@@ -54,5 +54,30 @@
 	- Learn JavaScript and Jquery - John
 
 
+---
 
+### 10/29 Th: Donna and Missy
+* Which cryptosystems to use:
+	* The RSA Cryptosystem 
+		- Key creation:
+			- Choose secret primes p and q
+			- Choose encryption exponent e wih gcd(e,(p-1)(q-1)) = 1
+			- Publish N = pq and e.
+		- Encryption:
+			- Choose plaintext m
+			- Use Bob's public key (N, e) to compute c≡ m^e (mod N)
+			- Send ciphertext c to Bob.
+		- Decryption:
+			- Compute d satisying ed≡1(mod(p-1)(q-1))
+			- Compute m'≡c^d (mod N)
+			- Then m' equals the plaintext.
+	- Diffie-Hellman Key Exchange
+		- SC please
+	- ElGamal Key Creation 
+		- sc pleasehlig-Hellman
+	- Pohlig-Hellman Algorithm (?)
+	- Vigenere Cipher (?)
+	- Substitution Cipher (?)
+	- DES (?)
+	- AES (?)
 
