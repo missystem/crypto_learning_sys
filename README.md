@@ -1,5 +1,9 @@
 # Check our meeting schedules: [meeting.md](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md)
 
+# Project info:
+* due in week 9 (11/24 Tues 11:59pm)
+* presentation in week 10 
+
 # Security-Cryptography Interactive Learning System
 
 * The goal is to create an interactive learning experience for CS students studying security
