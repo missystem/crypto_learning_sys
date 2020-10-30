@@ -1,15 +1,14 @@
-# Project 2
----
-
-## Meeting Schedules:
+# Meeting Schedules:
 * Monday: 4pm - 6pm
 * Friday: 11am - 1pm
 * Saturday as needed
 ---
 
 ## Meetings:
-1. [10/28 W: ALL members]()
-2. [10/29 U: Donna & Missy]()
+1. [10/28 W: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1028-w-all-members)
+2. [10/29 U: Donna & Missy](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1029-u-donna--missy)
+
+---
 
 ## Separate this project into 3 sections:
 1. Front end (JAVA script - JQuery)
