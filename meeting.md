@@ -60,8 +60,10 @@
 ---
 
 ### 10/29 U: Donna & Missy
+
 * Which Cryptosystems to use:   
-	*(?) = undecided, if have time*
+	*(?) = undecided, if have time*  
+	- [Intro to Math Cryptography](https://github.com/missystem/crypto_learning_sys/blob/master/intro%20to%20math%20crypto.pdf)
 	1. [RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))   
 	<img width="684" height="483" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/RSA.png"> <br />
 	2. [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange)  
