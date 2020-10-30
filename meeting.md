@@ -75,7 +75,7 @@
 		- SC please
 	- ElGamal Key Creation 
 		- sc pleasehlig-Hellman
-	- Po
+	- Pohlig-Hellman Algorithm (?)
 	- Vigenere Cipher (?)
 	- Substitution Cipher (?)
 	- DES (?)
