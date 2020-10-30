@@ -57,7 +57,8 @@
 ---
 
 ### 10/29 U: Donna and Missy
-* Which Cryptosystems to use:
+* Which Cryptosystems to use:   
+	(?) = undecided, if have time
 	* RSA   
 	<img width="684" height="483" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/RSA.png"> <br />
 	- Diffie-Hellman  
@@ -65,7 +66,8 @@
 	- ElGamal 
 	<img width="677" height="534" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/elgamal.png"> <br />
 	- Pohlig-Hellman Algorithm (?)
-	- Vigenere Cipher (?)
+	- Vigenere Cipher (?)    
+	<img width="626" height="771" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/vigenere.png"> <br />
 	- Substitution Cipher (?)
 	- DES (?)
 	- AES (?)
