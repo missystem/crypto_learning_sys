@@ -75,3 +75,22 @@
 	7. [Data Encryption Standard (DES)](https://en.wikipedia.org/wiki/Data_Encryption_Standard) (?)
 	8. [Advanced Encryption Standard (AES)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (?)
 
+
+---
+
+### 10/30 - Fri 
+* Present the cryptosystems
+* Clearify each module and the job of each individual
+	- Xuehai & Donna : html and flask
+	- Missy & Donna : Backend
+		- How will it look:
+			- Each cryptosystem will have it's own .py file with functions such as step1, step2, etc.
+	- John : Interactive page
+* Rough timeline:
+	- RSA crypto system (1 week)
+	- Diffie-Hellman key key exchange & ElGamal encryption (1.5 weeks)
+	- Add another crypto system (1 week)
+	- Make sure everything works and final changes (0.5 weeks)
+* Have RSA cryptosystem done by Sunday of next week 
+* Ask Professor Young if the project is good.
+* Clearify the deadline with Professor Young.
