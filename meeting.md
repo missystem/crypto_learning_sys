@@ -7,7 +7,7 @@
 ## Meetings:
 1. [10/28 W: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1028-w-all-members)
 2. [10/29 U: Donna & Missy](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1029-u-donna--missy)
-
+3. [10/30 F: ALL members]()
 ---
 
 ## Separate this project into 3 sections:
@@ -78,19 +78,18 @@
 
 ---
 
-### 10/30 - Fri 
+### 10/30 F: ALL members
 * Present the cryptosystems
-* Clearify each module and the job of each individual
+* Clarify each module and the job of each individual
 	- Xuehai & Donna : html and flask
 	- Missy & Donna : Backend
 		- How will it look:
-			- Each cryptosystem will have it's own .py file with functions such as step1, step2, etc.
+			- Each cryptosystem will have it's own .py file with functions, such as step1, step2, etc.
 	- John : Interactive page
-* Rough timeline:
-	- RSA crypto system (1 week)
-	- Diffie-Hellman key key exchange & ElGamal encryption (1.5 weeks)
-	- Add another crypto system (1 week)
-	- Make sure everything works and final changes (0.5 weeks)
-* Have RSA cryptosystem done by Sunday of next week 
-* Ask Professor Young if the project is good.
-* Clearify the deadline with Professor Young.
+* Rough Timeline:
+	- RSA cryptosystem done by 11/08 Sunday
+	- Diffie-Hellman key exchange & ElGamal encryption (11/18 Wed)
+	- Add other cryptosystems (11/25 Wed)
+	- Make sure everything works and final changes (11/29 Sun)
+* Ask Prof. Young if the project is good.
+* Clarify the deadline with Prof. Young.
