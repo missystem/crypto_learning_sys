@@ -59,11 +59,11 @@
 ### 10/29 U: Donna and Missy
 * Which Cryptosystems to use:
 	* RSA   
-	<img width="555" height="346" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/RSA.png"> <br />
-	- Diffie-Hellman Key Exchange
-		- SC please
-	- ElGamal Key Creation 
-		- sc pleasehlig-Hellman
+	<img width="684" height="483" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/RSA.png"> <br />
+	- Diffie-Hellman  
+	<img width="696" height="404" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/diffie-hellman.png"> <br />
+	- ElGamal 
+	<img width="677" height="534" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/elgamal.png"> <br />
 	- Pohlig-Hellman Algorithm (?)
 	- Vigenere Cipher (?)
 	- Substitution Cipher (?)
