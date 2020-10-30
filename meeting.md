@@ -7,6 +7,10 @@
 * Saturday as needed
 ---
 
+## Meetings:
+1. [10/28 W: ALL members]()
+2. [10/29 U: Donna & Missy]()
+
 ## Separate this project into 3 sections:
 1. Front end (JAVA script - JQuery)
 	- detailed solution page
@@ -26,7 +30,7 @@
 
 ---
 
-### 10/28 W
+### 10/28 W: ALL members
 * Task Assignments:
 	* Java Script & Jquery:
 		- John
@@ -56,19 +60,19 @@
 
 ---
 
-### 10/29 U: Donna and Missy
+### 10/29 U: Donna & Missy
 * Which Cryptosystems to use:   
 	(?) = undecided, if have time
-	* RSA   
+	- [RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))   
 	<img width="684" height="483" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/RSA.png"> <br />
-	- Diffie-Hellman  
+	- [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange)  
 	<img width="696" height="404" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/diffie-hellman.png"> <br />
-	- ElGamal 
+	- [ElGamal encryption](https://en.wikipedia.org/wiki/ElGamal_encryption)
 	<img width="677" height="534" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/elgamal.png"> <br />
-	- Pohlig-Hellman Algorithm (?)
-	- Vigenere Cipher (?)    
+	- [Pohlig-Hellman Algorithm](https://en.wikipedia.org/wiki/Pohlig–Hellman_algorithm) (?)
+	- [Vigenere Cipher](https://en.wikipedia.org/wiki/Vigenère_cipher) (?)    
 	<img width="626" height="771" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/vigenere.png"> <br />
-	- Substitution Cipher (?)
-	- DES (?)
-	- AES (?)
+	- [Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher) (?)
+	- [Data Encryption Standard (DES)](https://en.wikipedia.org/wiki/Data_Encryption_Standard) (?)
+	- [Advanced Encryption Standard (AES)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (?)
 
