@@ -1,3 +1,5 @@
+# Check our meeting schedules: [meeting.md](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md)
+
 # Security-Cryptography Interactive Learning System
 
 * The goal is to create an interactive learning experience for CS students studying security
