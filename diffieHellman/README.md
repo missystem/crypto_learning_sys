@@ -1,4 +1,4 @@
-# pyDHE
+# Diffie–Hellman Key Exchange
 PyDHE is an instructional implementation of the Diffie-Hellman key exchange protocol in Python.
 
 DiffieHellman.py contains a functional implementation of the protocol, and SimpleDHE.py includes a simplified example of the protocol's steps.
