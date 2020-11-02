@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to LearnCrypto</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+    <link rel="stylesheet" href="../static/styles/mainpage.css">
+</head>
+
+<h1 align="center">Welcome to Cryptography Interactive Learning System!</h1>
+
+<span class="color-picker"></span>
+
+<br/><br/>
+
+<form action="_choose" method="POST">
+    <span class="custom-dropdown big">
+        <select name="cryptosystem">
+            <option>RSA</option>
+            <option>Diffie–Hellman key exchange</option>
+            <option>ElGamal encryption</option>
+            <option>Pohlig-Hellman Algorithm</option>
+            <option>Vigenere Cipher</option>
+        </select>
+    </span>
+
+    <span class="custom-dropdown">
+        <select name="en/de">
+            <option>Encrypt</option>
+            <option>Decrypt</option>
+        </select>
+    </span>
+
+    <span class="custom-dropdown small">
+        <select>
+            <option>Sherlock Holmes</option>
+            <option>The Great Gatsby</option>
+            <option>V for Vendetta</option>
+            <option>The Wolf of Wallstreet</option>
+            <option>Quantum of Solace</option>
+        </select>
+    </span>
+
+    <br/><br/>
+    <div>
+        <button class="button">Go!</button>
+    </div>
+
+
+</form>
+
+</html>
