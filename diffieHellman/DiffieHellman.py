@@ -49,13 +49,13 @@ class DiffieHellman(object):
 		valid_generators = [ 2, 3, 5, 7 ]
 
 		# Sanity check fors generator and keyLength
-		if(generator not in valid_generators):
+		if (generator not in valid_generators):
 			print("Error: Invalid generator. Using default.")
 			self.generator = default_generator
 		else:
 			self.generator = generator
 
-		if(keyLength < min_keyLength):
+		if (keyLength < min_keyLength):
 			print("Error: keyLength is too small. Setting to minimum.")
 			self.keyLength = min_keyLength
 		else:
