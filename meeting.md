@@ -8,6 +8,7 @@
 1. [10/28 W: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1028-w-all-members)
 2. [10/29 U: Donna & Missy](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1029-u-donna--missy)
 3. [10/30 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1030-f-all-members)
+4. [11/02 M: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1102-m-all-members)
 ---
 
 ## Separate this project into 3 sections:
@@ -67,7 +68,7 @@
 	1. [RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))   
 	<img width="684" height="483" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/RSA.png"> <br />
 	2. [Diffie–Hellman key exchange](https://en.wikipedia.org/wiki/Diffie–Hellman_key_exchange)   
-	[example](https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c)
+	[example](https://medium.com/@sadatnazrul/diffie-hellman-key-exchange-explained-python-8d67c378701c)    
 	<img width="696" height="404" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/diffie-hellman.png"> <br />
 	3. [ElGamal encryption](https://en.wikipedia.org/wiki/ElGamal_encryption)
 	<img width="677" height="534" src="https://github.com/missystem/crypto_learning_sys/blob/master/csys/elgamal.png"> <br />
