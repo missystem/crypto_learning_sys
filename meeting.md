@@ -96,3 +96,19 @@
 	- Make sure everything works and final changes (11/29 Sun)
 * Ask Prof. Young if the project is good.
 * Clarify the deadline with Prof. Young.
+
+---
+
+### 11/02 M: ALL members
+* Present progress:
+	- John: Finished most of the framework. He presented some issues and warned us to be cautious of using ajax. 
+		- For python module: We need to use a json data structure to return the inputs in the main python function of each file.
+		- For the html/flask (with some help from the java module): We need to figure out cookies and ajax calling-function (double checked with Michal)
+	- Xuehai: Finished the initial page with the cryptosystems and created the skeleton for all cryptosystems input pages. 
+	- Missy and Donna: Will need to change the output to be a json file and also we need to have a main function in constrast to only creating a library with stepX functions. 
+	
+* Changes:
+	- After the initial page, make a method page, and then use a botton like "try it yourself" to go to the input page (create new tab for the input page). 
+	- Change backend output to a jason file
+	
+		
