@@ -26,23 +26,13 @@ body {
   font-size: 1.2em;
 }
 
-#word1 {
-  border: 1px solid wheat;
-  margin:50px
+.title {
+  margin:20px;
   font-family: "Comic Sans MS", serif;
 }
 
-#word2 {
-  border: 1px solid wheat;
-  margin:50px
-  text-align: left;
-  text-indent: 30px;
-  font-family: "Comic Sans MS", serif;
-}
-
-#word3 {
-  border: 1px solid wheat;
-  margin:50px
+.word {
+  margin:50px;
   text-align: left;
   text-indent: 30px;
   font-family: "Comic Sans MS", serif;
@@ -57,7 +47,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: "Comic Sans MS", Serif;
+  font-family: "Comic Sans MS", serif;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
