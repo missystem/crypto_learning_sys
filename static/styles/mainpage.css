@@ -21,17 +21,46 @@ body {
   display: inline-block;
 }
 
+#text1 {
+  font-family: "Comic Sans MS", serif;
+  font-size: 1.2em;
+}
+
+#word1 {
+  border: 1px solid wheat;
+  margin:50px
+  font-family: "Comic Sans MS", serif;
+}
+
+#word2 {
+  border: 1px solid wheat;
+  margin:50px
+  text-align: left;
+  text-indent: 30px;
+  font-family: "Comic Sans MS", serif;
+}
+
+#word3 {
+  border: 1px solid wheat;
+  margin:50px
+  text-align: left;
+  text-indent: 30px;
+  font-family: "Comic Sans MS", serif;
+}
+
 .button {
-  background-color: #4CAF50;
+  background-color: #4CAF40;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-family: "Comic Sans MS", Serif;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 /* Custom dropdown */
