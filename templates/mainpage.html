@@ -19,6 +19,16 @@
             }
         }
 
+        function validateForm() {
+            if (document.getElementById("opt").value != "none") {
+                return true;
+            }
+
+            //Handle error message here.
+            alert("Please select a category");
+            return false;
+        }
+
     </script>
 </head>
 
@@ -32,7 +42,7 @@
 
 <br/><br/><br/>
 
-<form action="_choose" method="POST">
+<form action="_choose" onsubmit="return validateForm()" method="POST">
     <span id="text1">
         I want to learn: &nbsp&nbsp&nbsp
     </span>
