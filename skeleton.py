@@ -1,30 +1,28 @@
-import flask
+from flask import Flask, render_template, request
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 
 @app.route("/")
 def index():
-    return flask.render_template('mainpage.html')
+    return render_template('mainpage.html')
 
 
 @app.route("/_choose", methods=['POST'])
 def choose():
-    cryptsys = flask.request.form['cryptosystem']
-    if flask.request.form['en/de'] == "Encrypt":
-        if cryptsys == "RSA":
-            return render_template("")
-        elif cryptsys == "Diffie–Hellman key exchange":
-            return render_template("")
-        elif cryptsys == "ElGamal encryption":
-            return render_template("")
-    else:
-        if cryptsys == "RSA":
-            return render_template("")
-        elif cryptsys == "Diffie–Hellman key exchange":
-            return render_template("")
-        elif cryptsys == "ElGamal encryption":
-            return render_template("")
+    cryptsys = request.form['cryptosystem']
+    if cryptsys == "RSA":
+        return render_template("rsa.html")
+    elif cryptsys == "Diffie–Hellman key exchange":
+        return render_template("Diffie–Hellman.html")
+    elif cryptsys == "ElGamal encryption":
+        return render_template("ElGamal.html")
+
+
+# @app.route("/_crypt", methods=['POST'])
+# def crypt():
+#     en_de_crypt = request.form['en_de']
+
 
 if __name__ == "__main__":
     # Running standalone
