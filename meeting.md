@@ -110,11 +110,19 @@
 	
 * Changes:
 	- After the initial page, make a method page, and then use a botton like "try it yourself" to go to the input page (create new tab for the input page). 
-	- Change backend output to a jason file
+	- Change backend output to a json file
 * Scratch for front end design    
-<a href="#" class="image"><img src="images/page1.jpg" alt="" /></a><br/>
-<a href="#" class="image"><img src="images/page2.jpg" alt="" /></a><br/>
-<a href="#" class="image"><img src="images/page22.jpg" alt="" /></a><br/>
-<a href="#" class="image"><img src="images/page3.jpg" alt="" /></a><br/>
-<a href="#" class="image"><img src="images/page4.jpg" alt="" /></a><br/>
-		
+	- Choose a method -> show what is this method, and motivation.
+	<a href="#" class="image"><img src="images/page1.jpg" alt="" /></a><br/>
+	- [new page] -> how encryption/ work when select encryption/decryption
+	<a href="#" class="image"><img src="images/page2.jpg" alt="" /></a><br/>
+	- on the method page: also show how to choose input numbers for encryption
+	<a href="#" class="image"><img src="images/page22.jpg" alt="" /></a><br/>
+	- [new tab] -> input page
+		- check if numbers work |-> backend -> isPrime/
+		- |-> if numbers do not work -> popup window to show which number isn't working
+		- |-> if numbers work -> encryption/decryption
+	<a href="#" class="image"><img src="images/page3.jpg" alt="" /></a><br/>
+	- [same page] -> encryption: show step-by-step with [click to see next step]
+	<a href="#" class="image"><img src="images/page4.jpg" alt="" /></a><br/>
+			
