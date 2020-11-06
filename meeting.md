@@ -112,6 +112,9 @@
 	- After the initial page, make a method page, and then use a botton like "try it yourself" to go to the input page (create new tab for the input page). 
 	- Change backend output to a jason file
 * Scratch for front end design    
-<a href="#" class="image"><img src="images/page1.jpeg" alt="" /></a><br/>
-<a href="#" class="image"><img src="images/page2and3.png" alt="" /></a><br/>
+<a href="#" class="image"><img src="images/page1.jpg" alt="" /></a><br/>
+<a href="#" class="image"><img src="images/page2.jpg" alt="" /></a><br/>
+<a href="#" class="image"><img src="images/page22.jpg" alt="" /></a><br/>
+<a href="#" class="image"><img src="images/page3.jpg" alt="" /></a><br/>
+<a href="#" class="image"><img src="images/page4.jpg" alt="" /></a><br/>
 		
