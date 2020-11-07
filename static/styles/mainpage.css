@@ -59,6 +59,18 @@ body {
   border-radius: 12px;
 }
 
+.box_leading {
+  font-family: "Comic Sans MS", serif;
+  font-size: 1.2em;
+  display:none;
+}
+
+.box {
+  width: 20em;
+  font-size: 1.2em;
+  display: none;
+}
+
 /* Custom dropdown */
 .custom-dropdown {
   position: relative;
