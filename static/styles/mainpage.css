@@ -6,6 +6,12 @@ body {
     font-family: Arial, Helvetica, serif;
 }
 
+#whysys {
+  text-align: initial;
+  font-style: italic;
+  text-decoration: aquamarine underline;
+}
+
 .big {
   font-size: 1.2em;
 }
@@ -21,7 +27,7 @@ body {
   display: inline-block;
 }
 
-#text1 {
+.dropdown_leading {
   font-family: "Comic Sans MS", serif;
   font-size: 1.2em;
 }
@@ -45,7 +51,7 @@ body {
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: none;
   font-size: 16px;
   font-family: "Comic Sans MS", serif;
   margin: 4px 2px;
@@ -67,8 +73,10 @@ body {
   font-size: inherit;
   padding: .5em;
   padding-right: 2.5em;
+  text-align-last: center;
   border: 0;
   margin: 0;
+  width:20em;
   border-radius: 3px;
   text-indent: 0.01px;
   text-overflow: '';
