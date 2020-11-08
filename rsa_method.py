@@ -4,14 +4,14 @@ WELCOME TO THE RSA ENCRYPTOR. THIS IS AN INTERACTIVE TOOL USED TO ENCRYPT OR DEC
 
 import math
 
-print("RSA ENCRYPTOR/DECRYPTOR")
-print("*****************************************************")
+# print("RSA ENCRYPTOR/DECRYPTOR")
+# print("*****************************************************")
 
-#Input Prime Numbers
-print("PLEASE ENTER THE 'p' AND 'q' VALUES BELOW:")
-p = int(input("Enter a prime number for p: "))
-q = int(input("Enter a prime number for q: "))
-print("*****************************************************")
+# #Input Prime Numbers
+# print("PLEASE ENTER THE 'p' AND 'q' VALUES BELOW:")
+# p = int(input("Enter a prime number for p: "))
+# q = int(input("Enter a prime number for q: "))
+# print("*****************************************************")
 
 #Check if inputs are prime
 '''THIS FUNCTION AND THE CODE IMMEDIATELY BELOW THE FUNCTION CHECKS WHETHER THE INPUTS ARE PRIME OR NOT.'''
@@ -28,32 +28,31 @@ def prime_check(a):
     return True
 
 
-check_p = prime_check(p)
-check_q = prime_check(q)
-while(((check_p == False)or(check_q == False))):
-    if check_p == False:
-        print("p is not a prime number")
-    else:
-        print("q is not a prime number")
-    p = int(input("Enter a prime number for p: "))
-    q = int(input("Enter a prime number for q: "))
-    check_p = prime_check(p)
-    check_q = prime_check(q)
+# check_p = prime_check(p)
+# check_q = prime_check(q)
+# while(((check_p == False)or(check_q == False))):
+#     if check_p == False:
+#         print("p is not a prime number")
+#     else:
+#         print("q is not a prime number")
+#     p = int(input("Enter a prime number for p: "))
+#     q = int(input("Enter a prime number for q: "))
+#     check_p = prime_check(p)
+#     check_q = prime_check(q)
 
 #RSA Modulus
 '''CALCULATION OF RSA MODULUS 'n'.'''
-n = p * q
-print("RSA Modulus(n) is:", n)
+# n = p * q
+# print("RSA Modulus(n) is:", n)
 
 #Eulers Toitent
 '''CALCULATION OF EULERS TOITENT 'r'.'''
-r = (p-1)*(q-1)
-print("Eulers Toitent(r) is:", r)
-print("*****************************************************")
+# r = (p-1)*(q-1)
+# print("Eulers Toitent(r) is:", r)
+# print("*****************************************************")
 
 #GCD
 '''CALCULATION OF GCD FOR 'e' CALCULATION.'''
-
 
 def egcd(e, r):
     while(r != 0):
@@ -72,8 +71,8 @@ def eugcd(e, r):
             r = e
             e = b
 
-#Extended Euclidean Algorithm
 
+# ------------------------- Extended Euclidean Algorithm ------------------------- #
 
 def eea(a, b):
     if(a % b == 0):
@@ -84,8 +83,8 @@ def eea(a, b):
         print("%d = %d*(%d) + (%d)*(%d)" % (gcd, a, t, s, b))
         return(gcd, t, s)
 
-#Multiplicative Inverse
 
+# ------------------------- Multiplicative Inverse ------------------------- #
 
 def mult_inv(e, r):
     gcd, s, _ = eea(e, r)
@@ -99,35 +98,35 @@ def mult_inv(e, r):
             print("s=%d." % (s))
         return s % r
 
+# # ------------------------- e Value Calculation ------------------------- #
 
-#e Value Calculation
-'''FINDS THE HIGHEST POSSIBLE VALUE OF 'e' BETWEEN 1 and 1000 THAT MAKES (e,r) COPRIME.'''
-for i in range(1, 1000):
-    if(egcd(i, r) == 1):
-        e = i
-print("The value of e is:", e)
-print("*****************************************************")
+# for i in range(1, 1000):
+#     '''FINDS THE HIGHEST POSSIBLE VALUE OF 'e' BETWEEN 1 and 1000 THAT MAKES (e,r) COPRIME.'''
+#     if(egcd(i, r) == 1):
+#         e = i
 
-#d, Private and Public Keys
-'''CALCULATION OF 'd', PRIVATE KEY, AND PUBLIC KEY.'''
-print("EUCLID'S ALGORITHM:")
-eugcd(e, r)
-print("END OF THE STEPS USED TO ACHIEVE EUCLID'S ALGORITHM.")
-print("*****************************************************")
-print("EUCLID'S EXTENDED ALGORITHM:")
-d = mult_inv(e, r)
-print("END OF THE STEPS USED TO ACHIEVE THE VALUE OF 'd'.")
-print("The value of d is:", d)
-print("*****************************************************")
-public = (e, n)
-private = (d, n)
-print("Private Key is:", private)
-print("Public Key is:", public)
-print("*****************************************************")
+# print("The value of e is:", e)
+# print("*****************************************************")
 
-#Encryption
-'''ENCRYPTION ALGORITHM.'''
+# # ------------------------- d, Private and Public Keys ------------------------- #
+# '''CALCULATION OF 'd', PRIVATE KEY, AND PUBLIC KEY.'''
+# print("EUCLID'S ALGORITHM:")
+# eugcd(e, r)
+# print("END OF THE STEPS USED TO ACHIEVE EUCLID'S ALGORITHM.")
+# print("*****************************************************")
+# print("EUCLID'S EXTENDED ALGORITHM:")
+# d = mult_inv(e, r)
+# print("END OF THE STEPS USED TO ACHIEVE THE VALUE OF 'd'.")
+# print("The value of d is:", d)
+# print("*****************************************************")
+# public = (e, n)
+# private = (d, n)
+# print("Private Key is:", private)
+# print("Public Key is:", public)
+# print("*****************************************************")
 
+
+# ------------------------- ENCRYPTION ALGORITHM ------------------------- #
 
 def encrypt(pub_key, n_text):
     e, n = pub_key
@@ -148,9 +147,7 @@ def encrypt(pub_key, n_text):
     return x
 
 
-#Decryption
-'''DECRYPTION ALGORITHM'''
-
+# ------------------------- DECRYPTION ALGORITHM ------------------------- #
 
 def decrypt(priv_key, c_text):
     d, n = priv_key
@@ -168,20 +165,20 @@ def decrypt(priv_key, c_text):
     return x
 
 
-#Message
-message = input(
-    "What would you like encrypted or decrypted?(Separate numbers with ',' for decryption):")
-print("Your message is:", message)
+# # ------------------------- INPUT MESSAGE ------------------------- #
+# message = input("What would you like encrypted or decrypted?(Separate numbers with ',' for decryption):")
+# print("Your message is:", message)
 
-#Choose Encrypt or Decrypt and Print
-choose = input("Type '1' for encryption and '2' for decrytion.")
-if(choose == '1'):
-    enc_msg = encrypt(public, message)
-    print("Your encrypted message is:", enc_msg)
-    print("Thank you for using the RSA Encryptor. Goodbye!")
-elif(choose == '2'):
-    print("Your decrypted message is:", decrypt(private, message))
-    print("Thank you for using the RSA Encryptor. Goodbye!")
-else:
-    print("You entered the wrong option.")
-    print("Thank you for using the RSA Encryptor. Goodbye!")
+# # ------------------------- Choose Encrypt or Decrypt and Print ------------------------- #
+# choose = input("Type '1' for encryption and '2' for decrytion.")
+# if(choose == '1'):
+#     enc_msg = encrypt(public, message)
+#     print("Your encrypted message is:", enc_msg)
+#     print("Thank you for using the RSA Encryptor. Goodbye!")
+# elif(choose == '2'):
+#     print("Your decrypted message is:", decrypt(private, message))
+#     print("Thank you for using the RSA Encryptor. Goodbye!")
+# else:
+#     print("You entered the wrong option.")
+#     print("Thank you for using the RSA Encryptor. Goodbye!")
+
