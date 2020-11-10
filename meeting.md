@@ -2,6 +2,8 @@
 * Monday: 4pm - 6pm
 * Friday: 11am - 1pm
 * Saturday as needed
+
+* DEADLINE: Tuesday, November 24th
 ---
 
 ## Meetings:
@@ -125,4 +127,22 @@
 	<a href="#" class="image"><img src="images/page3.jpg" alt="" /></a><br/>
 	- [same page] -> encryption: show step-by-step with [click to see next step]
 	<a href="#" class="image"><img src="images/page4.jpg" alt="" /></a><br/>
-			
+
+---
+
+### 11/09 M: ALL members
+* Present PRogress: 
+	- Donna: Has sent motivation for RSA to Xuehai but was slow last week recoverying from wisdom teeth removal. She will send The example and method for RSA to Xuehai ASAP. 
+		- Send motiation, example, and method of the cryptosystems to Xuehai by the end of the week (RSA, ElGamal, and Diffie Hellman) --> Then will go around helping with whatever has had the slowest progress. 
+	- Missy: Mostly done with RSA Crypto system. 
+	- John: The skeleton code is done. Will work with Xuehai to put that in the html pages and make sure it is functioning. 
+	- Xuehai: Presented the webpage! Looks great! 
+* What to do:
+	- Group Goal: RSA & Diffie hellman to be finished by next week.
+	-Donna: Send motiation, example(step by step)-method (encrypt and decrypt) of the cryptosystems to Xuehai by the end of the week (RSA, ElGamal, and Diffie Hellman) --> Then will go around helping with whatever has had the slowest progress. 
+	- Missy: Fix remaining bit of RSA & Finish ElGamal.
+	- Xuehai: Implement examples and method donna sends. + link user input to back end
+	- John: Put everything together. Look at Xuehai's page and add ajax and javascript-interactive page into the code.
+	- Have RSA linked and together by Thursday night (before our 11 am meeting on Friday).
+	
+	
