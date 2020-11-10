@@ -131,7 +131,7 @@
 ---
 
 ### 11/09 M: ALL members
-* Present PRogress: 
+* Present Progress: 
 	- Donna: Has sent motivation for RSA to Xuehai but was slow last week recoverying from wisdom teeth removal. She will send The example and method for RSA to Xuehai ASAP. 
 		- Send motiation, example, and method of the cryptosystems to Xuehai by the end of the week (RSA, ElGamal, and Diffie Hellman) --> Then will go around helping with whatever has had the slowest progress. 
 	- Missy: Mostly done with RSA Crypto system. 
