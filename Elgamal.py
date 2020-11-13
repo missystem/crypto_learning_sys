@@ -74,7 +74,9 @@ def Elgamal_decrypt(enc_msg, p, a):
 
 def elgamal():
     """
-    return a list:
+    return ["0"] if p is not prime
+    return [p, g, "0"] if a is not valid
+    else return a list:
     [p, g, a, publicKeyA, k, encryptedMsg, decryptedMsg]
     """
     result = []
