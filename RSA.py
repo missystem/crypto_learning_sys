@@ -1,11 +1,13 @@
 """
 Author: Missy Shi
+Information: Implementation of RSA Key Exchange
 """
 
 import math
 
 
-def prime_check(a):
+def prime_check(a: int) -> bool:
+    """ check for a integer is prime or not """
     if a == 2:
         return True
     elif (a < 2) or ((a % 2) == 0):
@@ -85,14 +87,15 @@ def mul_inverse(e: int, r: int) -> int:
         return x % r
 
 
-def encrypt(public: tuple, m: int) -> int:
+def rsa_encrypt(public: tuple, m: int) -> int:
+    """"""
     e, N = public
     ciphertext = (m ** e) % N
     # return the array of bytes
     return ciphertext
 
 
-def decrypt(private, c):
+def rsa_decrypt(private, c):
     d, n = private
     # print(f"c^d = {c**d}")
     plaintext = (c ** d) % n
@@ -153,10 +156,10 @@ def rsa():
     result.append(publicKey)
 
     # input message #
-    message = int(input("What would you like encrypted or decrypted?: "))
+    message = int(input("What would you like to encrypt or decrypt?: "))
     print(f"Your message is: {message}")
 
-    enc_msg = encrypt(public, message)
+    enc_msg = rsa_encrypt(public, message)
     ciphertext = "Your encrypted message is: " + str(enc_msg)
     result.append(ciphertext)
     print(ciphertext)
@@ -176,23 +179,12 @@ def rsa():
     result.append(privateKey)
     print(privateKey)
 
-    dec_msg = decrypt(private, enc_msg)
+    dec_msg = rsa_decrypt(private, enc_msg)
     plaintext = "Your decrypted message is: " + str(dec_msg)
     result.append(plaintext)
     print(plaintext)
 
-
-    # Choose Encrypt or Decrypt and Print #
-    # method = input("Select 'enc' for encryption, or 'dec' for decryption: ")
-    # if method == 'enc':
-    #     enc_msg = encrypt(public, message)
-    #     print("Your encrypted message is:", enc_msg)
-    # elif method == 'dec':
-    #     print("Your decrypted message is:", decrypt(private, message))
-    # else:
-    #     print("Wrong method, please input 'enc' for encryption, or 'dec' for decryption: ")
     return result
-
 
 
 def main():
