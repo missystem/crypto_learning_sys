@@ -88,7 +88,7 @@ def mul_inverse(e: int, r: int) -> int:
 
 
 def rsa_encrypt(public: tuple, m: int) -> int:
-    """"""
+    """return encrypted message"""
     e, N = public
     ciphertext = (m ** e) % N
     # return the array of bytes
@@ -96,6 +96,7 @@ def rsa_encrypt(public: tuple, m: int) -> int:
 
 
 def rsa_decrypt(private, c):
+    """return decrypted message"""
     d, n = private
     # print(f"c^d = {c**d}")
     plaintext = (c ** d) % n
@@ -103,6 +104,9 @@ def rsa_decrypt(private, c):
 
 
 def rsa():
+    """
+    return: [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
+    """
     result = []
     # Input prime numbers q & Check if inputs are prime #
     # if not prime, return False, and ask to input again #
@@ -169,7 +173,6 @@ def rsa():
 
 
 def main():
-    # [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
     print(rsa())
 
 
