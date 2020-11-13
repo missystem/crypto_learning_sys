@@ -108,7 +108,7 @@ def rsa():
     return: [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
     """
     result = []
-    # Input prime numbers q & Check if inputs are prime #
+    # Input prime numbers p & q, Check if inputs are prime #
     # if not prime, return False, and ask to input again #
     p = int(input("Enter a prime number for p: "))
     check_p = prime_check(p)
