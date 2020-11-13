@@ -8,6 +8,9 @@ import random
 
 
 def prime_check(a):
+    """check a number is prime or not
+    if it is a prime return True
+    else return False"""
     if a == 2:
         return True
     elif (a < 2) or ((a % 2) == 0):
@@ -44,15 +47,25 @@ def mul_inverse(e: int, r: int) -> int:
         return x % r
 
 
-def Elgamal_encrypt(m, p, g, bigA):
-    """"""
-    k = random.randint(10, 100)   # Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1).
+def Elgamal_encrypt(m, p, g, bigA, k):
+    """
+    random element k
+    Use public key A to compute
+        c1 = g^k (mod p)
+        c2 = mA^k (mod p)
+    return ciphertext (c1, c2)
+    """
     c1 = (g ** k) % p
     c2 = (m * (bigA ** k)) % p
     return (c1, c2)
 
 
 def Elgamal_decrypt(enc_msg, p, a):
+    """
+    Compute dec_msg = (c1^a )^(−1) · c2 (mod p)
+    dec_msg = plaintext m
+    return plaintext dec_msg
+    """
     c1, c2 = enc_msg
     x = mul_inverse(c1 ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
     dec_msg = (x * c2) % p
@@ -60,48 +73,54 @@ def Elgamal_decrypt(enc_msg, p, a):
 
 
 def elgamal():
+    """
+    return a list:
+    [p, g, a, publicKeyA, k, encryptedMsg, decryptedMsg]
+    """
     result = []
+    # Input prime numbers p, Check if inputs are prime #
+    # if not prime, return False, and ask to input again #
     p = int(input("Input a large prime p: "))
     check_p = prime_check(p)
     if check_p == False:
-        result.append("p is not prime")
+        result.append("0")
         return result
     else:
-        numberP = "your prime p is: " + str(p)
-        result.append(numberP)
-    print(numberP)
+        result.append(str(p))
 
+    # Input an element g: c1 = g^k (mod p) #
     g = int(input("Input an element g modulo p of large (prime) order: "))
-    numberG = "Your element g is: " + str(g)
-    result.append(numberG)
-    print(numberG)
+    result.append(str(g))
 
+    # Input a secret number a: 1 ≤ a ≤ p-1, A = g^a (mod p) #
     a = int(input("Input a secret number a to act as your private key: "))
+    # if a is not valid:
     if a < 1 or a > p-1:
-        result.append("a is not valid, a should be 1 ≤ a ≤ p-1")
+        result.append("0")
         return result
     else:
-        number_a = "Your number a is: " + str(a)
-        result.append(number_a)
-    print(number_a)
+        result.append(str(a))
 
+    # Public key A = g^a (mod p), publish it #
     bigA = (g ** a) % p
-    numberA = "Your public key A = g ^ a (mod p) is: " + str(bigA) + ". Publish it."
-    result.append(numberA)
-    print(numberA)
+    result.append(str(bigA))
 
+    # Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1).
+    # The number k is called a random element;
+    # it exists for the sole purpose of encrypting a single message.
+    k = random.randint(10, 100)
+
+    # message the user wants to encrypt #
     m = int(input("What would you like to encrypt or decrypt?: "))
     print(f"Your message is: {m}")
 
-    enc_msg = Elgamal_encrypt(m, p, g, bigA)
-    ciphertext = "Your encrypted message is: " + str(enc_msg)
-    result.append(ciphertext)
-    print(ciphertext)
+    # encrypt the message #
+    enc_msg = Elgamal_encrypt(m, p, g, bigA, k)
+    result.append(str(enc_msg))
 
+    # decrypt the encrypted message #
     dec_msg = Elgamal_decrypt(enc_msg, p, a)
-    plaintext = "Your decrypted message is: " + str(dec_msg)
-    result.append(plaintext)
-    print(plaintext)
+    result.append(str(dec_msg))
 
     return result
 
