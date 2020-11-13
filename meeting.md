@@ -159,16 +159,16 @@
 * <a href="#" class="image"><img src="images/newPage.jpg" alt="" /></a><br/>
 * Backend working:
 	- Error detection:
-		- if *p* is not prime → return ["p is not prime"] to front end
-		- if *q* is not prime → return ["q is not prime"] to front end
-		- if *e* does not work → return ["p = ###", "q = ###", "e is not valid"]
+		> - if *p* is not prime → return ["p is not prime"] to front end
+		> - if *q* is not prime → return ["q is not prime"] to front end
+		> - if *e* does not work → return ["p = ###", "q = ###", "e is not valid"]
 	- All variables work → return ["p = ###", "q = ###", "e = ###", ..., "encrypted message is: ###", ..., "decrypted message is: ###"]
 * Variables limitations:
 	- We are providing interactive learning systems, we don't want users wait long time (>5 seconds) to see the results, so it will be better to limit the numbers
-	- example: RSA
-		- 10^2 ≤ p ≤ 10^10
-		- 10^2 ≤ q ≤ 10^10
-		- 1 ≤ e ≤ 10^3
+	> - example: RSA
+	>	- 10^2 ≤ p ≤ 10^10
+	>	- 10^2 ≤ q ≤ 10^10
+	>	- 1 ≤ e ≤ 10^3
 
 
 
