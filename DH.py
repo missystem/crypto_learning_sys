@@ -1,7 +1,16 @@
 """
 Author: Missy Shi
-Information: Implementation of Diffie-Hellman Key Exchange
+
+Description: Implementation of Diffie-Hellman Key Exchange
+
+Date: 11/13/2020
 """
+
+# ------------------------------------- Function Declaration ------------------------------------- #
+# prime_check(a: int) -> bool
+# fast_powering(n: int, pow: int, modulus: int) -> int
+# diffie_hellman() -> list
+# ------------------------------------------------------------------------------------------------ #
 
 
 import math
@@ -20,7 +29,24 @@ def prime_check(a: int) -> bool:
     return True
 
 
-def diffie_hellman():
+def fast_powering(n: int, pow: int, modulus: int) -> int:
+    """ Implementation of fast powering algorithm
+    :param n: base integer
+    :param pow: exponent
+    :param modulus: integer modulus
+    :return: res = n**pow (mod modulus)
+    """
+    res = 1
+    n = n % modulus
+    while pow > 0:
+        if int(pow) & 1:
+            res = (res * n) % modulus
+        pow = int(pow) >> 1
+        n = (n * n) % modulus
+    return res
+
+
+def diffie_hellman() -> list:
     """
     return ["0"] if p is not prime
     else return a list:
@@ -51,10 +77,12 @@ def diffie_hellman():
     result.append(str(b))
 
     # A computes A ≡ g^a (mod p):
-    bigA = (g ** a) % p
+    # bigA = (g ** a) % p
+    bigA = fast_powering(g, a, p)
     result.append(str(bigA))
     # B computes B ≡ g^b (mod p):
-    bigB = (g ** b) % p
+    # bigB = (g ** b) % p
+    bigB = fast_powering(g, b, p)
     result.append(str(bigB))
 
     # They next exchange these computed values,
@@ -63,12 +91,15 @@ def diffie_hellman():
     # since they are sent over the insecure communication channel.
     # B and A again use their secret integers to compute
     # A' = B^a (mod p)
-    bigA_ = (bigB ** a) % p
+    # bigA_ = (bigB ** a) % p
+    bigA_ = fast_powering(bigB, a, p)
     result.append(str(bigA_))
     # B' = A^b (mod p)
-    bigB_ = (bigA ** b) % p
+    # bigB_ = (bigA ** b) % p
+    bigB_ = fast_powering(bigA, b, p)
     result.append(str(bigB_))
 
+    # A' and B' are the shared secret
     # The values that they compute,
     # A′ and B′ respectively, are actually the same,
     # since A′ ≡ B^a ≡ (g^b)^a ≡ g^(ab) ≡ (g^a)^b ≡ A^b ≡ B′ (mod p)
