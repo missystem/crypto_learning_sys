@@ -60,6 +60,31 @@ def mult_inv(e, r):
         return s % r
 
 
+def gcdEx(a: int, b: int) -> (int, int, int):
+    """ Extended Euclidean Algorithm """
+    if a == 0:
+        return (b, 0, 1)
+    else:
+        g, y, x = gcdEx(b % a, a)
+        return (g, x - (b // a) * y, y)
+
+
+def mul_inverse(e: int, r: int) -> int:
+    """
+    Find the multiplicative inverse of e (d) mod r
+    r = (p-1)(q-1)
+    ed = 1 (mod r)
+    :param e: integer
+    :param r: modulus
+    :return: integer e^(-1) (mod r)
+    """
+    g, x, y = gcdEx(e, r)
+    if g != 1:
+        raise Exception('modular inverse does not exist')
+    else:
+        return x % r
+
+
 def encrypt(public: tuple, m: int) -> int:
     e, N = public
     ciphertext = (m ** e) % N
@@ -67,75 +92,111 @@ def encrypt(public: tuple, m: int) -> int:
     return ciphertext
 
 
-def decrypt(private, m):
+def decrypt(private, c):
     d, n = private
+    # print(f"c^d = {c**d}")
     plaintext = (c ** d) % n
     return plaintext
 
 
 def rsa():
+    result = []
     # Input prime numbers q & Check if inputs are prime
     # if not prime, return False, and ask to input again
     p = int(input("Enter a prime number for p: "))
     check_p = prime_check(p)
-    while check_p == False:
-        print("p is not prime.")
-        p = int(input("Enter a prime number for p: "))
-        check_p = prime_check(p)
+    if check_p == False:
+        result.append("p is not prime")
+    else:
+        numberP = "your prime p is: " + str(p) + ". keep it secret"
+        result.append(numberP)
+    print(numberP)
+
     # Input prime numbers q & Check if inputs are prime
     q = int(input("Enter a prime number for q: "))
     check_q = prime_check(q)
-    while check_q == False:
-        print("q is not prime.")
-        q = int(input("Enter a prime number for q: "))
-        check_q = prime_check(q)
+    if check_q == False:
+        result.append("q is not prime")
+        return result
+    else:
+        numberQ = "your prime q is: " + str(q) + ". keep it secret"
+        result.append(numberQ)
+    print(numberQ)
 
     #  Calculation of RSA modulus N
     n = p * q
+    numberN = "your N = p * q = " + str(n)
+    result.append(numberN)
+    print(numberN)
 
     # Calculation of Eulers toitent 'r'
     r = (p-1)*(q-1)
+    numberR = "your r = (p-1)(q-1) = " + str(r)
+    result.append(numberR)
+    print(numberR)
 
     # 'e' Value Calculation #
     e = int(input("Enter an exponent e between 1 and 1000: "))
     check_e = egcd(e, r)
-    while check_e != 1:
-        print("e is not valid.")
-        p = int(input("Enter an exponent e between 1 and 1000: "))
-        check_e = egcd(e, r)
-
-    # d, Private and Public Keys
-    # calculation of 'd', private keey, and public key.
-    # eugcd(e, r)
-
-    d = mult_inv(e, r)
+    if check_e != 1:
+        result.append("e is not valid")
+        return result
+    else:
+        numberE = "your exponent e = " + str(e)
+        result.append(numberE)
+    print(numberE)
 
     # Public key: publish N = pq and e
     public = (e, n)
-    # Private key, 
-    private = (d, n)
-    print(f"Private Key is: {private}. Do not give this to anyone")
-    print(f"Public Key is: {public}. Publish N = pq and e")
+    publicKey = "Public Key is: " + str(public) + ". Publish your N and e"
+    result.append(publicKey)
 
     # input message #
     message = int(input("What would you like encrypted or decrypted?: "))
     print(f"Your message is: {message}")
 
+    enc_msg = encrypt(public, message)
+    ciphertext = "Your encrypted message is: " + str(enc_msg)
+    result.append(ciphertext)
+    print(ciphertext)
+
+    # d, Private and Public Keys
+    # calculation of 'd', private key, and public key.
+    # eugcd(e, r)
+
+    d = mul_inverse(e, r)
+    numberD = "your d = " + str(d)
+    result.append(numberD)
+    print(numberD)
+
+    # Private key, 
+    private = (d, n)
+    privateKey = "Private Key is: " + str(private) + ". Do not give this to anyone"
+    result.append(privateKey)
+    print(privateKey)
+
+    dec_msg = decrypt(private, enc_msg)
+    plaintext = "Your decrypted message is: " + str(dec_msg)
+    result.append(plaintext)
+    print(plaintext)
+
+
     # Choose Encrypt or Decrypt and Print #
-    method = input("Select 'enc' for encryption, or 'dec' for decryption: ")
-    if method == 'enc':
-        enc_msg = encrypt(public, message)
-        print("Your encrypted message is:", enc_msg)
-    elif method == 'dec':
-        print("Your decrypted message is:", decrypt(private, message))
-    else:
-        print("Wrong method, please input 'enc' for encryption, or 'dec' for decryption: ")
-    
-    return None
+    # method = input("Select 'enc' for encryption, or 'dec' for decryption: ")
+    # if method == 'enc':
+    #     enc_msg = encrypt(public, message)
+    #     print("Your encrypted message is:", enc_msg)
+    # elif method == 'dec':
+    #     print("Your decrypted message is:", decrypt(private, message))
+    # else:
+    #     print("Wrong method, please input 'enc' for encryption, or 'dec' for decryption: ")
+    return result
+
 
 
 def main():
-    rsa()
+    print(rsa())
+    # rsa()
 
 
 if __name__ == "__main__":
