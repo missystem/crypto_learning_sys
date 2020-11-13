@@ -176,19 +176,25 @@
 * **Current Progress**: 
 	- **Missy**: 
 		- Finish 2 algorithm implementation: 
-			1. RSA Key Exchange
+			1. RSA Key Exchange.
 			2. Elgamal Public Key Cryptosystem
 		- Designed web pages
 	- **Donna**:
-	- **Xuehai**:
-	- **John**:
+		- Finished Explanation and examples for RSA.
+		- Finished Explanation and examples for Diffie-Hellman.
+	- **Xuehai**: 
+		- Finished the mvp for pages.
+	- **John**:   ----------------
 * **TO DO**:
 	- **Missy**: 
 		- Finish another algorithm implementation: Diffie–Hellman Key Exchange
 		- Design further web pages
 	- **Donna**:
+		- Finished Explanation and examples for ElGamal by the end of today.
+		- After John is done with his code reqrite the explanations to match his output.
 	- **Xuehai**:
-	- **John**:
+		- Implement "The Dice": the user will click a dice so we can generate a random number that works for them.
+	- **John**: Fix the interactive page for RSA.
 
 	
 
