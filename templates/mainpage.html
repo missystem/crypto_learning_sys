@@ -15,9 +15,8 @@
             var droptext2 = val2.options[val2.selectedIndex].text;
             if (droptext1 == "RSA") {
                 document.getElementById("word1").innerHTML = "The Rivet-Shamir-Adleman (RSA) ";
-                document.getElementById("word2").innerHTML = "Cryptosystem is a asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages! Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. \n" +
-                    "RSA is based on the principle that it is easy to multiply large numbers, but factoring large numbers is very difficult. ";
-                document.getElementById("word3").innerHTML = "RSA is used today in modern computers. It is used in a range of web browsers, email, VPNs, chat and other communication channels. So, it is a very valuable cryptosystem to learn for many computer scienctists!";
+                document.getElementById("word2").innerHTML = "The Rivet-Shamir-Adleman (RSA) Cryptosystem is an asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages. Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. RSA is based on the principle that it is easy to multiply large numbers, but factoring large numbers is very difficult. ";
+                document.getElementById("word3").innerHTML = "RSA is used today in modern computers. It is used in a range of web browsers, email, VPNs, chat and other communication channels and it is considered the most secure way of encryption. So, it is a very valuable cryptosystem to learn for many computer scientists!";
             }
             else if (droptext1 == "Diffie–Hellman key exchange") {
                 document.getElementById("word1").innerHTML = "";
@@ -41,17 +40,30 @@
                 document.getElementById("word1").innerHTML = "";
                 document.getElementById("word2").innerHTML = "RSA encrypt example!";
                 document.getElementById("word3").innerHTML = "";
-                document.getElementById("p1_text").style.display = 'inline-block';
-                document.getElementById("p1_input").style.display = 'inline-block';
-                document.getElementById("q1_text").style.display = 'inline-block';
-                document.getElementById("q1_input").style.display = 'inline-block';
-                document.getElementById("e1_text").style.display = 'inline-block';
-                document.getElementById("e1_input").style.display = 'inline-block';
+                document.getElementById("text1").style.display = 'inline-block';
+                document.getElementById("input1").style.display = 'inline-block';
+                document.getElementById("text2").style.display = 'inline-block';
+                document.getElementById("input2").style.display = 'inline-block';
+                document.getElementById("text3").style.display = 'inline-block';
+                document.getElementById("input3").style.display = 'inline-block';
+                document.getElementById("text4").style.display = 'inline-block';
+                document.getElementById("input4").style.display = 'inline';
+                document.getElementById("text1").innerHTML = "Exponent e: &nbsp&nbsp&nbsp";
+                document.getElementById("text2").innerHTML = "Prime p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text3").innerHTML = "Prime q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             }
             else if (droptext1 == "RSA" && droptext2 == "Decrypt") {
                 document.getElementById("word1").innerHTML = "";
                 document.getElementById("word2").innerHTML = "RSA decrypt example!";
                 document.getElementById("word3").innerHTML = "";
+                document.getElementById("text1").style.display = 'inline-block';
+                document.getElementById("input1").style.display = 'inline-block';
+                document.getElementById("text2").style.display = 'inline-block';
+                document.getElementById("input2").style.display = 'inline-block';
+                document.getElementById("text3").style.display = 'inline-block';
+                document.getElementById("input3").style.display = 'inline-block';
+                document.getElementById("text4").style.display = 'inline-block';
+                document.getElementById("input4").style.display = 'inline';
             }
             else if (droptext1 == "Diffie–Hellman key exchange" && droptext2 == "Encrypt") {
                 document.getElementById("word1").innerHTML = "";
@@ -74,9 +86,9 @@
                 document.getElementById("word3").innerHTML = "";
             }
             else if(droptext1 == "RSA" && droptext2 == "Select an Option") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "RSA encrypt motivation!";
-                document.getElementById("word3").innerHTML = "";
+                document.getElementById("word1").innerHTML = "The Rivet-Shamir-Adleman (RSA) ";
+                document.getElementById("word2").innerHTML = "The Rivet-Shamir-Adleman (RSA) Cryptosystem is an asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages. Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. RSA is based on the principle that it is easy to multiply large numbers, but factoring large numbers is very difficult. ";
+                document.getElementById("word3").innerHTML = "RSA is used today in modern computers. It is used in a range of web browsers, email, VPNs, chat and other communication channels and it is considered the most secure way of encryption. So, it is a very valuable cryptosystem to learn for many computer scientists!";
             }
             else if(droptext1 == "Diffie–Hellman key exchange" && droptext2 == "Select an Option") {
                 document.getElementById("word1").innerHTML = "";
@@ -205,9 +217,7 @@
 
     </span>
 
-    <br/><br/><br/><br/>
-
-    <br/><br/><br/>
+    <br/><br/>
 
     <p class="title" id="word1">
 
@@ -221,12 +231,15 @@
 
     </p>
 
-    <label for="fname" class="box_leading" id="e1_text">Exponent e: &nbsp&nbsp&nbsp</label>
-    <input type="text" class="box" id="e1_input"><br><br><br><br>
-    <label for="lname" class="box_leading" id="p1_text">Prime p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-    <input type="text" class="box" id="p1_input"><br><br><br><br>
-    <label for="lname" class="box_leading" id="q1_text">Prime q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-    <input type="text" class="box" id="q1_input">
+    <label for="lname" class="box_leading" id="text1"></label>
+    <input type="text" class="box" id="input1" name="userInput1"><br><br><br><br>
+    <label for="lname" class="box_leading" id="text2"></label>
+    <input type="text" class="box" id="input2" name="userInput2"><br><br><br><br>
+    <label for="lname" class="box_leading" id="text3"></label>
+    <input type="text" class="box" id="input3" name="userInput3"><br><br><br><br>
+    <label for="lname" class="box_leading" id="text4">text you want to encrypt: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+    <br><br><br>
+    <textarea type="text" class="text_box" id="input4" rows="10" cols="70"></textarea>
     <br/><br/><br/><br/><br/><br/>
 
     <div>

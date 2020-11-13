@@ -10,13 +10,12 @@ def index():
 
 @app.route("/_choose", methods=['POST'])
 def choose():
-    cryptsys = request.form['cryptosystem']
-    if cryptsys == "RSA":
-        return render_template("rsa.html")
-    elif cryptsys == "Diffie–Hellman key exchange":
-        return render_template("Diffie–Hellman.html")
-    elif cryptsys == "ElGamal encryption":
-        return render_template("ElGamal.html")
+    userInput1 = request.form['userInput1']
+    userInput2 = request.form['userInput2']
+    userInput3 = request.form['userInput3']
+    print(userInput1)
+    print(userInput2)
+    print(userInput3)
 
 
 # @app.route("/_crypt", methods=['POST'])
