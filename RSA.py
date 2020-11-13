@@ -105,7 +105,11 @@ def rsa_decrypt(private, c):
 
 def rsa():
     """
-    return: [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
+    return ["0", q] if p is not prime
+    return [p, "0"] if q is not prime
+    return ["0", "0"] if p and q both are not prime
+    return [p, q, N, r, "0"] if e is not valid
+    else return: [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
     """
     result = []
     # Input prime numbers p & q, Check if inputs are prime #
