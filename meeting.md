@@ -12,7 +12,7 @@
 3. [10/30 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1030-f-all-members)
 4. [11/02 M: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1102-m-all-members)
 5. [11/12 U: Missy & Xuehai](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1112-u-missy--xuehai)
-4. [11/13 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1113-m-all-members)
+4. [11/13 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1113-f-all-members)
 ---
 
 ## Separate this project into 3 sections:
@@ -173,8 +173,28 @@
 ---
 
 ### 11/13 F: ALL members
-* Present Progress: 
-
+* **Current Progress**: 
+	- **Missy**: 
+		- Finish 2 algorithm implementation: 
+			1. RSA Key Exchange
+			2. Elgamal Public Key Cryptosystem
+		- Designed web pages
+	- **Donna**:
+		- 
+	- **Xuehai**:
+		- 
+	- **John**:
+		- 
+* **TO DO**:
+	- **Missy**: 
+		- Finish another algorithm implementation: Diffie–Hellman Key Exchange
+		- Design further web pages
+	- **Donna**:
+		- 
+	- **Xuehai**:
+		- 
+	- **John**:
+		-  
 
 	
 
