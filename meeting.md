@@ -144,5 +144,32 @@
 	- Xuehai: Implement examples and method donna sends. + link user input to back end
 	- John: Put everything together. Look at Xuehai's page and add ajax and javascript-interactive page into the code.
 	- Have RSA linked and together by Thursday night (before our 11 am meeting on Friday).
+
+---
+
+### 11/12 T: Missy & Xuehai
+* Dice game
+	- Create a list of prime numbers -> let user click on generate a random prime, it will randomly select a prime number from the prime_list
+	- this dice-like rule can work for primes, and other numbers
+	- example: RSA
+		- prime_list = [2333, 3323, ...], click on 🎲 to get p, q from the list
+		- exponent_list = [97, 11, 7, ...], click on 🎲 to get exponent e from the list
+* <a href="#" class="image"><img src="images/newPage.jpg" alt="" /></a><br/>
+* Backend working:
+	- Error detection:
+		- if *p* is not prime → return ["p is not prime"] to front end
+		- if *q* is not prime → return ["q is not prime"] to front end
+		- if *e* does not work → return ["p = ###", "q = ###", "e is not valid"]
+	- All variables work → return ["p = ###", "q = ###", "e = ###", ..., "encrypted message is: ###", ..., "decrypted message is: ###"]
+* Variables limitations:
+	- We are providing interactive learning systems, we don't want users wait long time (>5 seconds) to see the results, so it will be better to limit the numbers
+	- example: RSA
+		- 10^2 ≤ p ≤ 10^10
+		- 10^2 ≤ q ≤ 10^10
+		- 1 ≤ e ≤ 10^3
+
+
+
+
 	
-	
+
