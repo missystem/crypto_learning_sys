@@ -180,21 +180,15 @@
 			2. Elgamal Public Key Cryptosystem
 		- Designed web pages
 	- **Donna**:
-		- 
 	- **Xuehai**:
-		- 
 	- **John**:
-		- 
 * **TO DO**:
 	- **Missy**: 
 		- Finish another algorithm implementation: Diffie–Hellman Key Exchange
 		- Design further web pages
 	- **Donna**:
-		- 
 	- **Xuehai**:
-		- 
 	- **John**:
-		-  
 
 	
 
