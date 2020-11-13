@@ -107,6 +107,7 @@ def rsa():
     check_p = prime_check(p)
     if check_p == False:
         result.append("p is not prime")
+        return result
     else:
         numberP = "your prime p is: " + str(p) + ". keep it secret"
         result.append(numberP)
