@@ -11,6 +11,8 @@
 2. [10/29 U: Donna & Missy](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1029-u-donna--missy)
 3. [10/30 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1030-f-all-members)
 4. [11/02 M: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1102-m-all-members)
+5. [11/12 U: Xuehai & Missy](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1112-u-xuehai--missy)
+4. [11/13 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1113-m-all-members)
 ---
 
 ## Separate this project into 3 sections:
@@ -147,7 +149,7 @@
 
 ---
 
-### 11/12 T: Missy & Xuehai
+### 11/12 U: Missy & Xuehai
 * Dice game
 	- Create a list of prime numbers -> let user click on generate a random prime, it will randomly select a prime number from the prime_list
 	- this dice-like rule can work for primes, and other numbers
