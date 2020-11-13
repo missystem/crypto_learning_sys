@@ -109,80 +109,95 @@ def rsa():
     p = int(input("Enter a prime number for p: "))
     check_p = prime_check(p)
     if check_p == False:
-        result.append("p is not prime")
-        return result
+        # result.append("p is not prime")
+        result.append("0")
+        # return result
     else:
-        numberP = "your prime p is: " + str(p) + ". keep it secret"
-        result.append(numberP)
-    print(numberP)
+        # numberP = "your prime p is: " + str(p) + ". keep it secret"
+        # result.append(numberP)
+        result.append(str(p))
+    # print(numberP)
 
     # Input prime numbers q & Check if inputs are prime
     q = int(input("Enter a prime number for q: "))
     check_q = prime_check(q)
     if check_q == False:
-        result.append("q is not prime")
-        return result
+        # result.append("q is not prime")
+        result.append("0")
+        # return result
     else:
-        numberQ = "your prime q is: " + str(q) + ". keep it secret"
-        result.append(numberQ)
-    print(numberQ)
+        # numberQ = "your prime q is: " + str(q) + ". keep it secret"
+        # result.append(numberQ)
+        result.append(str(q))
+    # print(numberQ)
+
+    if result[0] == "0" or result[1] == "0":
+        return result
 
     #  Calculation of RSA modulus N
     n = p * q
-    numberN = "your N = p * q = " + str(n)
-    result.append(numberN)
-    print(numberN)
+    # numberN = "your N = p * q = " + str(n)
+    # result.append(numberN)
+    # print(numberN)
+    result.append(str(n))
 
     # Calculation of Eulers toitent 'r'
     r = (p-1)*(q-1)
-    numberR = "your r = (p-1)(q-1) = " + str(r)
-    result.append(numberR)
-    print(numberR)
+    # numberR = "your r = (p-1)(q-1) = " + str(r)
+    # result.append(numberR)
+    # print(numberR)
 
     # 'e' Value Calculation #
     e = int(input("Enter an exponent e between 1 and 1000: "))
     check_e = egcd(e, r)
     if check_e != 1:
-        result.append("e is not valid")
+        # result.append("e is not valid")
+        result.append("0")
         return result
     else:
-        numberE = "your exponent e = " + str(e)
-        result.append(numberE)
-    print(numberE)
+        # numberE = "your exponent e = " + str(e)
+        # result.append(numberE)
+        result.append(str(e))
+    # print(numberE)
 
     # Public key: publish N = pq and e
     public = (e, n)
-    publicKey = "Public Key is: " + str(public) + ". Publish your N and e"
-    result.append(publicKey)
+    # publicKey = "Public Key is: " + str(public) + ". Publish your N and e"
+    # result.append(publicKey)
+    result.append(str(public))
 
     # input message #
     message = int(input("What would you like to encrypt or decrypt?: "))
     print(f"Your message is: {message}")
 
     enc_msg = rsa_encrypt(public, message)
-    ciphertext = "Your encrypted message is: " + str(enc_msg)
-    result.append(ciphertext)
-    print(ciphertext)
+    # ciphertext = "Your encrypted message is: " + str(enc_msg)
+    # result.append(ciphertext)
+    # print(ciphertext)
+    result.append(str(enc_msg))
 
     # d, Private and Public Keys
     # calculation of 'd', private key, and public key.
     # eugcd(e, r)
 
     d = mul_inverse(e, r)
-    numberD = "your d = " + str(d)
-    result.append(numberD)
-    print(numberD)
+    # numberD = "your d = " + str(d)
+    # result.append(numberD)
+    # print(numberD)
+    result.append(str(d))
 
     # Private key, 
     private = (d, n)
-    privateKey = "Private Key is: " + str(private) + ". Do not give this to anyone"
-    result.append(privateKey)
-    print(privateKey)
+    # privateKey = "Private Key is: " + str(private) + ". Do not give this to anyone"
+    # result.append(privateKey)
+    # print(privateKey)
+    result.append(str(private))
 
     dec_msg = rsa_decrypt(private, enc_msg)
-    plaintext = "Your decrypted message is: " + str(dec_msg)
-    result.append(plaintext)
-    print(plaintext)
+    # plaintext = "Your decrypted message is: " + str(dec_msg)
+    # result.append(plaintext)
+    # print(plaintext)
+    result.append(str(dec_msg))
 
     return result
 
