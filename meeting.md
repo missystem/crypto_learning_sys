@@ -191,10 +191,11 @@
 		- Design further web pages
 	- **Donna**:
 		- Finished Explanation and examples for ElGamal by the end of today.
-		- After John is done with his code reqrite the explanations to match his output.
+		- After John is done with his code rewrite the explanations to match his output.
 	- **Xuehai**:
 		- Implement "The Dice": the user will click a dice so we can generate a random number that works for them.
-	- **John**: Fix the interactive page for RSA.
+		- After Donna send the method and example for Elgamal, add that to the wepage.
+	- **John**: Fix the interactive page for RSA by the end of this weekend (Sunday at Midnight)
 
 	
 
