@@ -10,6 +10,8 @@ Date: 11/13/2020
 from RSA import *
 from DH import *
 from Elgamal import *
+from substitution import *
+
 
 def main():
     rsa_result = rsa(233, 2333, 97, 345)
@@ -28,6 +30,13 @@ def main():
     elgamal_result = elgamal(23333, 233, 776, 456, 345)
     print(elgamal_result)
     # ['23333', '233', '776', '19729', '456', '345', '(16065, 19636)', '345']
+    print()
+
+    print("[message, generatedKey, encryptedMsg, decryptedMsg]")
+    message = "Hi! How are you? I am good, thank you."
+    sub_result = substitution(message)
+    print(sub_result)
+    print()
 
 
 if __name__ == '__main__':
