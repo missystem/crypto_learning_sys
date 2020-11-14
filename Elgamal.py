@@ -98,12 +98,12 @@ def Elgamal_decrypt(enc_msg: int, p: int, a:int) -> int:
     """
     c1, c2 = enc_msg
     x = mul_inverse(c1 ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
-    print(f"multiplicative inverse of c1^a mod p: {x}")
+    # print(f"multiplicative inverse of c1^a mod p: {x}")
     dec_msg = (x * c2) % p
     return dec_msg
 
 
-def elgamal(p: int, g: int, a: int, k: int, m: int)->list:
+def elgamal(p: int, g: int, a: int, k: int, m: int) -> list:
     """
     return ["0"] if p is not prime
     return [p, g, "0"] if a is not valid
