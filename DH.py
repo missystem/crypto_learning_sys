@@ -50,7 +50,10 @@ def diffie_hellman() -> list:
     """
     return ["0"] if p is not prime
     else return a list:
-    [p, g, a, b, A, B, A', B', ]
+    [p, g, a, b, A, B, A', B']
+
+    example:
+    ['23', '9', '4', '3', '6', '16', '9', '9']
     """
     result = []
 
