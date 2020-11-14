@@ -84,7 +84,6 @@ def rsa_encrypt(public: tuple, m: int) -> int:
     e, N = public
     # ciphertext = (m ** e) % N
     ciphertext = fast_powering(m, e, N)
-    # return the array of bytes
     return ciphertext
 
 
