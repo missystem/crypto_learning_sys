@@ -13,12 +13,11 @@ Date: 11/11/2020
 # mul_inverse(e: int, r: int) -> int
 # Elgamal_encrypt(m: int, p: int, g: int, bigA: int, k: int)->(int, int)
 # Elgamal_decrypt(enc_msg: int, p: int, a:int) -> int
-# elgamal() -> list
+# elgamal()->list
 # ------------------------------------------------------------------------------------------------ #
 
 
 import math
-import random
 
 
 def prime_check(a: int) -> bool:
@@ -34,6 +33,23 @@ def prime_check(a: int) -> bool:
             if not (a % i):
                 return False
     return True
+
+
+def fast_powering(n: int, pow: int, modulus: int) -> int:
+    """ Implementation of fast powering algorithm
+    :param n: base integer
+    :param pow: exponent
+    :param modulus: integer modulus
+    :return: res = n**pow (mod modulus)
+    """
+    res = 1
+    n = n % modulus
+    while pow > 0:
+        if int(pow) & 1:
+            res = (res * n) % modulus
+        pow = int(pow) >> 1
+        n = (n * n) % modulus
+    return res
 
 
 def gcdEx(a: int, b: int) -> (int, int, int):
@@ -69,7 +85,7 @@ def Elgamal_encrypt(m: int, p: int, g: int, bigA: int, k: int)->(int, int):
         c2 ≡ mA^k (mod p)
     return ciphertext (c1, c2)
     """
-    c1 = (g ** k) % p
+    c1 = fast_powering(g, k, p)
     c2 = (m * (bigA ** k)) % p
     return (c1, c2)
 
@@ -84,8 +100,6 @@ def Elgamal_decrypt(enc_msg: int, p: int, a:int) -> int:
     x = mul_inverse(c1 ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
     print(f"multiplicative inverse of c1^a mod p: {x}")
     dec_msg = (x * c2) % p
-    # x = c1 ** a % p
-    # dec_msg = c2 / x
     return dec_msg
 
 
@@ -124,7 +138,7 @@ def elgamal()->list:
         result.append(str(a))
 
     # Public key A = g^a (mod p), publish it #
-    bigA = (g ** a) % p
+    bigA = fast_powering(g, a, p)
     result.append(str(bigA))
 
     # Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1).
