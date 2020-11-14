@@ -9,11 +9,8 @@ Date: 11/13/2020
 # ------------------------------------- Function Declaration ------------------------------------- #
 # prime_check(a: int) -> bool
 # fast_powering(n: int, pow: int, modulus: int) -> int
-# diffie_hellman() -> list
+# diffie_hellman(p: int, g: int, a: int, b: int) -> list
 # ------------------------------------------------------------------------------------------------ #
-
-
-import math
 
 
 def prime_check(a: int) -> bool:

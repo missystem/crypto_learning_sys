@@ -1,9 +1,20 @@
 """
 Author: Missy Shi
-Information: Implementation of RSA Key Exchange
+
+Description: Implementation of RSA Key Exchange
+
+Date: 11/03/2020
 """
 
-import math
+# ------------------------------------- Function Declaration ------------------------------------- #
+# prime_check(a: int) -> bool
+# egcd(e: int, r: int) -> int
+# gcdEx(a: int, b: int) -> (int, int, int)
+# mul_inverse(e: int, r: int) -> int
+# rsa_encrypt(public: tuple, m: int) -> int
+# rsa_decrypt(private: int, c: int) -> int
+# rsa(p: int, q: int, e: int, message: int) -> list
+# ------------------------------------------------------------------------------------------------ #
 
 
 def prime_check(a: int) -> bool:
@@ -19,47 +30,11 @@ def prime_check(a: int) -> bool:
     return True
 
 
-def egcd(e, r):
+def egcd(e: int, r: int) -> int:
     """ gcd(e,(p-1)(q-1)) = 1 """
     while r != 0:
         e, r = r, e % r
     return e
-
-
-def eugcd(e, r):
-    """ Euclid's Algorithm """
-    for i in range(1, r):
-        while e != 0:
-            a, b = r//e, r % e
-            if b != 0:
-                print("%d = %d*(%d) + %d" % (r, a, e, b))
-            r = e
-            e = b
-
-
-def eea(a, b):
-    """ Extended Euclidean Algorithm """
-    if a % b == 0:
-        return (b, 0, 1)
-    else:
-        gcd, s, t = eea(b, a % b)
-        s = s-((a//b) * t)
-        # print("%d = %d*(%d) + (%d)*(%d)" % (gcd, a, t, s, b))
-        return (gcd, t, s)
-
-
-def mult_inv(e, r):
-    """ Multiplicative InverseMultiplicative Inverse """
-    gcd, s, _ = eea(e, r)
-    if gcd != 1:
-        return None
-    else:
-        if s < 0:
-            print("s=%d. Since %d is less than 0, s = s(modr), i.e., s=%d." %
-                  (s, s, s % r))
-        elif s > 0:
-            print("s=%d." % (s))
-        return s % r
 
 
 def gcdEx(a: int, b: int) -> (int, int, int):
@@ -95,7 +70,7 @@ def rsa_encrypt(public: tuple, m: int) -> int:
     return ciphertext
 
 
-def rsa_decrypt(private, c):
+def rsa_decrypt(private: int, c: int) -> int:
     """return decrypted message"""
     d, n = private
     # print(f"c^d = {c**d}")
@@ -103,7 +78,7 @@ def rsa_decrypt(private, c):
     return plaintext
 
 
-def rsa(p, q, e, message):
+def rsa(p: int, q: int, e: int, message: int) -> list:
     """
     return ["0", q] if p is not prime
     return [p, "0"] if q is not prime
@@ -178,9 +153,9 @@ def rsa(p, q, e, message):
     return result
 
 
-def main():
-    print(rsa())
-
-
-if __name__ == "__main__":
-    main()
+# def main():
+#     print(rsa())
+#
+#
+# if __name__ == "__main__":
+#     main()
