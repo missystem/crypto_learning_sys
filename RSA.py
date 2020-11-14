@@ -103,18 +103,18 @@ def rsa_decrypt(private, c):
     return plaintext
 
 
-def rsa():
+def rsa(p, q, e, message):
     """
     return ["0", q] if p is not prime
     return [p, "0"] if q is not prime
     return ["0", "0"] if p and q both are not prime
     return [p, q, N, r, "0"] if e is not valid
-    else return: [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
+    else return: [p, q, N, r, e, publicKey, message, encryptedMsg, d, privateKey, decryptedMsg]
     """
     result = []
     # Input prime numbers p & q, Check if inputs are prime #
     # if not prime, return False, and ask to input again #
-    p = int(input("Enter a prime number for p: "))
+    # p = int(input("Enter a prime number for p: "))
     check_p = prime_check(p)
     if check_p == False:
         result.append("0")
@@ -122,7 +122,7 @@ def rsa():
         result.append(str(p))
 
     # Input prime numbers q & Check if inputs are prime #
-    q = int(input("Enter a prime number for q: "))
+    # q = int(input("Enter a prime number for q: "))
     check_q = prime_check(q)
     if check_q == False:
         result.append("0")
@@ -142,7 +142,7 @@ def rsa():
     result.append(str(r))
 
     # 'e' Value Calculation #
-    e = int(input("Enter an exponent e between 1 and 1000: "))
+    # e = int(input("Enter an exponent e between 1 and 1000: "))
     check_e = egcd(e, r)
     if check_e != 1:
         result.append("0")
@@ -155,17 +155,18 @@ def rsa():
     result.append(str(public))
 
     # input message #
-    message = int(input("What would you like to encrypt or decrypt?: "))
-    print(f"Your message is: {message}")
+    # message = int(input("What would you like to encrypt or decrypt?: "))
+    # print(f"Your message is: {message}")
+    result.append(str(message))
 
     # encrypt message #
     enc_msg = rsa_encrypt(public, message)
     result.append(str(enc_msg))
 
+    # Private key: d and N = pq (keep d private) #
     d = mul_inverse(e, r)
     result.append(str(d))
 
-    # Private key: d and N = pq (keep d private) #
     private = (d, n)
     result.append(str(private))
 
