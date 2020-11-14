@@ -109,7 +109,8 @@ def rsa(p, q, e, message):
     return [p, "0"] if q is not prime
     return ["0", "0"] if p and q both are not prime
     return [p, q, N, r, "0"] if e is not valid
-    else return: [p, q, N, r, e, publicKey, message, encryptedMsg, d, privateKey, decryptedMsg]
+    else return:
+    [p, q, N, r, e, publicKey, message, encryptedMsg, d, privateKey, decryptedMsg]
     """
     result = []
     # Input prime numbers p & q, Check if inputs are prime #
