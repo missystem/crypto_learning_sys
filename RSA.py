@@ -30,6 +30,23 @@ def prime_check(a: int) -> bool:
     return True
 
 
+def fast_powering(n: int, pow: int, modulus: int) -> int:
+    """ Implementation of fast powering algorithm
+    :param n: base integer
+    :param pow: exponent
+    :param modulus: integer modulus
+    :return: res = n**pow (mod modulus)
+    """
+    res = 1
+    n = n % modulus
+    while pow > 0:
+        if int(pow) & 1:
+            res = (res * n) % modulus
+        pow = int(pow) >> 1
+        n = (n * n) % modulus
+    return res
+
+
 def egcd(e: int, r: int) -> int:
     """ gcd(e,(p-1)(q-1)) = 1 """
     while r != 0:
@@ -65,16 +82,17 @@ def mul_inverse(e: int, r: int) -> int:
 def rsa_encrypt(public: tuple, m: int) -> int:
     """return encrypted message"""
     e, N = public
-    ciphertext = (m ** e) % N
+    # ciphertext = (m ** e) % N
+    ciphertext = fast_powering(m, e, N)
     # return the array of bytes
     return ciphertext
 
 
 def rsa_decrypt(private: int, c: int) -> int:
     """return decrypted message"""
-    d, n = private
-    # print(f"c^d = {c**d}")
-    plaintext = (c ** d) % n
+    d, N = private
+    # plaintext = (c ** d) % N
+    plaintext = fast_powering(c, d, N)
     return plaintext
 
 
