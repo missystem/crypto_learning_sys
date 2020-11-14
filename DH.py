@@ -46,7 +46,7 @@ def fast_powering(n: int, pow: int, modulus: int) -> int:
     return res
 
 
-def diffie_hellman(p->int, g->int, a->int, b->int) -> list:
+def diffie_hellman(p: int, g: int, a: int, b: int) -> list:
     """
     return ["0"] if p is not prime
     else return a list:
@@ -106,13 +106,12 @@ def diffie_hellman(p->int, g->int, a->int, b->int) -> list:
     # The values that they compute,
     # A′ and B′ respectively, are actually the same,
     # since A′ ≡ B^a ≡ (g^b)^a ≡ g^(ab) ≡ (g^a)^b ≡ A^b ≡ B′ (mod p)
-
     return result
 
 
-def main():
-    print(diffie_hellman())
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     print(diffie_hellman())
+#
+#
+# if __name__ == '__main__':
+#     main()
