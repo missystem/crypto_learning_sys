@@ -1,13 +1,27 @@
 """
 Author: Missy Shi
-Information: Implementation of The Elgamal Public Key Cryptosystem
+
+Description: Implementation of The Elgamal Public Key Cryptosystem
+
+Date: 11/11/2020
 """
+
+
+# ------------------------------------- Function Declaration ------------------------------------- #
+# prime_check(a: int) -> bool
+# gcdEx(a: int, b: int) -> (int, int, int)
+# mul_inverse(e: int, r: int) -> int
+# Elgamal_encrypt(m: int, p: int, g: int, bigA: int, k: int)->(int, int)
+# Elgamal_decrypt(enc_msg: int, p: int, a:int) -> int
+# elgamal() -> list
+# ------------------------------------------------------------------------------------------------ #
+
 
 import math
 import random
 
 
-def prime_check(a):
+def prime_check(a: int) -> bool:
     """check a number is prime or not
     if it is a prime return True
     else return False"""
@@ -47,12 +61,12 @@ def mul_inverse(e: int, r: int) -> int:
         return x % r
 
 
-def Elgamal_encrypt(m, p, g, bigA, k):
+def Elgamal_encrypt(m: int, p: int, g: int, bigA: int, k: int)->(int, int):
     """
     random element k
     Use public key A to compute
-        c1 = g^k (mod p)
-        c2 = mA^k (mod p)
+        c1 ≡ g^k (mod p)
+        c2 ≡ mA^k (mod p)
     return ciphertext (c1, c2)
     """
     c1 = (g ** k) % p
@@ -60,24 +74,30 @@ def Elgamal_encrypt(m, p, g, bigA, k):
     return (c1, c2)
 
 
-def Elgamal_decrypt(enc_msg, p, a):
+def Elgamal_decrypt(enc_msg: int, p: int, a:int) -> int:
     """
-    Compute dec_msg = (c1^a )^(−1) · c2 (mod p)
+    Compute dec_msg = (c1^a)^(−1) · c2 (mod p)
     dec_msg = plaintext m
     return plaintext dec_msg
     """
     c1, c2 = enc_msg
     x = mul_inverse(c1 ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
+    print(f"multiplicative inverse of c1^a mod p: {x}")
     dec_msg = (x * c2) % p
+    # x = c1 ** a % p
+    # dec_msg = c2 / x
     return dec_msg
 
 
-def elgamal():
+def elgamal()->list:
     """
     return ["0"] if p is not prime
     return [p, g, "0"] if a is not valid
     else return a list:
-    [p, g, a, publicKeyA, k, encryptedMsg, decryptedMsg]
+    [p, g, a, publicKeyA, k, input_message, encryptedMsg, decryptedMsg]
+
+    example:
+    ['23333', '233', '776', '19729', '456', '345', '(16065, 19636)', '345']
     """
     result = []
     # Input prime numbers p, Check if inputs are prime #
@@ -97,7 +117,7 @@ def elgamal():
     # Input a secret number a: 1 ≤ a ≤ p-1, A = g^a (mod p) #
     a = int(input("Input a secret number a to act as your private key: "))
     # if a is not valid:
-    if a < 1 or a > p-1:
+    if a < 1 or a > p-1 or math.gcd(a, p) != 1:
         result.append("0")
         return result
     else:
@@ -110,11 +130,18 @@ def elgamal():
     # Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1).
     # The number k is called a random element;
     # it exists for the sole purpose of encrypting a single message.
-    k = random.randint(10, 100)
+    # k = random.randint(10, 100)
+    k = int(input("Enter a int for your random element k: "))
+    if math.gcd(k, p) != 1:
+        result.append("0")
+        return result
+    else:
+        result.append(str(k))
 
     # message the user wants to encrypt #
     m = int(input("What would you like to encrypt or decrypt?: "))
     print(f"Your message is: {m}")
+    result.append(str(m))
 
     # encrypt the message #
     enc_msg = Elgamal_encrypt(m, p, g, bigA, k)
