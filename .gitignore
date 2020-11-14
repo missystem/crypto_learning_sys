@@ -8,3 +8,6 @@
 .idea/workspace.xml
 __pycache__/rsa_method.cpython-37.pyc
 .idea/crypto_learning_sys.iml
+__pycache__/DH.cpython-37.pyc
+__pycache__/Elgamal.cpython-37.pyc
+__pycache__/RSA.cpython-37.pyc
