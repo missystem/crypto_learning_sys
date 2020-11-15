@@ -1,9 +1,20 @@
 """
 Author: Missy Shi
-Information: Implementation of RSA Key Exchange
+
+Description: Implementation of RSA Key Exchange
+
+Date: 11/03/2020
 """
 
-import math
+# ------------------------------------- Function Declaration ------------------------------------- #
+# prime_check(a: int) -> bool
+# egcd(e: int, r: int) -> int
+# gcdEx(a: int, b: int) -> (int, int, int)
+# mul_inverse(e: int, r: int) -> int
+# rsa_encrypt(public: tuple, m: int) -> int
+# rsa_decrypt(private: int, c: int) -> int
+# rsa(p: int, q: int, e: int, message: int) -> list
+# ------------------------------------------------------------------------------------------------ #
 
 
 def prime_check(a: int) -> bool:
@@ -19,47 +30,28 @@ def prime_check(a: int) -> bool:
     return True
 
 
-def egcd(e, r):
+def fast_powering(n: int, pow: int, modulus: int) -> int:
+    """ Implementation of fast powering algorithm
+    :param n: base integer
+    :param pow: exponent
+    :param modulus: integer modulus
+    :return: res = n**pow (mod modulus)
+    """
+    res = 1
+    n = n % modulus
+    while pow > 0:
+        if int(pow) & 1:
+            res = (res * n) % modulus
+        pow = int(pow) >> 1
+        n = (n * n) % modulus
+    return res
+
+
+def egcd(e: int, r: int) -> int:
     """ gcd(e,(p-1)(q-1)) = 1 """
     while r != 0:
         e, r = r, e % r
     return e
-
-
-def eugcd(e, r):
-    """ Euclid's Algorithm """
-    for i in range(1, r):
-        while e != 0:
-            a, b = r//e, r % e
-            if b != 0:
-                print("%d = %d*(%d) + %d" % (r, a, e, b))
-            r = e
-            e = b
-
-
-def eea(a, b):
-    """ Extended Euclidean Algorithm """
-    if a % b == 0:
-        return (b, 0, 1)
-    else:
-        gcd, s, t = eea(b, a % b)
-        s = s-((a//b) * t)
-        # print("%d = %d*(%d) + (%d)*(%d)" % (gcd, a, t, s, b))
-        return (gcd, t, s)
-
-
-def mult_inv(e, r):
-    """ Multiplicative InverseMultiplicative Inverse """
-    gcd, s, _ = eea(e, r)
-    if gcd != 1:
-        return None
-    else:
-        if s < 0:
-            print("s=%d. Since %d is less than 0, s = s(modr), i.e., s=%d." %
-                  (s, s, s % r))
-        elif s > 0:
-            print("s=%d." % (s))
-        return s % r
 
 
 def gcdEx(a: int, b: int) -> (int, int, int):
@@ -90,31 +82,32 @@ def mul_inverse(e: int, r: int) -> int:
 def rsa_encrypt(public: tuple, m: int) -> int:
     """return encrypted message"""
     e, N = public
-    ciphertext = (m ** e) % N
-    # return the array of bytes
+    # ciphertext = (m ** e) % N
+    ciphertext = fast_powering(m, e, N)
     return ciphertext
 
 
-def rsa_decrypt(private, c):
+def rsa_decrypt(private: int, c: int) -> int:
     """return decrypted message"""
-    d, n = private
-    # print(f"c^d = {c**d}")
-    plaintext = (c ** d) % n
+    d, N = private
+    # plaintext = (c ** d) % N
+    plaintext = fast_powering(c, d, N)
     return plaintext
 
 
-def rsa():
+def rsa(p: int, q: int, e: int, message: int) -> list:
     """
     return ["0", q] if p is not prime
     return [p, "0"] if q is not prime
     return ["0", "0"] if p and q both are not prime
     return [p, q, N, r, "0"] if e is not valid
-    else return: [p, q, N, r, e, publicKey, encryptedMsg, d, privateKey, decryptedMsg]
+    else return:
+    [p, q, N, r, e, publicKey, message, encryptedMsg, d, privateKey, decryptedMsg]
     """
     result = []
     # Input prime numbers p & q, Check if inputs are prime #
     # if not prime, return False, and ask to input again #
-    p = int(input("Enter a prime number for p: "))
+    # p = int(input("Enter a prime number for p: "))
     check_p = prime_check(p)
     if check_p == False:
         result.append("0")
@@ -122,7 +115,7 @@ def rsa():
         result.append(str(p))
 
     # Input prime numbers q & Check if inputs are prime #
-    q = int(input("Enter a prime number for q: "))
+    # q = int(input("Enter a prime number for q: "))
     check_q = prime_check(q)
     if check_q == False:
         result.append("0")
@@ -142,7 +135,7 @@ def rsa():
     result.append(str(r))
 
     # 'e' Value Calculation #
-    e = int(input("Enter an exponent e between 1 and 1000: "))
+    # e = int(input("Enter an exponent e between 1 and 1000: "))
     check_e = egcd(e, r)
     if check_e != 1:
         result.append("0")
@@ -155,17 +148,18 @@ def rsa():
     result.append(str(public))
 
     # input message #
-    message = int(input("What would you like to encrypt or decrypt?: "))
-    print(f"Your message is: {message}")
+    # message = int(input("What would you like to encrypt or decrypt?: "))
+    # print(f"Your message is: {message}")
+    result.append(str(message))
 
     # encrypt message #
     enc_msg = rsa_encrypt(public, message)
     result.append(str(enc_msg))
 
+    # Private key: d and N = pq (keep d private) #
     d = mul_inverse(e, r)
     result.append(str(d))
 
-    # Private key: d and N = pq (keep d private) #
     private = (d, n)
     result.append(str(private))
 
@@ -176,9 +170,9 @@ def rsa():
     return result
 
 
-def main():
-    print(rsa())
-
-
-if __name__ == "__main__":
-    main()
+# def main():
+#     print(rsa())
+#
+#
+# if __name__ == "__main__":
+#     main()

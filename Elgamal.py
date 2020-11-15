@@ -98,17 +98,17 @@ def Elgamal_decrypt(enc_msg: int, p: int, a:int) -> int:
     """
     c1, c2 = enc_msg
     x = mul_inverse(c1 ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
-    print(f"multiplicative inverse of c1^a mod p: {x}")
+    # print(f"multiplicative inverse of c1^a mod p: {x}")
     dec_msg = (x * c2) % p
     return dec_msg
 
 
-def elgamal()->list:
+def elgamal(p: int, g: int, a: int, k: int, m: int) -> list:
     """
     return ["0"] if p is not prime
     return [p, g, "0"] if a is not valid
     else return a list:
-    [p, g, a, publicKeyA, k, input_message, encryptedMsg, decryptedMsg]
+    [p, g, a, publicKeyA, k, message, encryptedMsg, decryptedMsg]
 
     example:
     ['23333', '233', '776', '19729', '456', '345', '(16065, 19636)', '345']
@@ -116,7 +116,7 @@ def elgamal()->list:
     result = []
     # Input prime numbers p, Check if inputs are prime #
     # if not prime, return False, and ask to input again #
-    p = int(input("Input a large prime p: "))
+    # p = int(input("Input a large prime p: "))
     check_p = prime_check(p)
     if check_p == False:
         result.append("0")
@@ -125,11 +125,11 @@ def elgamal()->list:
         result.append(str(p))
 
     # Input an element g: c1 = g^k (mod p) #
-    g = int(input("Input an element g modulo p of large (prime) order: "))
+    # g = int(input("Input an element g modulo p of large (prime) order: "))
     result.append(str(g))
 
     # Input a secret number a: 1 ≤ a ≤ p-1, A = g^a (mod p) #
-    a = int(input("Input a secret number a to act as your private key: "))
+    # a = int(input("Input a secret number a to act as your private key: "))
     # if a is not valid:
     if a < 1 or a > p-1 or math.gcd(a, p) != 1:
         result.append("0")
@@ -145,7 +145,7 @@ def elgamal()->list:
     # The number k is called a random element;
     # it exists for the sole purpose of encrypting a single message.
     # k = random.randint(10, 100)
-    k = int(input("Enter a int for your random element k: "))
+    # k = int(input("Enter a int for your random element k: "))
     if math.gcd(k, p) != 1:
         result.append("0")
         return result
@@ -153,8 +153,8 @@ def elgamal()->list:
         result.append(str(k))
 
     # message the user wants to encrypt #
-    m = int(input("What would you like to encrypt or decrypt?: "))
-    print(f"Your message is: {m}")
+    # m = int(input("What would you like to encrypt or decrypt?: "))
+    # print(f"Your message is: {m}")
     result.append(str(m))
 
     # encrypt the message #

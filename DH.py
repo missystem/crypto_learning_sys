@@ -9,11 +9,8 @@ Date: 11/13/2020
 # ------------------------------------- Function Declaration ------------------------------------- #
 # prime_check(a: int) -> bool
 # fast_powering(n: int, pow: int, modulus: int) -> int
-# diffie_hellman() -> list
+# diffie_hellman(p: int, g: int, a: int, b: int) -> list
 # ------------------------------------------------------------------------------------------------ #
-
-
-import math
 
 
 def prime_check(a: int) -> bool:
@@ -46,7 +43,7 @@ def fast_powering(n: int, pow: int, modulus: int) -> int:
     return res
 
 
-def diffie_hellman() -> list:
+def diffie_hellman(p: int, g: int, a: int, b: int) -> list:
     """
     return ["0"] if p is not prime
     else return a list:
@@ -60,7 +57,7 @@ def diffie_hellman() -> list:
     # public number p & g #
     # Input prime p, Check if input is prime #
     # if not prime, return False, and ask to input again #
-    p = int(input("Enter a prime number for p: "))
+    # p = int(input("Enter a prime number for p: "))
     check_p = prime_check(p)
     if check_p == False:
         result.append("0")
@@ -68,15 +65,15 @@ def diffie_hellman() -> list:
         result.append(str(p))
 
     # it is best if they choose g such that its order in Fp* is a large prime.
-    g = int(input("Input an element g modulo p of large (prime) order: "))
+    # g = int(input("Input an element g modulo p of large (prime) order: "))
     result.append(str(g))
 
     # A picks a secret integer a, do not reveal to anyone
-    a = int(input("Enter a secret integer a: "))
+    # a = int(input("Enter a secret integer a: "))
     result.append(str(a))
 
     # B picks a secret integer b, do not reveal to anyone
-    b = int(input("Enter a secret integer b: "))
+    # b = int(input("Enter a secret integer b: "))
     result.append(str(b))
 
     # A computes A ≡ g^a (mod p):
@@ -106,13 +103,12 @@ def diffie_hellman() -> list:
     # The values that they compute,
     # A′ and B′ respectively, are actually the same,
     # since A′ ≡ B^a ≡ (g^b)^a ≡ g^(ab) ≡ (g^a)^b ≡ A^b ≡ B′ (mod p)
-
     return result
 
 
-def main():
-    print(diffie_hellman())
-
-
-if __name__ == '__main__':
-    main()
+# def main():
+#     print(diffie_hellman())
+#
+#
+# if __name__ == '__main__':
+#     main()
