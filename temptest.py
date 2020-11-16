@@ -11,10 +11,25 @@ from RSA import *
 from DH import *
 from Elgamal import *
 from substitution import *
+from prime_list import *
 
 
 def main():
-    rsa_result = rsa(233, 2333, 97, 345)
+    # generate 20 prime numbers
+    num_prime = 2
+    prime_list = randomNumGenerator(num_prime)
+    p = random.choice(prime_list)
+    prime_list.remove(p)
+    q = random.choice(prime_list)
+    prime_list.remove(q)
+    print(f"random item from list is: {p}, and {q}")
+
+    # rsa_result = rsa(233, 2333, 97, 345)
+    e = random.randint(1, 1000)
+    print(f"number e is {e}")
+    message = random.randint(100, 1000)
+    print(f"message is {message}")
+    rsa_result = rsa(p, q, e, message)
     print("[p, q, N, r, e, publicKey, message, encryptedMsg, d, privateKey, decryptedMsg]")
     print(rsa_result)
     print()
