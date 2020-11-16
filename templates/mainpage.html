@@ -40,25 +40,54 @@
                 for (var i = 2; i < 25; i++) {
                     var id = "word" + i;
                     document.getElementById(id).style.textDecoration = "none";
+                    document.getElementById(id).innerHTML = "";
+                    var jq_id = "#" + id;
+                    $(jq_id).off("click");
                 }
                 var web = "https://bigprimes.org";
                 document.getElementById("word2").innerHTML = "Before we begin the encryption method, there are a few things we must set up. ";
                 document.getElementById("word3").style.textDecoration = 'underline';
                 document.getElementById("word3").innerHTML = "Step 1: pick two -large- primes";
+                $("#word3").click(function() {
+                    $("#word4").fadeToggle();
+                    $("#word5").fadeToggle();
+                    $("#word6").fadeToggle();
+                });
                 document.getElementById("word4").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The bigger the prime, the more secure the system is. For better visualization and understanding, I will use two smaller primes:  p = 11  and q = 3";
                 document.getElementById("word5").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp If you want to try larger numbers, I would suggest checking out this website: " + web.link("https://bigprimes.org");
                 document.getElementById("word6").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Easy enough! Next step! ";
                 document.getElementById("word7").style.textDecoration = 'underline';
+                $("#word7").click(function() {
+                    $("#word8").fadeToggle();
+                    $("#word9").fadeToggle();
+                    $("#word10").fadeToggle();
+                    $("#word11").fadeToggle();
+                });
                 document.getElementById("word7").innerHTML = "Step 2: find N(modulus) and Euler’s Phi";
                 document.getElementById("word8").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp N is the product of the two primes we picked earlier, it’s simply: N = p*q";
                 document.getElementById("word9").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp With my example, N = 3*11 = 33";
                 document.getElementById("word10").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp As for Euler’s Phi function, it’s:  ϕ = (p-1)(q-1).       (attach popup 1)";
                 document.getElementById("word11").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp With the nubes above, it is: (11-1)(3-1)=20";
                 document.getElementById("word12").style.textDecoration = 'underline';
+                $("#word12").click(function() {
+                    $("#word13").fadeToggle();
+                    $("#word14").fadeToggle();
+                });
                 document.getElementById("word12").innerHTML = "Step 3: Find e, the public exponent";
                 document.getElementById("word13").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp We must choose an integer e such that: 1 < e < ϕ , and: gcd(e,ϕ) = 1, (If you can’t think of one, we can find a random e for you)!";
                 document.getElementById("word14").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp We must find an example such that gcd(e,20) = 1. 3 fits this criteria! So, e = 3.";
                 document.getElementById("word15").style.textDecoration = 'underline';
+                $("#word15").click(function() {
+                    $("#word16").fadeToggle();
+                    $("#word17").fadeToggle();
+                    $("#word18").fadeToggle();
+                    $("#word19").fadeToggle();
+                    $("#word20").fadeToggle();
+                    $("#word21").fadeToggle();
+                    $("#word22").fadeToggle();
+                    $("#word23").fadeToggle();
+                    $("#word24").fadeToggle();
+                });
                 document.getElementById("word15").innerHTML = "Step 4: Send out the public key!";
                 document.getElementById("word16").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Public key = (N,e) which in our example is (33,3)";
                 document.getElementById("word17").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Now the encryption begins!";
@@ -87,16 +116,33 @@
                     var id = "word" + i;
                     document.getElementById(id).style.textDecoration = "none";
                     document.getElementById(id).innerHTML = "";
+                    var jq_id = "#" + id;
+                    $(jq_id).off("click");
                 }
                 document.getElementById("word2").innerHTML = "Recall, We already know p, q, and the public key (N,e). ";
                 document.getElementById("word3").innerHTML = "There is one simple step Bob has to do before starting the encryption:";
                 document.getElementById("word4").style.textDecoration = 'underline';
+                $("#word4").click(function() {
+                    $("#word5").fadeToggle();
+                    $("#word6").fadeToggle();
+                    $("#word7").fadeToggle();
+                    $("#word8").fadeToggle();
+                });
                 document.getElementById("word4").innerHTML = "Generate private key";
                 document.getElementById("word5").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp For this step, Bob has to compute the secret exponent d such that: 1<d<ϕ, and ed ≡ 1 mod ϕ (attach popup 2)";
                 document.getElementById("word6").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp In our example, we must find a value such that 3d ≡ 1 mod 20";
                 document.getElementById("word7").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Using simple methods learned in discrete math, we are looking for a d such that 20 divides 3d-1. Since our numbers are very small we can test and see that 7 works. d = 7.";
                 document.getElementById("word8").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp So the private key is: which in our example is (33,7)";
                 document.getElementById("word9").style.textDecoration = 'underline';
+                $("#word9").click(function() {
+                    $("#word10").fadeToggle();
+                    $("#word11").fadeToggle();
+                    $("#word12").fadeToggle();
+                    $("#word13").fadeToggle();
+                    $("#word14").fadeToggle();
+                    $("#word15").fadeToggle();
+                    $("#word16").fadeToggle();
+                });
                 document.getElementById("word9").innerHTML = "Now the decryption begins! ";
                 document.getElementById("word10").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bob only has to do one thing: ";
                 document.getElementById("word11").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Compute m’ ≡ c" + "d".sup() +" mod N. m’ will equal the plaintext m! "
