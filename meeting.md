@@ -229,7 +229,7 @@
 		- By Sunday night: ElGamal, Diffie-Hellman, and Substitution cipher should be completely done. 
 		- Fix the two errors in the RSA file.
 	- **Xuehai**:
-		- Will work with John to finish the website and make sure things 
+		- Will work with John to finish the website and make sure things are working together nicely! 
 	- **Donna**:
-		- Send method, example, and motivation to Xuehai (Key generated automatically) 
+		- Send method, example, and motivation to Xuehai (Key generated automatically).
 		- Documentation.
