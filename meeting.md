@@ -200,9 +200,33 @@
 	- **John**: Fix the interactive page for RSA by the end of this weekend (Sunday at Midnight)
 
 	
+---
 
+### 11/16 M: ALL members
+* **Current Progress**: 
+	- **Missy**: 
+		- She sent out an updated design for the website that we should follow. 
+		- She finished substitution cipher, and Diffie-Hellman. 
+		- Also, made a new file for generating prime numbers to implement the dice-thing! 
+	- **John**:
+		- Finished RSA and sent the code to Xuehai.
+		- there are some bugs that John has to fix.
+			- If the user clicks submit a couple of times then the decrypt module pops out multiple times. 
+			- The user should do things step by step. As in for example, they should find d first then m'. They should not be allowed to type m' before d. 
+	- **Xuehai**:
+		- website has been updated the website to missy's new design. 
+	- **Donna**:
+		- Finished the example and method or ElGamal.
+		- Has written the hints that John should show and wrote a detailed document on what to write for design.
+			- Missy then updated the design so her's is the msot recent.
 
-
-
+		
+* **TO DO**:
+	- **Missy**: 
+	- **John**:
+		- By Sunday night: ElGamal, Diffie-Hellman, and Substitution cipher should be completely done. 
+	- **Xuehai**:
+		- Will work with John to finish the website and make sure things 
+	- **Donna**:
 
 
