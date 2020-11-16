@@ -38,10 +38,14 @@ body {
 }
 
 .word {
-  margin:50px;
+  margin:25px;
   text-align: left;
   text-indent: 30px;
   font-family: "Comic Sans MS", serif;
+}
+
+.err {
+  color: red;
 }
 
 .button {

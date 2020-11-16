@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from RSA import rsa
 
 app = Flask(__name__)
 
@@ -8,14 +9,16 @@ def index():
     return render_template('mainpage.html')
 
 
-@app.route("/_choose", methods=['POST'])
-def choose():
-    userInput1 = request.form['userInput1']
-    userInput2 = request.form['userInput2']
-    userInput3 = request.form['userInput3']
-    print(userInput1)
-    print(userInput2)
-    print(userInput3)
+@app.route("/process", methods=['POST','GET'])
+def process():
+    input1 = request.form['userInput1']
+    input2 = request.form['userInput2']
+    input3 = request.form['userInput3']
+    input4 = request.form['userInput4']
+    if input1 and input2 and input3 and input4:
+        result = rsa(int(input1), int(input2), int(input3), int(input4))
+        return jsonify(result)
+    return jsonify({'error': "Missing data!"})
 
 
 # @app.route("/_crypt", methods=['POST'])

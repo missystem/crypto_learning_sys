@@ -77,23 +77,44 @@
                     document.getElementById(id2).style.display = 'inline-block';
                 }
 
-                document.getElementById("text1").innerHTML = "Exponent e: &nbsp&nbsp&nbsp";
-                document.getElementById("text2").innerHTML = "Prime p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
-                document.getElementById("text3").innerHTML = "Prime q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text1").innerHTML = "Prime p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text2").innerHTML = "Prime q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text3").innerHTML = "Exponent e: &nbsp&nbsp&nbsp";
                 document.getElementById("text4").innerHTML = "text you want to encrypt: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             }
             else if (droptext1 == "RSA" && droptext2 == "Decrypt") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "RSA decrypt example!";
-                document.getElementById("word3").innerHTML = "";
-                document.getElementById("text1").style.display = 'inline-block';
-                document.getElementById("input1").style.display = 'inline-block';
-                document.getElementById("text2").style.display = 'inline-block';
-                document.getElementById("input2").style.display = 'inline-block';
-                document.getElementById("text3").style.display = 'inline-block';
-                document.getElementById("input3").style.display = 'inline-block';
-                document.getElementById("text4").style.display = 'inline-block';
-                document.getElementById("input4").style.display = 'inline';
+                for (var i = 2; i < 25; i++) {
+                    var id = "word" + i;
+                    document.getElementById(id).style.textDecoration = "none";
+                    document.getElementById(id).innerHTML = "";
+                }
+                document.getElementById("word2").innerHTML = "Recall, We already know p, q, and the public key (N,e). ";
+                document.getElementById("word3").innerHTML = "There is one simple step Bob has to do before starting the encryption:";
+                document.getElementById("word4").style.textDecoration = 'underline';
+                document.getElementById("word4").innerHTML = "Generate private key";
+                document.getElementById("word5").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp For this step, Bob has to compute the secret exponent d such that: 1<d<ϕ, and ed ≡ 1 mod ϕ (attach popup 2)";
+                document.getElementById("word6").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp In our example, we must find a value such that 3d ≡ 1 mod 20";
+                document.getElementById("word7").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Using simple methods learned in discrete math, we are looking for a d such that 20 divides 3d-1. Since our numbers are very small we can test and see that 7 works. d = 7.";
+                document.getElementById("word8").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp So the private key is: which in our example is (33,7)";
+                document.getElementById("word9").style.textDecoration = 'underline';
+                document.getElementById("word9").innerHTML = "Now the decryption begins! ";
+                document.getElementById("word10").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bob only has to do one thing: ";
+                document.getElementById("word11").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Compute m’ ≡ c" + "d".sup() +" mod N. m’ will equal the plaintext m! "
+                document.getElementById("word12").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp In our example we will have ";
+                document.getElementById("word13").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Alice sent Bob the ciphertext c = 13. ";
+                document.getElementById("word14").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bob will compute the following: ";
+                document.getElementById("word15").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp m’ ≡ c" + "d".sup() + "mod N &hArr; 13" +"7".sup() +"mod 33 &hArr; 7";
+                document.getElementById("word16").innerHTML = "Note: We don’t have to compute the full value of 13^7. we can factor and make use of the fact that: ";
+                document.getElementById("word17").innerHTML = "A = bc mod n ⇔(b mod n)(c mod n) mod n";
+                document.getElementById("word18").innerHTML = "Done!  :)";
+
+
+                for (var i = 1; i < 5; i++) {
+                    var id1 = "text" + i;
+                    var id2 = "input" + i;
+                    document.getElementById(id1).style.display = 'inline-block';
+                    document.getElementById(id2).style.display = 'inline-block';
+                }
             }
             else if (droptext1 == "Diffie–Hellman key exchange" && droptext2 == "Encrypt") {
                 document.getElementById("word1").innerHTML = "";
@@ -202,6 +223,63 @@
                 e.style.display = 'inline-block';
         }
 
+        function show_dice1() {
+            var img = document.createElement('img');
+            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
+            img.width = "30";
+            var myp = document.getElementById("img1");
+            myp.appendChild(img);
+        }
+
+        function show_dice2() {
+            var img = document.createElement('img');
+            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
+            img.width = "30";
+            var myp = document.getElementById("img2");
+            myp.appendChild(img);
+        }
+
+        function show_dice3() {
+            var img = document.createElement('img');
+            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
+            img.width = "30";
+            var myp = document.getElementById("img3");
+            myp.appendChild(img);
+        }
+
+        $(document).ready(function(){
+			$("#butt").click(function(){
+                $.ajax({
+                    url: '/process',
+                    type: 'POST',
+                    data: {userInput1: $("#input1").val(),
+                           userInput2: $("#input2").val(),
+                           userInput3: $("#input3").val(),
+                           userInput4: $("#input4").val()}
+                })
+                .done(function(data) {
+                    if (data.length == 2) {
+                        if (data[0] == "0" && data[1] == "0") {
+                            $("#err1").html("p has to be a prime");
+                            $("#err2").html("q has to be a prime");
+                        }
+                        else if (data[0] == "0") {
+                            $("#err1").html("p has to be a prime");
+                        }
+                        else if (data[1] == "0") {
+                            $("#err2").html("q has to be a prime");
+                        }
+                    }
+                    else if (data.length == 5)
+                        $("#err3").html("e is not a valid number, please read the example one more time!");
+                    else {
+                        // show steps here
+                    }
+                });
+			});
+		});
+
+
     </script>
 </head>
 
@@ -215,126 +293,132 @@
 
 <br/><br/><br/>
 
-<form action="_choose" onsubmit="return validateForm()" method="POST">
-    <span class="dropdown_leading">
-        I want to learn: &nbsp&nbsp&nbsp
-    </span>
-    <span class="custom-dropdown big">
-        <select name="cryptosystem" id="opt" onchange="show_text(); why_system(); toggle_visibility();" >
-            <option value="none" selected disabled hidden>
-                Select an Option
-            </option>
-            <option>RSA</option>
-            <option>Diffie–Hellman key exchange</option>
-            <option>ElGamal encryption</option>
-        </select>
-    </span>
+<!-- <form action="_choose" onsubmit="return validateForm()" method="GET|POST"></form> -->
+<span class="dropdown_leading">
+    I want to learn: &nbsp&nbsp&nbsp
+</span>
+<span class="custom-dropdown big">
+    <select name="cryptosystem" id="opt" onchange="show_text(); why_system(); toggle_visibility();" >
+        <option value="none" selected disabled hidden>
+            Select an Option
+        </option>
+        <option>RSA</option>
+        <option>Diffie–Hellman key exchange</option>
+        <option>ElGamal encryption</option>
+    </select>
+</span>
 
-    <br/><br/>
+<br/><br/>
 
-    <span class="dropdown_leading">
-        How it works? &nbsp&nbsp&nbsp&nbsp&nbsp
-    </span>
-    <div class="custom-dropdown big">
-        <select name="en_de" id="ende" onchange="toggle_visibility(); show_text();">
-            <option value="none" selected disabled hidden>
-                Select an Option
-            </option>
-            <option>Encrypt</option>
-            <option>Decrypt</option>
-        </select>
-    </div>
+<span class="dropdown_leading">
+    How it works? &nbsp&nbsp&nbsp&nbsp&nbsp
+</span>
+<div class="custom-dropdown big">
+    <select name="en_de" id="ende" onchange="toggle_visibility(); show_text();">
+        <option value="none" selected disabled hidden>
+            Select an Option
+        </option>
+        <option>Encrypt</option>
+        <option>Decrypt</option>
+    </select>
+</div>
 
-    <br/><br/><br/><br/>
+<br/><br/><br/><br/>
 
-    <span id="whysys" onclick="click_motivation();">
+<span id="whysys" onclick="click_motivation();">
 
-    </span>
+</span>
 
-    <br/><br/>
+<br/><br/>
 
-    <p class="title" id="word1"></p>
+<p class="title" id="word1"></p>
 
-    <p class="word" id="word2"></p>
+<p class="word" id="word2"></p>
 
-    <p class="word" id="word3"></p>
+<p class="word" id="word3"></p>
 
-    <p class="word" id="word4"></p>
+<p class="word" id="word4"></p>
 
-    <p class="word" id="word5"></p>
+<p class="word" id="word5"></p>
 
-    <p class="word" id="word6"></p>
+<p class="word" id="word6"></p>
 
-    <p class="word" id="word7"></p>
+<p class="word" id="word7"></p>
 
-    <p class="word" id="word8"></p>
+<p class="word" id="word8"></p>
 
-    <p class="word" id="word9"></p>
+<p class="word" id="word9"></p>
 
-    <p class="word" id="word10"></p>
+<p class="word" id="word10"></p>
 
-    <p class="word" id="word11"></p>
+<p class="word" id="word11"></p>
 
-    <p class="word" id="word12"></p>
+<p class="word" id="word12"></p>
 
-    <p class="word" id="word13"></p>
+<p class="word" id="word13"></p>
 
-    <p class="word" id="word14"></p>
+<p class="word" id="word14"></p>
 
-    <p class="word" id="word15"></p>
+<p class="word" id="word15"></p>
 
-    <p class="word" id="word16"></p>
+<p class="word" id="word16"></p>
 
-    <p class="word" id="word17"></p>
+<p class="word" id="word17"></p>
 
-    <p class="word" id="word18"></p>
+<p class="word" id="word18"></p>
 
-    <p class="word" id="word19"></p>
+<p class="word" id="word19"></p>
 
-    <p class="word" id="word20"></p>
+<p class="word" id="word20"></p>
 
-    <p class="word" id="word21"></p>
+<p class="word" id="word21"></p>
 
-    <p class="word" id="word22"></p>
+<p class="word" id="word22"></p>
 
-    <p class="word" id="word23"></p>
+<p class="word" id="word23"></p>
 
-    <p class="word" id="word24"></p>
+<p class="word" id="word24"></p>
 
-    <p class="word" id="word25"></p>
+<p class="word" id="word25"></p>
 
-    <p class="word" id="word26"></p>
+<p class="word" id="word26"></p>
 
-    <p class="word" id="word27"></p>
+<p class="word" id="word27"></p>
 
-    <p class="word" id="word28"></p>
+<p class="word" id="word28"></p>
 
-    <p class="word" id="word29"></p>
+<p class="word" id="word29"></p>
 
-    <p class="word" id="word30"></p>
+<p class="word" id="word30"></p>
 
-    <p class="word" id="word31"></p>
+<p class="word" id="word31"></p>
 
-    <p class="word" id="word32"></p>
+<p class="word" id="word32"></p>
 
-    <p class="word" id="word33"></p>
+<p class="word" id="word33"></p>
 
-    <label for="lname" class="box_leading" id="text1"></label>
-    <input type="text" class="box" id="input1" name="userInput1"><br><br><br><br>
-    <label for="lname" class="box_leading" id="text2"></label>
-    <input type="text" class="box" id="input2" name="userInput2"><br><br><br><br>
-    <label for="lname" class="box_leading" id="text3"></label>
-    <input type="text" class="box" id="input3" name="userInput3"><br><br><br><br>
-    <label for="lname" class="box_leading" id="text4"></label>
-    <br><br><br>
-    <textarea type="text" class="text_box" id="input4" rows="10" cols="70"></textarea>
-    <br/><br/><br/><br/><br/><br/>
+<label for="lname" class="box_leading" id="text1"></label>
+<input type="text" class="box" id="input1" name="userInput1" onclick="show_dice1(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img1"></span>
+<p class="err" id="err1">&nbsp</p>
+<br><br>
+<label for="lname" class="box_leading" id="text2"></label>
+<input type="text" class="box" id="input2" name="userInput2" onclick="show_dice2(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img2"></span>
+<p class="err" id="err2">&nbsp</p>
+<br><br>
+<label for="lname" class="box_leading" id="text3"></label>
+<input type="text" class="box" id="input3" name="userInput3" placeholder="follow the example to find e" onclick="show_dice3(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
+<p class="err" id="err3">&nbsp</p>
+<br><br>
+<label for="lname" class="box_leading" id="text4"></label>
+<br><br>
+<textarea type="text" class="text_box" id="input4" name="userInput4" rows="10" cols="70"></textarea>
+<br/><br/><br/><br/><br/><br/>
 
-    <div>
-        <button class="button" id="butt">Try it yourself!</button>
-    </div>
+<div>
+    <button class="button" id="butt">Try it yourself!</button>
+</div>
 
 
-</form>
+<!-- </form> -->
 </body>
 </html>
