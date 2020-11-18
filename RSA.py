@@ -81,7 +81,7 @@ def mul_inverse(e: int, r: int) -> int:
 
 def rsa_encrypt(public: tuple, m: int) -> int:
     """return encrypted message"""
-    e, N = public
+    N, e = public
     # ciphertext = (m ** e) % N
     ciphertext = fast_powering(m, e, N)
     return ciphertext
@@ -144,7 +144,7 @@ def rsa(p: int, q: int, e: int, message: int) -> list:
         result.append(str(e))
 
     # Public key: publish N = pq and e #
-    public = (e, n)
+    public = (n, e)
     result.append(str(public))
 
     # input message #
