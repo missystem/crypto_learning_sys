@@ -30,6 +30,253 @@
             }
         }
 
+        function RSA_text() {
+            for (var i = 2; i < 75; i++) {
+                var id = "word" + i;
+                document.getElementById(id).style.textDecoration = "none";
+                document.getElementById(id).innerHTML = "";
+                var jq_id = "#" + id;
+                $(jq_id).off("click");
+            }
+            for (var i = 1; i < 5; i++) {
+                var id1 = "text" + i;
+                var id2 = "input" + i;
+                document.getElementById(id1).style.display = 'none';
+                document.getElementById(id2).style.display = 'none';
+            }
+            var web1 = "https://bigprimes.org";
+            $("#word2").html("Let's start with encryption: ");
+            $("#word3").html("Method");
+            document.getElementById("word4").style.textDecoration = 'underline';
+            $("#word4").html("Step 1 of 4");
+            $("#word5").html("Step 1: pick two -large- primes");
+            $("#word6").html("The bigger the prime, the more secure the system is.");
+            $("#word7").html("If you want to try larger numbers, I would suggest checking out this website: " + web1.link("https://bigprimes.org"));
+            $("#word5").hide();
+            $("#word6").hide();
+            $("#word7").hide();
+            $("#word4").click(function() {
+                $("#word5").fadeToggle();
+                $("#word6").fadeToggle();
+                $("#word7").fadeToggle();
+            });
+            document.getElementById("word8").style.textDecoration = 'underline';
+            $("#word8").html("Step 2 of 4");
+            $("#word9").html("Step 2: find N(modulus) and Euler’s Phi");
+            $("#word10").html("N is the product of the two primes we picked earlier");
+            $("#word11").html("As for Euler’s Phi function, it’s:  ϕ = (p-1)(q-1).");
+            $("#word9").hide();
+            $("#word10").hide();
+            $("#word11").hide();
+            $("#word8").click(function() {
+                $("#word9").fadeToggle();
+                $("#word10").fadeToggle();
+                $("#word11").fadeToggle();
+            });
+            document.getElementById("word12").style.textDecoration = 'underline';
+            $("#word12").html("Step 3 of 4");
+            $("#word13").html("Step 3: Find e, the public exponent");
+            $("#word14").html("We must choose an integer e such that: 1 < e < ϕ , and: gcd(e,ϕ) = 1");
+            document.getElementById("word15").style.textDecoration = 'underline';
+            $("#word15").html("Step 4 of 4");
+            $("#word16").html("Step 4: Send out the public key!");
+            $("#word15").html("Public key = (N,e) ");
+
+            for (var i = 1; i < 5; i++) {
+                var id1 = "text" + i;
+                var id2 = "input" + i;
+                document.getElementById(id1).style.display = 'inline-block';
+                document.getElementById(id2).style.display = 'inline-block';
+            }
+
+            document.getElementById("text1").innerHTML = "Prime p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            document.getElementById("text2").innerHTML = "Prime q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            document.getElementById("text3").innerHTML = "Exponent e: &nbsp&nbsp&nbsp";
+            document.getElementById("text4").innerHTML = "text you want to encrypt: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+        }
+
+        function dh_text() {
+            for (var i = 2; i < 25; i++) {
+                var id = "word" + i;
+                document.getElementById(id).style.textDecoration = "none";
+                document.getElementById(id).innerHTML = "";
+                var jq_id = "#" + id;
+                $(jq_id).off("click");
+            }
+            for (var i = 1; i < 5; i++) {
+                var id1 = "text" + i;
+                var id2 = "input" + i;
+                var id3 = "inputWrap" + i;
+                document.getElementById(id1).style.display = 'none';
+                document.getElementById(id2).style.display = 'none';
+                document.getElementById(id3).style.display = 'none';
+            }
+
+            $("#word2").html("Method");
+            $("#word3").html("--Encryption-----------------------------------");
+            document.getElementById("word4").style.textDecoration = 'underline';
+            $("#word4").html("Step 1 of 2");
+            $("#word5").html("Step 1: Public Parameter Creation");
+            $("#word6").html("A trusted party must choose and publish a (large) prime p, and an integer g having large prime order in F" + "*".sup() + "p".sub());
+            $("#word5").hide();
+            $("#word6").hide();
+            $("#word4").click(function() {
+                $("#word5").fadeToggle();
+                $("#word6").fadeToggle();
+            });
+            document.getElementById("word7").style.textDecoration = 'underline';
+            $("#word7").html("Step 2 of 2");
+            $("#word8").html("Step 2: Private Computations");
+            $("#word9").html("Alice:​ Alice chooses a secret integer a to compute A ≡ g" + "a".sup() + "(mod p)");
+            $("#word10").html("Bob:​ Bob chooses a secret integer b to compute B ≡ g" + "b".sup() + "(mod p)");
+            $("#word11").html("Now, Alice sends A to Bob, and Bob sends B to Alice. These values will be sent over the channel and are public.");
+            $("#word12").html("In the decrypt section We will show how Alice and Bob compute the shared secret value.");
+            $("#word8").hide();
+            $("#word9").hide();
+            $("#word10").hide();
+            $("#word11").hide();
+            $("#word12").hide();
+            $("#word7").click(function() {
+                $("#word8").fadeToggle();
+                $("#word9").fadeToggle();
+                $("#word10").fadeToggle();
+                $("#word11").fadeToggle();
+                $("#word12").fadeToggle();
+            });
+            $("#word4").hide();
+            $("#word7").hide();
+            $("#word3").click(function() {
+                $("#word4").fadeToggle();
+                $("#word7").fadeToggle();
+            });
+            $("#word13").html("--Decryption-----------------------------------");
+            $("#word14").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
+            $("#word15").html("AlicehassentA≡ g" + "a".sup() + "(mod p)to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
+            $("#word16").html("How to decrypt?");
+            $("#word17").html("Alice​: Alice will now compute B" + "a".sup() + "(mod p )");
+            $("#word18").html("Bob​: Bob will compute A" + "b".sup() + "(mod p)");
+            $("#word19").html("The shared secret value is: B" + "a".sup() + "≡ (g" + "b".sup() +")" + "a".sup() + "≡ g" + "ab".sup() + "≡ (g" + "a".sup()+ ")" + "b".sup() + "≡ A" +"b".sup() + "(mod p)");
+            $("#word20").html("Thus, they managed to create a private key over an insecure channel.");
+            $("#word14").hide();
+            $("#word15").hide();
+            $("#word16").hide();
+            $("#word17").hide();
+            $("#word18").hide();
+            $("#word19").hide();
+            $("#word20").hide();
+            $("#word13").click(function() {
+                $("#word14").fadeToggle();
+                $("#word15").fadeToggle();
+                $("#word16").fadeToggle();
+                $("#word17").fadeToggle();
+                $("#word18").fadeToggle();
+                $("#word19").fadeToggle();
+                $("#word20").fadeToggle();
+            });
+            $("#word3").hide();
+            $("#word13").hide();
+            $("#word2").click(function() {
+                $("#word3").fadeToggle();
+                $("#word13").fadeToggle();
+            });
+            $("#word21").html("Exmaple");
+            $("#word22").html("--Encryption-----------------------------------");
+            document.getElementById("word23").style.textDecoration = 'underline';
+            $("#word23").html("Step 1 of 2");
+            $("#word24").html("Step 1: Public Parameter Creation");
+            $("#word25").html("Alice and Bob agree to use the prime p = 941 and the primitive root g = 627.");
+            $("#word24").hide();
+            $("#word25").hide();
+            $("#word23").click(function() {
+                $("#word24").fadeToggle();
+                $("#word25").fadeToggle();
+            });
+            document.getElementById("word26").style.textDecoration = 'underline';
+            $("#word26").html("Step 2 of 2");
+            $("#word27").html("Step 2: Private Computations");
+            $("#word28").html("Alice: ​In our example, Alice chooses 347 and computes: A ≡ 627347 (mod 941) = 390");
+            $("#word29").html("Bob:​ In our example, Bob chooses 781 and computes: B ≡ 627781 (mod 971) = 691");
+            $("#word27").hide();
+            $("#word28").hide();
+            $("#word29").hide();
+            $("#word26").click(function() {
+                $("#word27").fadeToggle();
+                $("#word28").fadeToggle();
+                $("#word29").fadeToggle();
+            });
+            $("#word23").hide();
+            $("#word26").hide();
+            $("#word22").click(function() {
+                $("#word23").fadeToggle();
+                $("#word26").fadeToggle();
+            });
+            $("#word30").html("--Decryption-----------------------------------");
+            $("#word31").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
+            $("#word32").html("AlicehassentA≡ g" + "a".sup() + "(mod p) to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
+            $("#word33").html("In our example, p = 941, g = 627, a = 347, A = 390, b = 781, and B = 691.");
+            $("#word34").html("The shared secret value is: B" + "a".sup() + "≡ (g" + "b".sup() + ")" +"a".sup() + "≡ g" + "ab".sup() + "≡ (g" + "a".sup() + ")" + "b".sup() + "≡ A" + "b".sup() + "(mod p)");
+            $("#word35").html("In our example, B" + "a".sup() + "≡ A" + "b".sup() + "≡ 627" + "347*781".sup() + "(mod 941) ≡ 470");
+            $("#word36").html("Their secret shared value is 470.");
+            $("#word37").html("Thus, they managed to create a private key over an insecure channel.");
+            $("#word31").hide();
+            $("#word32").hide();
+            $("#word33").hide();
+            $("#word34").hide();
+            $("#word35").hide();
+            $("#word36").hide();
+            $("#word37").hide();
+            $("#word30").click(function() {
+                $("#word31").fadeToggle();
+                $("#word32").fadeToggle();
+                $("#word33").fadeToggle();
+                $("#word34").fadeToggle();
+                $("#word35").fadeToggle();
+                $("#word36").fadeToggle();
+                $("#word37").fadeToggle();
+            });
+            $("#word22").hide();
+            $("#word30").hide();
+            $("#word21").click(function() {
+                $("#word22").fadeToggle();
+                $("#word30").fadeToggle();
+            });
+            for (var i = 39; i <= 75; i++) {
+                var id = "#word" + i;
+                $(id).hide();
+            }
+            $("#word38").html("Ready to try it yourself?");
+            $("#word38").append("&nbsp&nbsp&nbsp&nbsp<button id='readyBtn'>Yeah!</button>");
+            $("#readyBtn").click(function() {
+                for (var i = 39; i <= 75; i++) {
+                    var id = "#word" + i;
+                    $(id).show();
+                }
+                for (var i = 1; i < 5; i++) {
+                    var id1 = "text" + i;
+                    var id2 = "input" + i;
+                    var id3 = "inputWrap" + i;
+                    document.getElementById(id1).style.display = 'inline-block';
+                    document.getElementById(id2).style.display = 'inline-block';
+                    document.getElementById(id3).style.display = 'inline-block';
+                }
+            });
+            $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
+            $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
+            $("#word41").html("In the following, we call the sender Alice, and the receiver Bob");
+            
+            $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text2").html("g:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text3").html("a:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text4").html("b:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#input1").attr("placeholder", "a large prime integer here");
+            $("#input2").attr("placeholder", "an integer g of prime order in F*");
+            $("#input3").attr("placeholder", "input a secret integer a");
+            $("#input4").attr("placeholder", "input a secret integer b");
+            $("#inputWrap3").html("Check numbers validation!").click(function() {
+            })
+        }
+        
+
         function show_text() {
             var val = document.getElementById("opt");
             var droptext = val.options[val.selectedIndex].text;
@@ -89,7 +336,7 @@
 
 
 
-                document.getElementById("tryButt").style.display = 'inline-block';
+                // document.getElementById("tryButt").style.display = 'inline-block';
 
                 for (var i = 1; i < 5; i++) {
                     var id1 = "text" + i;
@@ -280,8 +527,9 @@
                 $("#input2").attr("placeholder", "an integer g of prime order in F*");
                 $("#input3").attr("placeholder", "input a secret integer a");
                 $("#input4").attr("placeholder", "input a secret integer b");
-                $("#inputWrap3").replaceWith("<button>Check numbers valid</button>");
-                $("#inputWrap3").hide();
+                $("#inputWrap3").html("Check numbers validation!").click(function() {
+                    
+                })
             }
             else if (droptext == "ElGamal encryption") {
                 document.getElementById("word1").innerHTML = "";
@@ -289,7 +537,7 @@
                 document.getElementById("word3").innerHTML = "";
             }
             else {
-                document.getElementById("word1").innerHTML = "Unknown requirements";
+                document.getElementById("word1").innerHTML = "Unknown request";
             }
         }
 
@@ -340,7 +588,7 @@
 
         function toggle_visibility() 
         {
-            var e = document.getElementById("butt");
+            var e = document.getElementById("btn");
             var val1 = document.getElementById("opt");
             var droptext1 = val1.options[val1.selectedIndex].text;
             
@@ -373,7 +621,23 @@
         }
 
         $(document).ready(function(){
-			$("#butt").click(function(){
+            $("#opt").change(function() {
+                var val = document.getElementById("opt");
+                var droptext = val.options[val.selectedIndex].text;
+                if (droptext == "RSA") {
+                    RSA_text();
+                }
+                else if (droptext == "Diffie–Hellman key exchange") {
+                    dh_text();
+                }
+                else if (droptext == "ElGamal encryption") {
+
+                }
+                else {
+                    document.getElementById("word1").innerHTML = "Unknown request";
+                }
+            })
+			$("#btn").click(function(){
                 $("#err1").html("&nbsp");
                 $("#err2").html("&nbsp");
                 $("#err3").html("&nbsp");
@@ -386,22 +650,49 @@
                            userInput4: $("#input4").val()}
                 })
                 .done(function(data) {
-                    if (data.length == 2) {
-                        if (data[0] == "0" && data[1] == "0") {
-                            $("#err1").html("p has to be a prime");
-                            $("#err2").html("q has to be a prime");
+                    var val = document.getElementById("opt");
+                    var droptext = val.options[val.selectedIndex].text;
+                    if (droptext == "RSA") {
+                        if (data.length == 2) {
+                            if (data[0] == "0" && data[1] == "0") {
+                                $("#err1").html("p has to be a prime");
+                                $("#err2").html("q has to be a prime");
+                            }
+                            else if (data[0] == "0") {
+                                $("#err1").html("p has to be a prime");
+                            }
+                            else if (data[1] == "0") {
+                                $("#err2").html("q has to be a prime");
+                            }
                         }
-                        else if (data[0] == "0") {
-                            $("#err1").html("p has to be a prime");
-                        }
-                        else if (data[1] == "0") {
-                            $("#err2").html("q has to be a prime");
+                        else if (data.length == 5)
+                            $("#err3").html("e is not a valid number, please read the example one more time!");
+                        else {
+                            // show steps here
+                            
                         }
                     }
-                    else if (data.length == 5)
-                        $("#err3").html("e is not a valid number, please read the example one more time!");
+                    else if (droptext == "Diffie–Hellman key exchange") {
+                        if (data.length == 1) {
+                            $("#err1").html("p has to be a prime");
+                        }
+                        else {
+                            // show steps here
+                        }
+                    }
+                    else if (droptext == "ElGamal encryption") {
+                        if (data.length == 1) {
+                            $("#err1").html("p has to be a prime");
+                        }
+                        else if (data.length == 3) {
+                            $("#err3").html("a is not valid");
+                        }
+                        else {
+                            // show steps here
+                        }
+                    }
                     else {
-                        // show steps here
+                        document.getElementById("word1").innerHTML = "Unknown request";
                     }
                 });
 			});
@@ -426,7 +717,7 @@
     I want to learn: &nbsp&nbsp&nbsp
 </span>
 <span class="custom-dropdown big">
-    <select name="cryptosystem" id="opt" onchange="show_text(); why_system(); toggle_visibility();" >
+    <select name="cryptosystem" id="opt" onchange="why_system(); toggle_visibility();" >
         <option value="none" selected disabled hidden>
             Select an Option
         </option>
@@ -609,10 +900,10 @@
 
 <br>
 
-<span class="word" id="try_leading"></span> 
-<button class="greyButt" id="tryButt">Yes!</button>
+<!-- <span class="word" id="try_leading"></span> 
+<button class="greyBtn" id="tryButt">Yes!</button> -->
 
-<br><br><br>
+<br><br>
 <div class="word" id="inputWrap1"></div>
 <label for="lname" class="box_leading" id="text1"></label>
 <input type="text" class="box" id="input1" name="userInput1" placeholder="input a prime number here" onclick="show_dice1(); this.onclick=null;">
@@ -631,14 +922,14 @@
 <span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
 <p class="err" id="err3">&nbsp</p>
 <div class="word" id="inputWrap4"></div>
-<br><br>
+<br><br><br>
 <label for="lname" class="box_leading" id="text4"></label>
 <br><br>
 <textarea type="text" class="text_box" id="input4" name="userInput4" rows="10" cols="70"></textarea>
 <br/><br/><br/><br/><br/><br/>
 
 <div>
-    <button class="button" id="butt">Try it yourself!</button>
+    <button class="button" id="btn">Try it yourself!</button>
 </div>
 
 
