@@ -31,73 +31,59 @@
         }
 
         function show_text() {
-            var val1 = document.getElementById("opt");
-            var droptext1 = val1.options[val1.selectedIndex].text;
-            var val2 = document.getElementById("ende");
-            var droptext2 = val2.options[val2.selectedIndex].text;
+            var val = document.getElementById("opt");
+            var droptext = val.options[val.selectedIndex].text;
 
-            if (droptext1 == "RSA" && droptext2 == "Encrypt") {
-                for (var i = 2; i < 25; i++) {
+            if (droptext == "RSA") {
+                for (var i = 2; i < 75; i++) {
                     var id = "word" + i;
                     document.getElementById(id).style.textDecoration = "none";
                     document.getElementById(id).innerHTML = "";
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                 }
-                var web = "https://bigprimes.org";
-                document.getElementById("word2").innerHTML = "Before we begin the encryption method, there are a few things we must set up. ";
-                document.getElementById("word3").style.textDecoration = 'underline';
-                document.getElementById("word3").innerHTML = "Step 1: pick two -large- primes";
-                $("#word3").click(function() {
-                    $("#word4").fadeToggle();
+                var web1 = "https://bigprimes.org";
+                $("#word2").html("Let's start with encryption: ");
+                $("#word3").html("Method");
+                document.getElementById("word4").style.textDecoration = 'underline';
+                $("#word4").html("Step 1 of 4");
+                $("#word5").html("Step 1: pick two -large- primes");
+                $("#word6").html("The bigger the prime, the more secure the system is.");
+                $("#word7").html("If you want to try larger numbers, I would suggest checking out this website: " + web1.link("https://bigprimes.org"));
+                $("#word5").hide();
+                $("#word6").hide();
+                $("#word7").hide();
+                $("#word4").click(function() {
                     $("#word5").fadeToggle();
                     $("#word6").fadeToggle();
+                    $("#word7").fadeToggle();
                 });
-                document.getElementById("word4").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The bigger the prime, the more secure the system is. For better visualization and understanding, I will use two smaller primes:  p = 11  and q = 3";
-                document.getElementById("word5").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp If you want to try larger numbers, I would suggest checking out this website: " + web.link("https://bigprimes.org");
-                document.getElementById("word6").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Easy enough! Next step! ";
-                document.getElementById("word7").style.textDecoration = 'underline';
-                $("#word7").click(function() {
-                    $("#word8").fadeToggle();
+                document.getElementById("word8").style.textDecoration = 'underline';
+                $("#word8").html("Step 2 of 4");
+                $("#word9").html("Step 2: find N(modulus) and Euler’s Phi");
+                $("#word10").html("N is the product of the two primes we picked earlier");
+                $("#word11").html("As for Euler’s Phi function, it’s:  ϕ = (p-1)(q-1).");
+                $("#word9").hide();
+                $("#word10").hide();
+                $("#word11").hide();
+                $("#word8").click(function() {
                     $("#word9").fadeToggle();
                     $("#word10").fadeToggle();
                     $("#word11").fadeToggle();
                 });
-                document.getElementById("word7").innerHTML = "Step 2: find N(modulus) and Euler’s Phi";
-                document.getElementById("word8").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp N is the product of the two primes we picked earlier, it’s simply: N = p*q";
-                document.getElementById("word9").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp With my example, N = 3*11 = 33";
-                document.getElementById("word10").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp As for Euler’s Phi function, it’s:  ϕ = (p-1)(q-1).       (attach popup 1)";
-                document.getElementById("word11").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp With the nubes above, it is: (11-1)(3-1)=20";
                 document.getElementById("word12").style.textDecoration = 'underline';
-                $("#word12").click(function() {
-                    $("#word13").fadeToggle();
-                    $("#word14").fadeToggle();
-                });
-                document.getElementById("word12").innerHTML = "Step 3: Find e, the public exponent";
-                document.getElementById("word13").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp We must choose an integer e such that: 1 < e < ϕ , and: gcd(e,ϕ) = 1, (If you can’t think of one, we can find a random e for you)!";
-                document.getElementById("word14").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp We must find an example such that gcd(e,20) = 1. 3 fits this criteria! So, e = 3.";
+                $("#word12").html("Step 3 of 4");
+                $("#word13").html("Step 3: Find e, the public exponent");
+                $("#word14").html("We must choose an integer e such that: 1 < e < ϕ , and: gcd(e,ϕ) = 1");
                 document.getElementById("word15").style.textDecoration = 'underline';
-                $("#word15").click(function() {
-                    $("#word16").fadeToggle();
-                    $("#word17").fadeToggle();
-                    $("#word18").fadeToggle();
-                    $("#word19").fadeToggle();
-                    $("#word20").fadeToggle();
-                    $("#word21").fadeToggle();
-                    $("#word22").fadeToggle();
-                    $("#word23").fadeToggle();
-                    $("#word24").fadeToggle();
-                });
-                document.getElementById("word15").innerHTML = "Step 4: Send out the public key!";
-                document.getElementById("word16").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Public key = (N,e) which in our example is (33,3)";
-                document.getElementById("word17").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Now the encryption begins!";
-                document.getElementById("word18").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Let’s suppose Alice wants to send a message to Bob. What does she have to do?";
-                document.getElementById("word19").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1.	Pick a message m to encrypt. In our example, we will use m = 7";
-                document.getElementById("word20").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2.	Obtain Bob’s public key (N,e) to compute the ciphertext: c ≡ m" + "e".sup() + "mod N.";
-                document.getElementById("word21").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Which is, 7^(3 ) mod 33 ⇔343 mod 33 ⇔ 13 mod 33";
-                document.getElementById("word22").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp So, our ciphertext is 13.";
-                document.getElementById("word23").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 3.	Send the Cipher text to Bob!";
-                document.getElementById("word24").innerHTML = "Encryption is done! Click decryption to see how to decrypt the message! ";
+                $("#word15").html("Step 4 of 4");
+                $("#word16").html("Step 4: Send out the public key!");
+                $("#word15").html("Public key = (N,e) ");
+
+
+
+
+                document.getElementById("tryButt").style.display = 'inline-block';
 
                 for (var i = 1; i < 5; i++) {
                     var id1 = "text" + i;
@@ -111,7 +97,7 @@
                 document.getElementById("text3").innerHTML = "Exponent e: &nbsp&nbsp&nbsp";
                 document.getElementById("text4").innerHTML = "text you want to encrypt: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             }
-            else if (droptext1 == "RSA" && droptext2 == "Decrypt") {
+            else if (droptext == "Diffie–Hellman key exchange") {
                 for (var i = 2; i < 25; i++) {
                     var id = "word" + i;
                     document.getElementById(id).style.textDecoration = "none";
@@ -119,42 +105,95 @@
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                 }
-                document.getElementById("word2").innerHTML = "Recall, We already know p, q, and the public key (N,e). ";
-                document.getElementById("word3").innerHTML = "There is one simple step Bob has to do before starting the encryption:";
+
+                $("#word2").html("--Encryption-----------------------------------");
+                $("#word3").html("Method");
                 document.getElementById("word4").style.textDecoration = 'underline';
+                $("#word4").html("Step 1 of 2");
+                $("#word5").html("Step 1: Public Parameter Creation");
+                $("#word6").html("A trusted party must choose and publish a (large) prime p, and an integer g having large prime order in F" + "*".sup() + "p".sub());
+                $("#word5").hide();
+                $("#word6").hide();
                 $("#word4").click(function() {
                     $("#word5").fadeToggle();
                     $("#word6").fadeToggle();
-                    $("#word7").fadeToggle();
-                    $("#word8").fadeToggle();
                 });
-                document.getElementById("word4").innerHTML = "Generate private key";
-                document.getElementById("word5").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp For this step, Bob has to compute the secret exponent d such that: 1<d<ϕ, and ed ≡ 1 mod ϕ (attach popup 2)";
-                document.getElementById("word6").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp In our example, we must find a value such that 3d ≡ 1 mod 20";
-                document.getElementById("word7").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Using simple methods learned in discrete math, we are looking for a d such that 20 divides 3d-1. Since our numbers are very small we can test and see that 7 works. d = 7.";
-                document.getElementById("word8").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp So the private key is: which in our example is (33,7)";
-                document.getElementById("word9").style.textDecoration = 'underline';
-                $("#word9").click(function() {
+                document.getElementById("word7").style.textDecoration = 'underline';
+                $("#word7").html("Step 2 of 2");
+                $("#word8").html("Step 2: Private Computations");
+                $("#word9").html("Alice:​ Alice chooses a secret integer a to compute A ≡ g" + "a".sup() + "(mod p)");
+                $("#word10").html("Bob:​ Bob chooses a secret integer b to compute B ≡ g" + "b".sup() + "(mod p)");
+                $("#word11").html("Now, Alice sends A to Bob, and Bob sends B to Alice. These values will be sent over the channel and are public.");
+                $("#word12").html("In the decrypt section We will show how Alice and Bob compute the shared secret value.");
+                $("#word8").hide();
+                $("#word9").hide();
+                $("#word10").hide();
+                $("#word11").hide();
+                $("#word12").hide();
+                $("#word7").click(function() {
+                    $("#word8").fadeToggle();
+                    $("#word9").fadeToggle();
                     $("#word10").fadeToggle();
                     $("#word11").fadeToggle();
                     $("#word12").fadeToggle();
-                    $("#word13").fadeToggle();
-                    $("#word14").fadeToggle();
-                    $("#word15").fadeToggle();
-                    $("#word16").fadeToggle();
                 });
-                document.getElementById("word9").innerHTML = "Now the decryption begins! ";
-                document.getElementById("word10").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bob only has to do one thing: ";
-                document.getElementById("word11").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Compute m’ ≡ c" + "d".sup() +" mod N. m’ will equal the plaintext m! "
-                document.getElementById("word12").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp In our example we will have ";
-                document.getElementById("word13").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Alice sent Bob the ciphertext c = 13. ";
-                document.getElementById("word14").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Bob will compute the following: ";
-                document.getElementById("word15").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp m’ ≡ c" + "d".sup() + "mod N &hArr; 13" +"7".sup() +"mod 33 &hArr; 7";
-                document.getElementById("word16").innerHTML = "Note: We don’t have to compute the full value of 13^7. we can factor and make use of the fact that: ";
-                document.getElementById("word17").innerHTML = "A = bc mod n ⇔(b mod n)(c mod n) mod n";
-                document.getElementById("word18").innerHTML = "Done!  :)";
+                $("#word13").html("--Decryption-----------------------------------");
+                $("#word14").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
+                $("#word15").html("AlicehassentA≡ g" + "a".sup() + "(mod p)to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
+                $("#word16").html("How to decrypt?");
+                $("#word17").html("Alice​: Alice will now compute B" + "a".sup() + "(mod p )");
+                $("#word18").html("Bob​: Bob will compute A" + "b".sup() + "(mod p)");
+                $("#word19").html("The shared secret value is: B" + "a".sup() + "≡ (g" + "b".sup() +")" + "a".sup() + "≡ g" + "ab".sup() + "≡ (g" + "a".sup()+ ")" + "b".sup() + "≡ A" +"b".sup() + "(mod p)");
+                $("#word20").html("Thus, they managed to create a private key over an insecure channel.");
+                $("#word21").html("--Exmaple---------------------------------------");
+                $("#word22").html("--Encryption-----------------------------------");
+                document.getElementById("word23").style.textDecoration = 'underline';
+                $("#word23").html("Step 1 of 2");
+                $("#word24").html("Step 1: Public Parameter Creation");
+                $("#word25").html("Alice and Bob agree to use the prime p = 941 and the primitive root g = 627.");
+                $("#word24").hide();
+                $("#word25").hide();
+                $("#word23").click(function() {
+                    $("#word24").fadeToggle();
+                    $("#word25").fadeToggle();
+                });
+                document.getElementById("word26").style.textDecoration = 'underline';
+                $("#word26").html("Step 2 of 2");
+                $("#word27").html("Step 2: Private Computations");
+                $("#word28").html("Alice: ​In our example, Alice chooses 347 and computes: A ≡ 627347 (mod 941) = 390");
+                $("#word29").html("Bob:​ In our example, Bob chooses 781 and computes: B ≡ 627781 (mod 971) = 691");
+                $("#word27").hide();
+                $("#word28").hide();
+                $("#word29").hide();
+                $("#word26").click(function() {
+                    $("#word27").fadeToggle();
+                    $("#word28").fadeToggle();
+                    $("#word29").fadeToggle();
+                });
+                $("#word30").html("--Decryption-----------------------------------");
+                $("#word31").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
+                $("#word32").html("AlicehassentA≡ g" + "a".sup() + "(mod p) to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
+                $("#word33").html("In our example, p = 941, g = 627, a = 347, A = 390, b = 781, and B = 691.");
+                $("#word34").html("The shared secret value is: B" + "a".sup() + "≡ (g" + "b".sup() + ")" +"a".sup() + "≡ g" + "ab".sup() + "≡ (g" + "a".sup() + ")" + "b".sup() + "≡ A" + "b".sup() + "(mod p)");
+                $("#word35").html("In our example, B" + "a".sup() + "≡ A" + "b".sup() + "≡ 627" + "347*781".sup() + "(mod 941) ≡ 470");
+                $("#word36").html("Their secret shared value is 470.");
+                $("#word37").html("Thus, they managed to create a private key over an insecure channel.");
 
+                for (var i = 39; i <= 75; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
 
+                $("#word38").html("Ready to try it yourself?");
+                $("#word38").append("&nbsp&nbsp&nbsp&nbsp<button id='readyBtn'>Yeah!</button>");
+                $("#readyBtn").click(function() {
+                    for (var i = 39; i <= 75; i++) {
+                    var id = "#word" + i;
+                    $(id).show();
+                    }
+                });
+                $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
+                $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
                 for (var i = 1; i < 5; i++) {
                     var id1 = "text" + i;
                     var id2 = "input" + i;
@@ -162,49 +201,9 @@
                     document.getElementById(id2).style.display = 'inline-block';
                 }
             }
-            else if (droptext1 == "Diffie–Hellman key exchange" && droptext2 == "Encrypt") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "Diffie–Hellman key exchange encrypt example!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "Diffie–Hellman key exchange" && droptext2 == "Decrypt") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "Diffie–Hellman key exchange decrypt example!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "ElGamal encryption" && droptext2 == "Encrypt") {
+            else if (droptext == "ElGamal encryption") {
                 document.getElementById("word1").innerHTML = "";
                 document.getElementById("word2").innerHTML = "ElGamal encryption encrypt example!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "ElGamal encryption" && droptext2 == "Decrypt") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "ElGamal encryption decrypt example!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if(droptext1 == "RSA" && droptext2 == "Select an Option") {
-                document.getElementById("word1").innerHTML = "The Rivet-Shamir-Adleman (RSA) ";
-                document.getElementById("word2").innerHTML = "The Rivet-Shamir-Adleman (RSA) Cryptosystem is an asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages. Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. RSA is based on the principle that it is easy to multiply large numbers, but factoring large numbers is very difficult. ";
-                document.getElementById("word3").innerHTML = "RSA is used today in modern computers. It is used in a range of web browsers, email, VPNs, chat and other communication channels and it is considered the most secure way of encryption. So, it is a very valuable cryptosystem to learn for many computer scientists!";
-            }
-            else if(droptext1 == "Diffie–Hellman key exchange" && droptext2 == "Select an Option") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "Diffie–Hellman key exchange motivation!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "ElGamal encryption" && droptext2 == "Select an Option") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "ElGamal encryption motivation!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "Select an Option" && droptext2 == "Encrypt") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "Select an Option" && droptext2 == "Decrypt") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "";
                 document.getElementById("word3").innerHTML = "";
             }
             else {
@@ -262,10 +261,8 @@
             var e = document.getElementById("butt");
             var val1 = document.getElementById("opt");
             var droptext1 = val1.options[val1.selectedIndex].text;
-            var val2 = document.getElementById("ende");
-            var droptext2 = val2.options[val2.selectedIndex].text;
             
-            if (droptext1 != "Select an Option" && droptext2 != "Select an Option")
+            if (droptext1 != "Select an Option")
                 e.style.display = 'inline-block';
         }
 
@@ -295,6 +292,9 @@
 
         $(document).ready(function(){
 			$("#butt").click(function(){
+                $("#err1").html("&nbsp");
+                $("#err2").html("&nbsp");
+                $("#err3").html("&nbsp");
                 $.ajax({
                     url: '/process',
                     type: 'POST',
@@ -354,9 +354,9 @@
     </select>
 </span>
 
-<br/><br/>
+<br>
 
-<span class="dropdown_leading">
+<!-- <span class="dropdown_leading">
     How it works? &nbsp&nbsp&nbsp&nbsp&nbsp
 </span>
 <div class="custom-dropdown big">
@@ -367,9 +367,7 @@
         <option>Encrypt</option>
         <option>Decrypt</option>
     </select>
-</div>
-
-<br/><br/><br/><br/>
+</div> -->
 
 <span id="whysys" onclick="click_motivation();">
 
@@ -443,16 +441,107 @@
 
 <p class="word" id="word33"></p>
 
+<p class="word" id="word34"></p>
+
+<p class="word" id="word35"></p>
+
+<p class="word" id="word36"></p>
+
+<p class="word" id="word37"></p>
+
+<p class="word" id="word38"></p>
+
+<p class="word" id="word39"></p>
+
+<p class="word" id="word40"></p>
+
+<p class="word" id="word41"></p>
+
+<p class="word" id="word42"></p>
+
+<p class="word" id="word43"></p>
+
+<p class="word" id="word44"></p>
+
+<p class="word" id="word45"></p>
+
+<p class="word" id="word46"></p>
+
+<p class="word" id="word47"></p>
+
+<p class="word" id="word48"></p>
+
+<p class="word" id="word49"></p>
+
+<p class="word" id="word50"></p>
+
+<p class="word" id="word51"></p>
+
+<p class="word" id="word52"></p>
+
+<p class="word" id="word53"></p>
+
+<p class="word" id="word54"></p>
+
+<p class="word" id="word55"></p>
+
+<p class="word" id="word56"></p>
+
+<p class="word" id="word57"></p>
+
+<p class="word" id="word58"></p>
+
+<p class="word" id="word59"></p>
+
+<p class="word" id="word60"></p>
+
+<p class="word" id="word61"></p>
+
+<p class="word" id="word62"></p>
+
+<p class="word" id="word63"></p>
+
+<p class="word" id="word64"></p>
+
+<p class="word" id="word65"></p>
+
+<p class="word" id="word66"></p>
+
+<p class="word" id="word67"></p>
+
+<p class="word" id="word68"></p>
+
+<p class="word" id="word69"></p>
+
+<p class="word" id="word70"></p>
+
+<p class="word" id="word71"></p>
+
+<p class="word" id="word72"></p>
+
+<p class="word" id="word73"></p>
+
+<p class="word" id="word74"></p>
+
+<p class="word" id="word75"></p>
+
+<br>
+
+<span class="word" id="try_leading"></span> 
+<button class="greyButt" id="tryButt">Yes!</button>
+
+<br><br><br>
+
 <label for="lname" class="box_leading" id="text1"></label>
-<input type="text" class="box" id="input1" name="userInput1" onclick="show_dice1(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img1"></span>
+<input type="text" class="box" id="input1" name="userInput1" placeholder="input a prime number here" onclick="show_dice1(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img1"></span>
 <p class="err" id="err1">&nbsp</p>
 <br><br>
 <label for="lname" class="box_leading" id="text2"></label>
-<input type="text" class="box" id="input2" name="userInput2" onclick="show_dice2(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img2"></span>
+<input type="text" class="box" id="input2" name="userInput2" placeholder="input a prime number here" onclick="show_dice2(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img2"></span>
 <p class="err" id="err2">&nbsp</p>
 <br><br>
 <label for="lname" class="box_leading" id="text3"></label>
-<input type="text" class="box" id="input3" name="userInput3" placeholder="follow the example to find e" onclick="show_dice3(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
+<input type="text" class="box" id="input3" name="userInput3" placeholder="input an exponent here" onclick="show_dice3(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
 <p class="err" id="err3">&nbsp</p>
 <br><br>
 <label for="lname" class="box_leading" id="text4"></label>
