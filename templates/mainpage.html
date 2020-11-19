@@ -42,6 +42,12 @@
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                 }
+                for (var i = 1; i < 5; i++) {
+                    var id1 = "text" + i;
+                    var id2 = "input" + i;
+                    document.getElementById(id1).style.display = 'none';
+                    document.getElementById(id2).style.display = 'none';
+                }
                 var web1 = "https://bigprimes.org";
                 $("#word2").html("Let's start with encryption: ");
                 $("#word3").html("Method");
@@ -105,9 +111,17 @@
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                 }
+                for (var i = 1; i < 5; i++) {
+                    var id1 = "text" + i;
+                    var id2 = "input" + i;
+                    var id3 = "inputWrap" + i;
+                    document.getElementById(id1).style.display = 'none';
+                    document.getElementById(id2).style.display = 'none';
+                    document.getElementById(id3).style.display = 'none';
+                }
 
-                $("#word2").html("--Encryption-----------------------------------");
-                $("#word3").html("Method");
+                $("#word2").html("Method");
+                $("#word3").html("--Encryption-----------------------------------");
                 document.getElementById("word4").style.textDecoration = 'underline';
                 $("#word4").html("Step 1 of 2");
                 $("#word5").html("Step 1: Public Parameter Creation");
@@ -137,6 +151,12 @@
                     $("#word11").fadeToggle();
                     $("#word12").fadeToggle();
                 });
+                $("#word4").hide();
+                $("#word7").hide();
+                $("#word3").click(function() {
+                    $("#word4").fadeToggle();
+                    $("#word7").fadeToggle();
+                });
                 $("#word13").html("--Decryption-----------------------------------");
                 $("#word14").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
                 $("#word15").html("AlicehassentA≡ g" + "a".sup() + "(mod p)to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
@@ -145,7 +165,29 @@
                 $("#word18").html("Bob​: Bob will compute A" + "b".sup() + "(mod p)");
                 $("#word19").html("The shared secret value is: B" + "a".sup() + "≡ (g" + "b".sup() +")" + "a".sup() + "≡ g" + "ab".sup() + "≡ (g" + "a".sup()+ ")" + "b".sup() + "≡ A" +"b".sup() + "(mod p)");
                 $("#word20").html("Thus, they managed to create a private key over an insecure channel.");
-                $("#word21").html("--Exmaple---------------------------------------");
+                $("#word14").hide();
+                $("#word15").hide();
+                $("#word16").hide();
+                $("#word17").hide();
+                $("#word18").hide();
+                $("#word19").hide();
+                $("#word20").hide();
+                $("#word13").click(function() {
+                    $("#word14").fadeToggle();
+                    $("#word15").fadeToggle();
+                    $("#word16").fadeToggle();
+                    $("#word17").fadeToggle();
+                    $("#word18").fadeToggle();
+                    $("#word19").fadeToggle();
+                    $("#word20").fadeToggle();
+                });
+                $("#word3").hide();
+                $("#word13").hide();
+                $("#word2").click(function() {
+                    $("#word3").fadeToggle();
+                    $("#word13").fadeToggle();
+                });
+                $("#word21").html("Exmaple");
                 $("#word22").html("--Encryption-----------------------------------");
                 document.getElementById("word23").style.textDecoration = 'underline';
                 $("#word23").html("Step 1 of 2");
@@ -170,6 +212,12 @@
                     $("#word28").fadeToggle();
                     $("#word29").fadeToggle();
                 });
+                $("#word23").hide();
+                $("#word26").hide();
+                $("#word22").click(function() {
+                    $("#word23").fadeToggle();
+                    $("#word26").fadeToggle();
+                });
                 $("#word30").html("--Decryption-----------------------------------");
                 $("#word31").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
                 $("#word32").html("AlicehassentA≡ g" + "a".sup() + "(mod p) to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
@@ -178,28 +226,62 @@
                 $("#word35").html("In our example, B" + "a".sup() + "≡ A" + "b".sup() + "≡ 627" + "347*781".sup() + "(mod 941) ≡ 470");
                 $("#word36").html("Their secret shared value is 470.");
                 $("#word37").html("Thus, they managed to create a private key over an insecure channel.");
-
+                $("#word31").hide();
+                $("#word32").hide();
+                $("#word33").hide();
+                $("#word34").hide();
+                $("#word35").hide();
+                $("#word36").hide();
+                $("#word37").hide();
+                $("#word30").click(function() {
+                    $("#word31").fadeToggle();
+                    $("#word32").fadeToggle();
+                    $("#word33").fadeToggle();
+                    $("#word34").fadeToggle();
+                    $("#word35").fadeToggle();
+                    $("#word36").fadeToggle();
+                    $("#word37").fadeToggle();
+                });
+                $("#word22").hide();
+                $("#word30").hide();
+                $("#word21").click(function() {
+                    $("#word22").fadeToggle();
+                    $("#word30").fadeToggle();
+                });
                 for (var i = 39; i <= 75; i++) {
                     var id = "#word" + i;
                     $(id).hide();
                 }
-
                 $("#word38").html("Ready to try it yourself?");
                 $("#word38").append("&nbsp&nbsp&nbsp&nbsp<button id='readyBtn'>Yeah!</button>");
                 $("#readyBtn").click(function() {
                     for (var i = 39; i <= 75; i++) {
-                    var id = "#word" + i;
-                    $(id).show();
+                        var id = "#word" + i;
+                        $(id).show();
+                    }
+                    for (var i = 1; i < 5; i++) {
+                        var id1 = "text" + i;
+                        var id2 = "input" + i;
+                        var id3 = "inputWrap" + i;
+                        document.getElementById(id1).style.display = 'inline-block';
+                        document.getElementById(id2).style.display = 'inline-block';
+                        document.getElementById(id3).style.display = 'inline-block';
                     }
                 });
                 $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
                 $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
-                for (var i = 1; i < 5; i++) {
-                    var id1 = "text" + i;
-                    var id2 = "input" + i;
-                    document.getElementById(id1).style.display = 'inline-block';
-                    document.getElementById(id2).style.display = 'inline-block';
-                }
+                $("#word41").html("In the following, we call the sender Alice, and the receiver Bob");
+                
+                $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#text2").html("g:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#text3").html("a:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#text4").html("b:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#input1").attr("placeholder", "a large prime integer here");
+                $("#input2").attr("placeholder", "an integer g of prime order in F*");
+                $("#input3").attr("placeholder", "input a secret integer a");
+                $("#input4").attr("placeholder", "input a secret integer b");
+                $("#inputWrap3").replaceWith("<button>Check numbers valid</button>");
+                $("#inputWrap3").hide();
             }
             else if (droptext == "ElGamal encryption") {
                 document.getElementById("word1").innerHTML = "";
@@ -531,18 +613,24 @@
 <button class="greyButt" id="tryButt">Yes!</button>
 
 <br><br><br>
-
+<div class="word" id="inputWrap1"></div>
 <label for="lname" class="box_leading" id="text1"></label>
-<input type="text" class="box" id="input1" name="userInput1" placeholder="input a prime number here" onclick="show_dice1(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img1"></span>
+<input type="text" class="box" id="input1" name="userInput1" placeholder="input a prime number here" onclick="show_dice1(); this.onclick=null;">
+<span>&nbsp&nbsp&nbsp</span><span id="img1"></span>
 <p class="err" id="err1">&nbsp</p>
+<div class="word" id="inputWrap2"></div>
 <br><br>
 <label for="lname" class="box_leading" id="text2"></label>
-<input type="text" class="box" id="input2" name="userInput2" placeholder="input a prime number here" onclick="show_dice2(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img2"></span>
+<input type="text" class="box" id="input2" name="userInput2" placeholder="input a prime number here" onclick="show_dice2(); this.onclick=null;">
+<span>&nbsp&nbsp&nbsp</span><span id="img2"></span>
 <p class="err" id="err2">&nbsp</p>
+<div class="word" id="inputWrap3"></div>
 <br><br>
 <label for="lname" class="box_leading" id="text3"></label>
-<input type="text" class="box" id="input3" name="userInput3" placeholder="input an exponent here" onclick="show_dice3(); this.onclick=null;"><span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
+<input type="text" class="box" id="input3" name="userInput3" placeholder="input an exponent here" onclick="show_dice3(); this.onclick=null;">
+<span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
 <p class="err" id="err3">&nbsp</p>
+<div class="word" id="inputWrap4"></div>
 <br><br>
 <label for="lname" class="box_leading" id="text4"></label>
 <br><br>
