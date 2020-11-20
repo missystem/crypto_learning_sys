@@ -244,7 +244,9 @@
 	- **Xuehai**: Great work with the website! Implemented the "hide" function. 
 	- **Donna**: Sent examples and motivation.
 	- **John**: did not show up.
+	
+	- Group decision: Don't add substitution cipher since we might not have time. 
 * **TO DO**:
 	- **Xuehai**: finish ElGamal & make things pretty.
-	- **Donna**: Send substitution cipher. Documentation. 
+	- **Donna**: Documentation. 
 	- **Missy**: MAke donna's documentation into an md file. 
