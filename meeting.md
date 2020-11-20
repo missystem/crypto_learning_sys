@@ -233,3 +233,18 @@
 	- **Donna**:
 		- Send method, example, and motivation to Xuehai (Key generated automatically).
 		- Documentation.
+
+
+	
+---
+
+### 11/20 M: Missy, Donna, Xuehai
+* **Current Progress**: 
+	- **Missy**: Was done by last meeting. good job!
+	- **Xuehai**: Great work with the website! Implemented the "hide" function. 
+	- **Donna**: Sent examples and motivation.
+	- **John**: did not show up.
+* **TO DO**:
+	- **Xuehai**: finish ElGamal & make things pretty.
+	- **Donna**: Send substitution cipher. Documentation. 
+	- **Missy**: MAke donna's documentation into an md file. 
