@@ -53,20 +53,29 @@ body {
   color: white;
   font-size: 16px;
   font-family: "Comic Sans MS", serif;
-  display: none;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
 }
 
-.button {
+/* .btn {
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+  font-family: "Comic Sans MS", serif;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+} */
+
+.btn {
   background-color: #4CAF40;
   border: none;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: none;
+  display: inline-block;
   font-size: 16px;
   font-family: "Comic Sans MS", serif;
   margin: 4px 2px;
