@@ -106,9 +106,20 @@
             $("#word16").hide();
             $("#word3").click(function() {
                 $("#word4").fadeToggle();
+                $("#word5").hide();
+                $("#word6").hide();
+                $("#word7").hide();
+                $("#word8").hide();
                 $("#word9").fadeToggle();
+                $("#word10").hide();
+                $("#word11").hide();
+                $("#word12").hide();
                 $("#word13").fadeToggle();
+                $("#word14").hide();
+                $("#word15").hide();
                 $("#word16").fadeToggle();
+                $("#word17").hide();
+                $("#word18").hide();
             });
             $("#word19").html("--Decryption-----------------------------------");
             $("#word20").html("Recall, We already know p, q, and the public key (N,e).");
@@ -147,7 +158,15 @@
             $("#word19").hide();
             $("#word2").click(function() {
                 $("#word3").fadeToggle();
+                for (var i = 4; i < 19; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word19").fadeToggle();
+                for (var i = 20; i < 30; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
             });
             $("#word30").html("Example");
             $("#word31").html("--Encryption-----------------------------------");
@@ -220,10 +239,24 @@
             $("#word45").hide();
             $("#word31").click(function() {
                 $("#word32").fadeToggle();
+                $("#word33").hide();
+                $("#word34").hide();
                 $("#word35").fadeToggle();
+                $("#word36").hide();
+                $("#word37").hide();
+                $("#word38").hide();
                 $("#word39").fadeToggle();
+                $("#word40").hide();
+                $("#word41").hide();
                 $("#word42").fadeToggle();
+                $("#word43").hide();
+                $("#word44").hide();
                 $("#word45").fadeToggle();
+                $("#word46").hide();
+                $("#word47").hide();
+                $("#word48").hide();
+                $("#word49").hide();
+                $("#word50").hide();
             });
             $("#word51").html("--Decryption-----------------------------------");
             $("#word52").html("In our example, we must find a value such that 61d≡1 mod 660");
@@ -248,7 +281,15 @@
             $("#word51").hide();
             $("#word30").click(function() {
                 $("#word31").fadeToggle();
+                for (var i = 32; i < 51; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word51").fadeToggle();
+                for (var i = 52; i < 57; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
             });
             for (var i = 58; i <= 75; i++) {
                 var id = "#word" + i;
@@ -335,7 +376,14 @@
             $("#word7").hide();
             $("#word3").click(function() {
                 $("#word4").fadeToggle();
+                $("#word5").hide();
+                $("#word6").hide();
                 $("#word7").fadeToggle();
+                $("#word8").hide();
+                $("#word9").hide();
+                $("#word10").hide();
+                $("#word11").hide();
+                $("#word12").hide();
             });
             $("#word13").html("--Decryption-----------------------------------");
             $("#word14").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
@@ -365,7 +413,15 @@
             $("#word13").hide();
             $("#word2").click(function() {
                 $("#word3").fadeToggle();
+                for (var i = 4; i < 13; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word13").fadeToggle();
+                for (var i = 14; i < 21; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
             });
             $("#word21").html("Example");
             $("#word22").html("--Encryption-----------------------------------");
@@ -396,7 +452,15 @@
             $("#word26").hide();
             $("#word22").click(function() {
                 $("#word23").fadeToggle();
+                for (var i = 24; i < 26; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word26").fadeToggle();
+                for (var i = 27; i < 30; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
             });
             $("#word30").html("--Decryption-----------------------------------");
             $("#word31").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
@@ -426,7 +490,15 @@
             $("#word30").hide();
             $("#word21").click(function() {
                 $("#word22").fadeToggle();
+                for (var i = 23; i < 30; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word30").fadeToggle();
+                for (var i = 31; i < 38; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
             });
             for (var i = 39; i <= 75; i++) {
                 var id = "#word" + i;
@@ -553,12 +625,6 @@
                 $("#word23").fadeToggle();
                 $("#word24").fadeToggle();
             });
-            $("#word23").hide();
-            $("#word24").hide();
-            $("#word22").click(function() {
-                $("#word23").fadeToggle();
-                $("#word24").fadeToggle();
-            });
             $("#word4").hide();
             $("#word7").hide();
             $("#word10").hide();
@@ -567,11 +633,26 @@
             $("#word22").hide();
             $("#word3").click(function() {
                 $("#word4").fadeToggle();
+                $("#word5").hide();
+                $("#word6").hide();
                 $("#word7").fadeToggle();
+                $("#word8").hide();
+                $("#word9").hide();
                 $("#word10").fadeToggle();
+                $("#word11").hide();
+                $("#word12").hide();
                 $("#word13").fadeToggle();
+                $("#word14").hide();
+                $("#word15").hide();
+                $("#word16").hide();
                 $("#word17").fadeToggle();
+                $("#word18").hide();
+                $("#word19").hide();
+                $("#word20").hide();
+                $("#word21").hide();
                 $("#word22").fadeToggle();
+                $("#word23").hide();
+                $("#word24").hide();
             });
             $("#word25").html("--Decryption-----------------------------------");
             $("#word26").html("Recall, Bob knows the values of a and A. And has received the cipher text ( c1 , c2 ) from Alice. Bob");
@@ -589,7 +670,15 @@
             $("#word25").hide();
             $("#word2").click(function() {
                 $("#word3").fadeToggle();
+                for (var i = 4; i < 25; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word25").fadeToggle();
+                for (var i = 26; i < 29; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
             });
 
             $("#word29").html("Example");
@@ -679,7 +768,12 @@
             $("#word49").hide();
             $("#word29").click(function() {
                 $("#word30").fadeToggle();
+                for (var i = 31; i < 49; i++) {
+                    var id = "#word" + i;
+                    $(id).hide();
+                }
                 $("#word49").fadeToggle();
+                $("#word50").hide();
             });
             $("#word51").html("Ready to try it yourself?");
             $("#word51").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
