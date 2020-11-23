@@ -248,5 +248,5 @@
 	- Group decision: Don't add substitution cipher since we might not have time. 
 * **TO DO**:
 	- **Xuehai**: finish ElGamal & make things pretty.
-	- **Donna**: Documentation. 
-	- **Missy**: MAke donna's documentation into an md file. 
+	- **Donna**: documentation. 
+	- **Missy**: edit documentation file into an markdown file and add pictures
