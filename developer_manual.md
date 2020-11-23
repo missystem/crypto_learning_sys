@@ -13,9 +13,9 @@
 ---
 
 ## General mapping of each directory in this repo:
-* **user_manual.md**
+* **README.md**
 	- A user guide, give assistance to user who is using the cryptosystem interactive learning system
-	
+
 * **config**:
 	- [Page Design](https://github.com/missystem/crypto_learning_sys/tree/master/config/Page%20Design): Page designs for each cryptosystem
 	- [algorithm_info](https://github.com/missystem/crypto_learning_sys/tree/master/config/algorithm_info): Guide to the frontend developers
