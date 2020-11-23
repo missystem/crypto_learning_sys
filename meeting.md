@@ -12,7 +12,8 @@
 3. [10/30 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1030-f-all-members)
 4. [11/02 M: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1102-m-all-members)
 5. [11/12 U: Missy & Xuehai](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1112-u-missy--xuehai)
-4. [11/13 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1113-f-all-members)
+6. [11/13 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1113-f-all-members)
+7. [11/20 M: Missy, Donna, Xuehai](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1120-m-missy-donna-xuehai)
 ---
 
 ## Separate this project into 3 sections:
