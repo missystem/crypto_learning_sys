@@ -84,7 +84,7 @@
             $("#word4").html("Step 1 of 4");
             $("#word5").html("Step 1: pick two -large- primes");
             $("#word6").html("The bigger the prime, the more secure the system is.");
-            $("#word7").html("If you want to try larger numbers, I would suggest checking out this website:" +  "​https://bigprimes.org".link("​https://bigprimes.org"));
+            $("#word7").html("If you want to try larger numbers, I would suggest checking out this website:&nbsp&nbsp" +  "​https://bigprimes.org".link("​https://bigprimes.org"));
             $("#word8").html("Easy enough! Next step!");
             $("#word5").hide();
             $("#word6").hide();
@@ -363,6 +363,8 @@
                 var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
                 $("#input4").val(randomNum4);
             });
+            $("#word58").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "click here".link("https://bigprimes.org"));
+            $("#word59").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "click here".link("https://www.wolframalpha.com/"));
             document.getElementById("text1").innerHTML = "p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             document.getElementById("text2").innerHTML = "q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             document.getElementById("text3").innerHTML = "e: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
@@ -603,8 +605,8 @@
                 var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
                 $("#input4").val(randomNum4);
             });
-            $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
-            $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
+            $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "click here".link("https://bigprimes.org"));
+            $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "click here".link("https://www.wolframalpha.com/"));
             $("#word41").html("In the following, we call the sender Alice, and the receiver Bob");
             
             $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
@@ -872,8 +874,8 @@
             });
             $("#word51").html("Ready to try it yourself?").css({"font-size": "24px"});
             $("#word51").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
-            $("#word52").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
-            $("#word53").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
+            $("#word52").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "click here".link("https://bigprimes.org"));
+            $("#word53").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "click here".link("https://www.wolframalpha.com/"));
             for (var i = 52; i <= 75; i++) {
                 var id = "#word" + i;
                 $(id).hide();
@@ -945,6 +947,7 @@
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                     $(jq_id).show();
+                    $(jq_id).css({"background-color": "", "font-size": "16px", "border-radius": ""});
                 }
                 document.getElementById("word2").innerHTML = "The Rivet-Shamir-Adleman (RSA) ";
                 document.getElementById("word3").innerHTML = "Cryptosystem is a asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages! Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. \n" +
@@ -959,6 +962,7 @@
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                     $(jq_id).show();
+                    $(jq_id).css({"background-color": "", "font-size": "16px", "border-radius": ""});
                 }
                 document.getElementById("word2").innerHTML = "Diffe-Hellman algorithm is one of the earliest practical examples of public key exchange implemented within the field of cryptography. Traditionally, secure encrypted communication between two parties required that they first exchange keys by some secure physical means, such as paper key lists transported by a trusted courier. The diffie-Hellman key exchange method allows two parties that have no prior knowledge of each other to jointly establish a shared key over an insecure channel. Which was a huge progress in the field of cryptography! This shared key can be used to encrypt subsequent communications using a symmetric key cipher. This algorithm is used for a variety of internet services. The idea of this algorithm is that it’s easy to compute powers modulo a prime but hard to reverse the process.";
                 document.getElementById("word3").innerHTML = "Important note: You’re not sharing information during the key exchange, you’re creating a key together! This can be used in addition to any other cryptosystem that requires exchanged keys. An important distinction to make is that the Diffie-Hellman is for exchanging keys over an insecure channel. So, we don’t encrypt or decrypt data. But rather we send “encrypted” keys and compute the shared value.";
@@ -972,6 +976,7 @@
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
                     $(jq_id).show();
+                    $(jq_id).css({"background-color": "", "font-size": "16px", "border-radius": ""});
                 }
                 document.getElementById("word2").innerHTML = "The ElGamal encryption system is an asymmetric key encryption algorithm for public key cryptography which is based on the Diffie-Hellman key exchange. The advantage of the ElGamal algorithm is the generation of keys using discrete logarithms.";
                 document.getElementById("word3").innerHTML = "ElGamalhas the disadvantage that the ciphertext is twice as long as the plaintext and it has the advantage that the same plaintext gives a different ciphertext (with near certainty) each time it is encrypted.";
