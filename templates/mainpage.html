@@ -8,27 +8,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-        function show_motivation() {
-            var val1 = document.getElementById("opt");
-            var droptext1 = val1.options[val1.selectedIndex].text;
-            var val2 = document.getElementById("ende");
-            var droptext2 = val2.options[val2.selectedIndex].text;
-            if (droptext1 == "RSA") {
-                document.getElementById("word1").innerHTML = "The Rivet-Shamir-Adleman (RSA) ";
-                document.getElementById("word2").innerHTML = "The Rivet-Shamir-Adleman (RSA) Cryptosystem is an asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages. Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. RSA is based on the principle that it is easy to multiply large numbers, but factoring large numbers is very difficult. ";
-                document.getElementById("word3").innerHTML = "RSA is used today in modern computers. It is used in a range of web browsers, email, VPNs, chat and other communication channels and it is considered the most secure way of encryption. So, it is a very valuable cryptosystem to learn for many computer scientists!";
-            }
-            else if (droptext1 == "Diffie–Hellman key exchange") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "Diffie–Hellman key exchange motivation!";
-                document.getElementById("word3").innerHTML = "";
-            }
-            else if (droptext1 == "ElGamal encryption") {
-                document.getElementById("word1").innerHTML = "";
-                document.getElementById("word2").innerHTML = "ElGamal encryption motivation!";
-                document.getElementById("word3").innerHTML = "";
-            }
-        }
 
         function rsa_text() {
             for (var i = 2; i < 75; i++) {
@@ -39,15 +18,19 @@
                 $(jq_id).off("click");
                 $(jq_id).show();
             }
-            for (var i = 1; i < 5; i++) {
+            for (var i = 1; i < 6; i++) {
                 var id1 = "text" + i;
                 var id2 = "input" + i;
                 var id3 = "inputWrap" + i;
+                var id4 = "img" + i;
+                var id5 = "#err" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
+                document.getElementById(id4).style.display = 'none';
+                $(id5).html("&nbsp");
             }
-            document.getElementById("inputWrap5").style.display = 'none';
+            document.getElementById("inputWrap6").style.display = 'none';
 
             $("#word2").html("Method");
             $("#word3").html("--Encryption-----------------------------------");
@@ -306,16 +289,18 @@
                     var id1 = "text" + i;
                     var id2 = "input" + i;
                     var id3 = "inputWrap" + i;
+                    var id4 = "img" + i;
                     document.getElementById(id1).style.display = 'inline-block';
                     document.getElementById(id2).style.display = 'inline-block';
                     document.getElementById(id3).style.display = 'inline-block';
+                    document.getElementById(id4).style.display = 'inline-block';
                 }
                 document.getElementById("inputWrap5").style.display = 'inline-block';
             });
-            document.getElementById("text1").innerHTML = "Prime p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
-            document.getElementById("text2").innerHTML = "Prime q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
-            document.getElementById("text3").innerHTML = "Exponent e: &nbsp&nbsp&nbsp";
-            document.getElementById("text4").innerHTML = "cipher text: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            document.getElementById("text1").innerHTML = "p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            document.getElementById("text2").innerHTML = "q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            document.getElementById("text3").innerHTML = "e: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            document.getElementById("text4").innerHTML = "m: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             $("#input1").attr("placeholder", "input a prime number here");
             $("#input2").attr("placeholder", "input a prime number here");
             $("#input3").attr("placeholder", "input an exponent here");
@@ -332,15 +317,19 @@
                 $(jq_id).off("click");
                 $(jq_id).show();
             }
-            for (var i = 1; i < 5; i++) {
+            for (var i = 1; i < 6; i++) {
                 var id1 = "text" + i;
                 var id2 = "input" + i;
                 var id3 = "inputWrap" + i;
+                var id4 = "img" + i;
+                var id5 = "#err" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
+                document.getElementById(id4).style.display = 'none';
+                $(id5).html("&nbsp");
             }
-            document.getElementById("inputWrap5").style.display = 'none';
+            document.getElementById("inputWrap6").style.display = 'none';
             $("#word2").html("Method");
             $("#word3").html("--Encryption-----------------------------------");
             document.getElementById("word4").style.textDecoration = 'underline';
@@ -515,9 +504,11 @@
                     var id1 = "text" + i;
                     var id2 = "input" + i;
                     var id3 = "inputWrap" + i;
+                    var id4 = "img" + i;
                     document.getElementById(id1).style.display = 'inline-block';
                     document.getElementById(id2).style.display = 'inline-block';
                     document.getElementById(id3).style.display = 'inline-block';
+                    document.getElementById(id4).style.display = 'inline-block';
                 }
                 document.getElementById("inputWrap5").style.display = 'inline-block';
             });
@@ -545,15 +536,19 @@
                 $(jq_id).off("click");
                 $(jq_id).show();
             }
-            for (var i = 1; i < 5; i++) {
+            for (var i = 1; i < 6; i++) {
                 var id1 = "text" + i;
                 var id2 = "input" + i;
                 var id3 = "inputWrap" + i;
+                var id4 = "img" + i;
+                var id5 = "#err" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
+                document.getElementById(id4).style.display = 'none';
+                $(id5).html("&nbsp");
             }
-            document.getElementById("inputWrap5").style.display = 'none';
+            document.getElementById("inputWrap6").style.display = 'none';
             $("#word2").html("Method");
             $("#word3").html("--Encryption-----------------------------------");
             document.getElementById("word4").style.textDecoration = 'underline';
@@ -566,6 +561,7 @@
                 $("#word5").fadeToggle();
                 $("#word6").fadeToggle();
             });
+            
             document.getElementById("word7").style.textDecoration = 'underline';
             $("#word7").html("Step 2 of 6");
             $("#word8").html("Bob’s part: Key Creation".bold() + "​&nbspStep 2: choosing a private key");
@@ -788,26 +784,30 @@
                     var id = "#word" + i;
                     $(id).show();
                 }
-                for (var i = 1; i < 5; i++) {
+                for (var i = 1; i < 6; i++) {
                     var id1 = "text" + i;
                     var id2 = "input" + i;
                     var id3 = "inputWrap" + i;
+                    var id4 = "img" + i;
                     document.getElementById(id1).style.display = 'inline-block';
                     document.getElementById(id2).style.display = 'inline-block';
                     document.getElementById(id3).style.display = 'inline-block';
+                    document.getElementById(id4).style.display = 'inline-block';
                 }
-                document.getElementById("inputWrap5").style.display = 'inline-block';
+                document.getElementById("inputWrap6").style.display = 'inline-block';
             });
 
             $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#text2").html("g:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#text3").html("a:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
-            $("#text4").html("m:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text4").html("k:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text5").html("m:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#input1").attr("placeholder", "input a large prime number here");
             $("#input2").attr("placeholder", "an element f of prime order");
-            $("#input3").attr("placeholder", "private key a, 1 &#8924 a &#8924; p-1");
-            $("#input4").attr("placeholder", "input the message you want to encrypt");
-            $("#inputWrap5").html("<button class=\"btn\">Go!</button>");
+            $("#input3").attr("placeholder", "an element k of prime order");
+            $("#input4").attr("placeholder", "private key a, 1 <= a <= p-1");
+            $("#input5").attr("placeholder", "input the message you want to encrypt!");
+            $("#inputWrap6").html("<button class=\"btn\">Go!</button>");
         }
 
 
@@ -821,6 +821,7 @@
                     document.getElementById(id).innerHTML = "";
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
+                    $(jq_id).show();
                 }
                 document.getElementById("word2").innerHTML = "The Rivet-Shamir-Adleman (RSA) ";
                 document.getElementById("word3").innerHTML = "Cryptosystem is a asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages! Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. \n" +
@@ -834,6 +835,7 @@
                     document.getElementById(id).innerHTML = "";
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
+                    $(jq_id).show();
                 }
                 document.getElementById("word2").innerHTML = "Diffe-Hellman algorithm is one of the earliest practical examples of public key exchange implemented within the field of cryptography. Traditionally, secure encrypted communication between two parties required that they first exchange keys by some secure physical means, such as paper key lists transported by a trusted courier. The diffie-Hellman key exchange method allows two parties that have no prior knowledge of each other to jointly establish a shared key over an insecure channel. Which was a huge progress in the field of cryptography! This shared key can be used to encrypt subsequent communications using a symmetric key cipher. This algorithm is used for a variety of internet services. The idea of this algorithm is that it’s easy to compute powers modulo a prime but hard to reverse the process.";
                 document.getElementById("word3").innerHTML = "Important note: You’re not sharing information during the key exchange, you’re creating a key together! This can be used in addition to any other cryptosystem that requires exchanged keys. An important distinction to make is that the Diffie-Hellman is for exchanging keys over an insecure channel. So, we don’t encrypt or decrypt data. But rather we send “encrypted” keys and compute the shared value.";
@@ -846,6 +848,7 @@
                     document.getElementById(id).innerHTML = "";
                     var jq_id = "#" + id;
                     $(jq_id).off("click");
+                    $(jq_id).show();
                 }
                 document.getElementById("word2").innerHTML = "The ElGamal encryption system is an asymmetric key encryption algorithm for public key cryptography which is based on the Diffie-Hellman key exchange. The advantage of the ElGamal algorithm is the generation of keys using discrete logarithms.";
                 document.getElementById("word3").innerHTML = "ElGamalhas the disadvantage that the ciphertext is twice as long as the plaintext and it has the advantage that the same plaintext gives a different ciphertext (with near certainty) each time it is encrypted.";
@@ -873,16 +876,6 @@
             alert("Please select a category");
             return false;
         }
-
-        // function toggle_visibility() 
-        // {
-        //     var e = document.getElementById("btn");
-        //     var val1 = document.getElementById("opt");
-        //     var droptext1 = val1.options[val1.selectedIndex].text;
-            
-        //     if (droptext1 != "Select an Option")
-        //         e.style.display = 'inline-block';
-        // }
 
         function show_dice1() {
             var img = document.createElement('img');
@@ -937,6 +930,7 @@
                 $("#err1").html("&nbsp");
                 $("#err2").html("&nbsp");
                 $("#err3").html("&nbsp");
+                $("#err4").html("&nbsp");
                 $.ajax({
                     url: '/process',
                     type: 'POST',
@@ -946,55 +940,57 @@
                            userInput4: $("#input4").val()}
                 })
                 .done(function(data) {
-                    if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {
-                        $("#err4").html("please fill in all blanks");
-                    }
-                    else {
-                        var val = document.getElementById("opt");
-                        var droptext = val.options[val.selectedIndex].text;
-                        if (droptext == "RSA") {
-                            if (data.length == 2) {
-                                if (data[0] == "0" && data[1] == "0") {
+                    $('#input1, #input2, #input3, #input4').each(function(){
+                        if(!$(this).val()){
+                                $("#err4").html("please fill in all blanks");
+                            } 
+                        else{
+                            var val = document.getElementById("opt");
+                            var droptext = val.options[val.selectedIndex].text;
+                            if (droptext == "RSA") {
+                                if (data.length == 2) {
+                                    if (data[0] == "0" && data[1] == "0") {
+                                        $("#err1").html("p has to be a prime");
+                                        $("#err2").html("q has to be a prime");
+                                    }
+                                    else if (data[0] == "0") {
+                                        $("#err1").html("p has to be a prime");
+                                    }
+                                    else if (data[1] == "0") {
+                                        $("#err2").html("q has to be a prime");
+                                    }
+                                }
+                                else if (data.length == 5)
+                                    $("#err3").html("e is not a valid number, please read the example one more time!");
+                                else {
+                                    // show steps here
+                                    
+                                }
+                            }
+                            else if (droptext == "Diffie–Hellman key exchange") {
+                                if (data.length == 2) {
                                     $("#err1").html("p has to be a prime");
-                                    $("#err2").html("q has to be a prime");
                                 }
-                                else if (data[0] == "0") {
+                                else {
+                                    // show steps here
+                                }
+                            }
+                            else if (droptext == "ElGamal encryption") {
+                                if (data.length == 2) {
                                     $("#err1").html("p has to be a prime");
                                 }
-                                else if (data[1] == "0") {
-                                    $("#err2").html("q has to be a prime");
+                                else if (data.length == 3) {
+                                    $("#err3").html("a is not valid");
+                                }
+                                else {
+                                    // show steps here
                                 }
                             }
-                            else if (data.length == 5)
-                                $("#err3").html("e is not a valid number, please read the example one more time!");
                             else {
-                                // show steps here
-                                
+                                document.getElementById("word1").innerHTML = "Unknown request";
                             }
                         }
-                        else if (droptext == "Diffie–Hellman key exchange") {
-                            if (data.length == 1) {
-                                $("#err1").html("p has to be a prime");
-                            }
-                            else {
-                                // show steps here
-                            }
-                        }
-                        else if (droptext == "ElGamal encryption") {
-                            if (data.length == 1) {
-                                $("#err1").html("p has to be a prime");
-                            }
-                            else if (data.length == 3) {
-                                $("#err3").html("a is not valid");
-                            }
-                            else {
-                                // show steps here
-                            }
-                        }
-                        else {
-                            document.getElementById("word1").innerHTML = "Unknown request";
-                        }
-                    }
+                    });
                 });
 			});
 		});
@@ -1018,7 +1014,7 @@
     I want to learn: &nbsp&nbsp&nbsp
 </span>
 <span class="custom-dropdown big">
-    <select name="cryptosystem" id="opt" onchange="why_system();" >
+    <select name="cryptosystem" id="opt" onchange="why_system();">
         <option value="none" selected disabled hidden>
             Select an Option
         </option>
@@ -1220,12 +1216,17 @@
 <div id="inputWrap4"></div>
 <br><br>
 <label for="lname" class="box_leading" id="text4"></label>
-<br><br>
 <input type="text" class="box" id="input4" name="userInput4"> 
 <span>&nbsp&nbsp&nbsp</span><span id="img4"></span>
-<br/><br/><br/>
-<div id="inputWrap5"></div>
 <p class="err" id="err4">&nbsp</p>
+<div id="inputWrap5"></div>
+<br><br>
+<label for="lname" class="box_leading" id="text5"></label>
+<input type="text" class="box" id="input5" name="userInput5"> 
+<span>&nbsp&nbsp&nbsp</span><span id="img5"></span>
+<br/><br/><br/>
+<div id="inputWrap6"></div>
+<p class="err" id="err5">&nbsp</p>
 <br/><br/><br/><br/><br/><br/>
 
 <!-- onclick="show_dice4(); this.onclick=null;" -->
