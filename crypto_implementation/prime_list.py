@@ -81,10 +81,10 @@ def mrt_random_a(n: int, num_wit: int) -> int:
     while num_wit != 0:
         a = random.randint(1, akspt)  # choose random integer as witness
         if miller_rabin_test(n, a) is True:
-            print(f"{n} is not a prime")
+            # print(f"{n} is not a prime")
             return 0
         num_wit -= 1
-    print(f"Tests failed:\n   {n} is a (probable) prime after test with {wit} different witness.")
+    # print(f"Tests failed:\n   {n} is a (probable) prime after test with {wit} different witness.")
     return 1
 
 
@@ -99,7 +99,7 @@ def randomNumGenerator(num_prime: int) -> list:
     while len(prime_list) < num_prime:
         p = random.randint((10 ** 5), 2 * (10 ** 5))
         num_wit = 100
-        print(f"Use Miller-Rabin test to check for [{p}] {num_wit} times:")
+        # print(f"Use Miller-Rabin test to check for [{p}] {num_wit} times:")
 
         if mrt_random_a(p, num_wit) == 1:
             prime_list.append(p)
