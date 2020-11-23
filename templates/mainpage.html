@@ -9,12 +9,6 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
-        // function gcd_two_numbers(a, b) {
-        //     if (!b) {
-        //         return a;
-        //     }
-        //     return gcd_two_numbers(b, a % b);
-        // }
 
         function gcd_two_numbers(e, r) {
             while (r != 0) {
@@ -23,19 +17,6 @@
             }
             return e;
         }
-
-        // function gcd_two_numbers(x, y) {
-        //     if ((typeof x !== 'number') || (typeof y !== 'number')) 
-        //         return false;
-        //     x = Math.abs(x);
-        //     y = Math.abs(y);
-        //     while(y) {
-        //         var t = y;
-        //         y = x % y;
-        //         x = t;
-        //     }
-        //     return x;
-        // }
 
         function valid_e(p, q) {
             var r = (p-1)*(q-1);
@@ -603,6 +584,23 @@
                 }
                 document.getElementById("inputWrap5").style.display = 'inline-block';
             });
+            var primes = primesInRange(10000000);
+            $("#img1").click(function() {
+                var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
+                $("#input1").val(randomNum1);
+            });
+            $("#img2").click(function() {
+                var randomNum2 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input2").val(randomNum2);
+            });
+            $("#img3").click(function() {
+                var randomNum3 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input3").val(randomNum3);
+            });
+            $("#img4").click(function() {
+                var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input4").val(randomNum4);
+            });
             $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
             $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
             $("#word41").html("In the following, we call the sender Alice, and the receiver Bob");
@@ -897,6 +895,28 @@
                 document.getElementById("img5").style.display = 'inline-block';
                 document.getElementById("inputWrap6").style.display = 'inline-block';
             });
+            var primes = primesInRange(10000000);
+            $("#img1").click(function() {
+                var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
+                $("#input1").val(randomNum1);
+            });
+            $("#img2").click(function() {
+                var randomNum2 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input2").val(randomNum2);
+            });
+            $("#img3").click(function() {
+                var p = $("#input1").val();
+                var randomNum3 = Math.floor(Math.random() * Math.floor(p-1));
+                $("#input3").val(randomNum3);
+            });
+            $("#img4").click(function() {
+                var randomNum4 = Math.floor(Math.random() * Math.floor(1000));
+                $("#input4").val(randomNum4);
+            });
+            $("#img5").click(function() {
+                var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input5").val(randomNum4);
+            });
 
             $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#text2").html("g:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
@@ -1023,10 +1043,10 @@
                                         $("#err1").html("p has to be a prime");
                                         $("#err2").html("q has to be a prime");
                                     }
-                                    else if (data[0] == "0") {
+                                    else if (data[0] == "0" && data[1] != "0") {
                                         $("#err1").html("p has to be a prime");
                                     }
-                                    else if (data[1] == "0") {
+                                    else if (data[1] == "0" && data[0] != "0") {
                                         $("#err2").html("q has to be a prime");
                                     }
                                 }
