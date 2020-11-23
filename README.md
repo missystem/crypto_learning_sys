@@ -1,3 +1,5 @@
+# User Guide
+
 # Check our meeting schedules: [meeting.md](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md)
 
 # Project info:
@@ -11,3 +13,10 @@
   - It will have 2 main users (If anyone can think of any other ones please let me know)
     1. A student new to crypto systems looking for an interactive way to understand various cryptosystems and how to break them. For this user we will provide step by step instructions. The user will have to read step 1, do the work, and submit their result for step one. If it is incorrect, a hint will pop up on the webapp and the user can try again. If the answer is correct step 2 will pop up. (It will not go to a new page, but rather a new step will appear -- I will show this in my illustration).
     2. The more advanced user who just wants to check the end result of the cryptosystem. Thus, they dont want any hint or a step by step guide. 
+
+
+## Overall explanation of this project:
+* An interactive learning system for learning cryptosystems. 
+* Help students who is learning cryptography, especially in the midst of the pandemic. 
+* This web application is unique in that it uses interactive learning tools and communicates with the user at each step. 
+* The user must input the correct number in each step to be able to reach the next step.
