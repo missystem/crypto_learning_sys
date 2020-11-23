@@ -13,7 +13,8 @@
 4. [11/02 M: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1102-m-all-members)
 5. [11/12 U: Missy & Xuehai](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1112-u-missy--xuehai)
 6. [11/13 F: ALL members](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1113-f-all-members)
-7. [11/20 M: Missy, Donna, Xuehai](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1120-m-missy-donna-xuehai)
+7. [11/20 F: Missy, Donna, Xuehai](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md#1120-m-missy-donna-xuehai)
+8. [11/23 M: ALL members]()
 ---
 
 ## Separate this project into 3 sections:
@@ -220,7 +221,6 @@
 		- Finished the example and method or ElGamal.
 		- Has written the hints that John should show and wrote a detailed document on what to write for design.
 			- Missy then updated the design so her's is the msot recent.
-
 		
 * **TO DO**:
 	- **Missy**: 
@@ -235,19 +235,30 @@
 		- Send method, example, and motivation to Xuehai (Key generated automatically).
 		- Documentation.
 
-
-	
 ---
 
-### 11/20 M: Missy, Donna, Xuehai
+### 11/20 F: Missy, Donna, Xuehai
 * **Current Progress**: 
 	- **Missy**: Was done by last meeting. good job!
 	- **Xuehai**: Great work with the website! Implemented the "hide" function. 
 	- **Donna**: Sent examples and motivation.
 	- **John**: did not show up.
-	
 	- Group decision: Don't add substitution cipher since we might not have time. 
+
 * **TO DO**:
 	- **Xuehai**: finish ElGamal & make things pretty.
 	- **Donna**: documentation. 
 	- **Missy**: edit documentation file into an markdown file and add pictures
+
+
+---
+
+### 11/23 M: ALL members
+* **Current Progress**: 
+	- 
+* **TO DO**:
+	- 
+
+
+
+
