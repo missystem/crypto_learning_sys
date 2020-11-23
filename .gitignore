@@ -1,0 +1,21 @@
+
+.DS_Store
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+__pycache__/rsa_method.cpython-37.pyc
+.idea/crypto_learning_sys.iml
+__pycache__/DH.cpython-37.pyc
+__pycache__/Elgamal.cpython-37.pyc
+__pycache__/RSA.cpython-37.pyc
+__pycache__/substitution.cpython-37.pyc
+page design.fld/colorschememapping.xml
+page design.fld/filelist.xml
+page design.fld/themedata.thmx
+page design.fld/image001.png
+~$ge design.html
+__pycache__/prime_list.cpython-37.pyc
+~$maples.docx
