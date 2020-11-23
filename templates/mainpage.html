@@ -9,6 +9,62 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
+        // function gcd_two_numbers(a, b) {
+        //     if (!b) {
+        //         return a;
+        //     }
+        //     return gcd_two_numbers(b, a % b);
+        // }
+
+        function gcd_two_numbers(e, r) {
+            while (r != 0) {
+                e = r;
+                r = e % r;
+            }
+            return e;
+        }
+
+        // function gcd_two_numbers(x, y) {
+        //     if ((typeof x !== 'number') || (typeof y !== 'number')) 
+        //         return false;
+        //     x = Math.abs(x);
+        //     y = Math.abs(y);
+        //     while(y) {
+        //         var t = y;
+        //         y = x % y;
+        //         x = t;
+        //     }
+        //     return x;
+        // }
+
+        function valid_e(p, q) {
+            var r = (p-1)*(q-1);
+            var valid = [];
+            var e;
+            while (valid.length < 20) {
+                e = Math.floor((Math.random() * 1000) + 1);
+                var gcd = gcd_two_numbers(e, r);
+                if (gcd == 1) {
+                    valid.push(e);
+                }
+            }
+            return valid;
+        }
+
+        function primesInRange(max) {
+            var sieve = [], i, j, primes = [];
+            for (i = 2; i <= max; ++i) {
+                if (!sieve[i]) {
+                    // i has not been marked -- it is prime
+                    primes.push(i);
+                    for (j = i << 1; j <= max; j += i) {
+                        sieve[j] = true;
+                    }
+                }
+            }
+            return primes;
+        }
+
         function rsa_text() {
             for (var i = 2; i < 75; i++) {
                 var id = "word" + i;
@@ -304,6 +360,26 @@
                     document.getElementById(id4).style.display = 'inline-block';
                 }
                 document.getElementById("inputWrap5").style.display = 'inline-block';
+            });
+            var primes = primesInRange(10000000);
+            $("#img1").click(function() {
+                var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
+                $("#input1").val(randomNum1);
+            });
+            $("#img2").click(function() {
+                var randomNum2 = primes[Math.floor(Math.random() * primes.length)];
+                $("#input2").val(randomNum2);
+            });
+            var p = $("#input1").val();
+            var q = $("#input2").val();
+            var elist = valid_e(p, q);
+            $("#img3").click(function() {
+                var randomNum3 = elist[Math.floor(Math.random() * elist.length)];
+                $("#input3").val(randomNum3);
+            });
+            $("#img4").click(function() {
+                var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input4").val(randomNum4);
             });
             document.getElementById("text1").innerHTML = "p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
             document.getElementById("text2").innerHTML = "q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
@@ -924,6 +1000,7 @@
                 $("#err2").html("&nbsp");
                 $("#err3").html("&nbsp");
                 $("#err4").html("&nbsp");
+                $("#err5").html("&nbsp");
                 $.ajax({
                     url: '/process',
                     type: 'POST',
@@ -935,7 +1012,7 @@
                 .done(function(data) {
                     $('#input1, #input2, #input3, #input4').each(function(){
                         if(!$(this).val()){
-                                $("#err4").html("please fill in all blanks");
+                                $("#err5").html("please fill in all blanks");
                             } 
                         else{
                             var val = document.getElementById("opt");
