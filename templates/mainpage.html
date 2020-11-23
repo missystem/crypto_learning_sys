@@ -54,6 +54,7 @@
                 var jq_id = "#" + id;
                 $(jq_id).off("click");
                 $(jq_id).show();
+                $(jq_id).css({"background-color": "", "font-size": "16px", "border-radius": ""});
             }
             for (var i = 1; i < 6; i++) {
                 var id1 = "text" + i;
@@ -77,8 +78,8 @@
             }
             document.getElementById("inputWrap6").style.display = 'none';
 
-            $("#word2").html("Method");
-            $("#word3").html("--Encryption-----------------------------------");
+            $("#word2").html("Method &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
+            $("#word3").html("Encryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             document.getElementById("word4").style.textDecoration = 'underline';
             $("#word4").html("Step 1 of 4");
             $("#word5").html("Step 1: pick two -large- primes");
@@ -149,7 +150,7 @@
                 $("#word17").hide();
                 $("#word18").hide();
             });
-            $("#word19").html("--Decryption-----------------------------------");
+            $("#word19").html("Decryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             $("#word20").html("Recall, We already know p, q, and the public key (N,e).");
             $("#word21").html("There is one simple step Bob has to do before starting the encryption:");
             $("#word22").html("Generate private key");
@@ -196,8 +197,8 @@
                     $(id).hide();
                 }
             });
-            $("#word30").html("Example");
-            $("#word31").html("--Encryption-----------------------------------");
+            $("#word30").html("Example &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
+            $("#word31").html("Encryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             document.getElementById("word32").style.textDecoration = 'underline';
             $("#word32").html("Step 1 of 4");
             $("#word33").html("Step 1: pick two -large- primes");
@@ -286,7 +287,7 @@
                 $("#word49").hide();
                 $("#word50").hide();
             });
-            $("#word51").html("--Decryption-----------------------------------");
+            $("#word51").html("Decryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             $("#word52").html("In our example, we must find a value such that 61d≡1 mod 660");
             $("#word53").html("Using simple methods learned in discrete math, we are looking for a d such that 660 divides 61d-1. Since our numbers are very small we can test and see that 541 works. d = 541.");
             $("#word54").html("Now the decryption begins!");
@@ -323,7 +324,7 @@
                 var id = "#word" + i;
                 $(id).hide();
             }
-            $("#word57").html("Ready to try it yourself?");
+            $("#word57").html("Ready to try it yourself?").css({"font-size": "24px"});
             $("#word57").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
             $("#readyBtn").click(function() {
                 for (var i = 58; i <= 75; i++) {
@@ -381,6 +382,7 @@
                 var jq_id = "#" + id;
                 $(jq_id).off("click");
                 $(jq_id).show();
+                $(jq_id).css({"background-color": "", "font-size": "16px", "border-radius": ""});
             }
             for (var i = 1; i < 6; i++) {
                 var id1 = "text" + i;
@@ -402,8 +404,8 @@
                 $(id5).html("&nbsp");
             }
             document.getElementById("inputWrap6").style.display = 'none';
-            $("#word2").html("Method");
-            $("#word3").html("--Encryption-----------------------------------");
+            $("#word2").html("Method &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
+            $("#word3").html("Encryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             document.getElementById("word4").style.textDecoration = 'underline';
             $("#word4").html("Step 1 of 2");
             $("#word5").html("Step 1: Public Parameter Creation");
@@ -446,7 +448,7 @@
                 $("#word11").hide();
                 $("#word12").hide();
             });
-            $("#word13").html("--Decryption-----------------------------------");
+            $("#word13").html("Decryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             $("#word14").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
             $("#word15").html("AlicehassentA≡ g" + "a".sup() + "(mod p)to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
             $("#word16").html("How to decrypt?");
@@ -484,8 +486,8 @@
                     $(id).hide();
                 }
             });
-            $("#word21").html("Example");
-            $("#word22").html("--Encryption-----------------------------------");
+            $("#word21").html("Example &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
+            $("#word22").html("Encryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             document.getElementById("word23").style.textDecoration = 'underline';
             $("#word23").html("Step 1 of 2");
             $("#word24").html("Step 1: Public Parameter Creation");
@@ -523,7 +525,7 @@
                     $(id).hide();
                 }
             });
-            $("#word30").html("--Decryption-----------------------------------");
+            $("#word30").html("Decryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             $("#word31").html("Recall, Alice and Bob agree on a public prime and the primitive root g.");
             $("#word32").html("AlicehassentA≡ g" + "a".sup() + "(mod p) to Bob, and Bob has sent B≡ g" + "b".sup() + "(mod p) to Alice.");
             $("#word33").html("In our example, p = 941, g = 627, a = 347, A = 390, b = 781, and B = 691.");
@@ -565,7 +567,7 @@
                 var id = "#word" + i;
                 $(id).hide();
             }
-            $("#word38").html("Ready to try it yourself?");
+            $("#word38").html("Ready to try it yourself?").css({"font-size": "24px"});
             $("#word38").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
             $("#readyBtn").click(function() {
                 for (var i = 39; i <= 75; i++) {
@@ -624,6 +626,7 @@
                 var jq_id = "#" + id;
                 $(jq_id).off("click");
                 $(jq_id).show();
+                $(jq_id).css({"background-color": "", "font-size": "16px", "border-radius": ""});
             }
             for (var i = 1; i < 6; i++) {
                 var id1 = "text" + i;
@@ -645,8 +648,8 @@
                 $(id5).html("&nbsp");
             }
             document.getElementById("inputWrap6").style.display = 'none';
-            $("#word2").html("Method");
-            $("#word3").html("--Encryption-----------------------------------");
+            $("#word2").html("Method &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
+            $("#word3").html("Encryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             document.getElementById("word4").style.textDecoration = 'underline';
             $("#word4").html("Step 1 of 6");
             $("#word5").html("Step 1: Public Parameter Creation");
@@ -746,7 +749,7 @@
                 $("#word23").hide();
                 $("#word24").hide();
             });
-            $("#word25").html("--Decryption-----------------------------------");
+            $("#word25").html("Decryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             $("#word26").html("Recall, Bob knows the values of a and A. And has received the cipher text ( c1 , c2 ) from Alice. Bob");
             $("#word27").html("only has to do one simple step:");
             $("#word28").html("Compute (c" + "a".sup() + "1".sub() + +")" + "−1".sup() + " c 1*2(mod p) . This quantity is equal to m.");
@@ -773,8 +776,8 @@
                 }
             });
 
-            $("#word29").html("Example");
-            $("#word30").html("--Encryption-----------------------------------");
+            $("#word29").html("Example &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
+            $("#word30").html("Encryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             document.getElementById("word31").style.textDecoration = 'underline';
             $("#word31").html("Step 1 of 6");
             $("#word32").html("Step 1: Public Parameter Creation");
@@ -850,7 +853,7 @@
                 $("#word46").fadeToggle();
             });
 
-            $("#word49").html("--Decryption-----------------------------------");
+            $("#word49").html("Decryption &nbsp&nbsp&#709;").css({"font-size": "20px"});
             $("#word50").html("In our example, Bob will compute: m′ = (2579" + "765".sup() + ") −1 * 2396 mod 2579 = 1299 mod 2579");
             $("#word50").hide();
             $("#word49").click(function() {
@@ -867,7 +870,7 @@
                 $("#word49").fadeToggle();
                 $("#word50").hide();
             });
-            $("#word51").html("Ready to try it yourself?");
+            $("#word51").html("Ready to try it yourself?").css({"font-size": "24px"});
             $("#word51").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
             $("#word52").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "https://bigprimes.org".link("https://bigprimes.org"));
             $("#word53").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "https://www.wolframalpha.com/".link("https://www.wolframalpha.com/"));
