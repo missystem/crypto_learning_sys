@@ -24,10 +24,18 @@
                 var id3 = "inputWrap" + i;
                 var id4 = "img" + i;
                 var id5 = "#err" + i;
+                var img_id = "#img" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
                 document.getElementById(id4).style.display = 'none';
+                var img = document.createElement('img');
+                img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
+                img.width = "30";
+                var myp = document.getElementById(id4);
+                if (!myp.hasChildNodes()) {
+                    myp.appendChild(img);
+                }
                 $(id5).html("&nbsp");
             }
             document.getElementById("inputWrap6").style.display = 'none';
@@ -327,6 +335,13 @@
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
                 document.getElementById(id4).style.display = 'none';
+                var img = document.createElement('img');
+                img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
+                img.width = "30";
+                var myp = document.getElementById(id4);
+                if (!myp.hasChildNodes()) {
+                    myp.appendChild(img);
+                }
                 $(id5).html("&nbsp");
             }
             document.getElementById("inputWrap6").style.display = 'none';
@@ -521,7 +536,7 @@
             $("#text3").html("a:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#text4").html("b:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#input1").attr("placeholder", "a large prime integer here");
-            $("#input2").attr("placeholder", "an integer g of prime order in F*");
+            $("#input2").attr("placeholder", "an integer g of prime order in Fp*");
             $("#input3").attr("placeholder", "input a secret integer a");
             $("#input4").attr("placeholder", "input a secret integer b");
             $("#inputWrap5").html("<button class=\"btn\">Go!</button>");
@@ -546,6 +561,13 @@
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
                 document.getElementById(id4).style.display = 'none';
+                var img = document.createElement('img');
+                img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
+                img.width = "30";
+                var myp = document.getElementById(id4);
+                if (!myp.hasChildNodes()) {
+                    myp.appendChild(img);
+                }
                 $(id5).html("&nbsp");
             }
             document.getElementById("inputWrap6").style.display = 'none';
@@ -784,7 +806,7 @@
                     var id = "#word" + i;
                     $(id).show();
                 }
-                for (var i = 1; i < 6; i++) {
+                for (var i = 1; i < 5; i++) {
                     var id1 = "text" + i;
                     var id2 = "input" + i;
                     var id3 = "inputWrap" + i;
@@ -794,6 +816,9 @@
                     document.getElementById(id3).style.display = 'inline-block';
                     document.getElementById(id4).style.display = 'inline-block';
                 }
+                document.getElementById("text5").style.display = 'inline-block';
+                document.getElementById("input5").style.display = 'inline-block';
+                document.getElementById("img5").style.display = 'inline-block';
                 document.getElementById("inputWrap6").style.display = 'inline-block';
             });
 
@@ -803,13 +828,12 @@
             $("#text4").html("k:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#text5").html("m:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
             $("#input1").attr("placeholder", "input a large prime number here");
-            $("#input2").attr("placeholder", "an element f of prime order");
-            $("#input3").attr("placeholder", "an element k of prime order");
-            $("#input4").attr("placeholder", "private key a, 1 <= a <= p-1");
+            $("#input2").attr("placeholder", "input an element f of prime order");
+            $("#input3").attr("placeholder", "private key a, 1 ≤ a ≤ p-1");
+            $("#input4").attr("placeholder", "input an integer 1 ≤ k ≤ 1000");
             $("#input5").attr("placeholder", "input the message you want to encrypt!");
             $("#inputWrap6").html("<button class=\"btn\">Go!</button>");
         }
-
 
 
         function click_motivation() {
@@ -877,37 +901,6 @@
             return false;
         }
 
-        function show_dice1() {
-            var img = document.createElement('img');
-            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
-            img.width = "30";
-            var myp = document.getElementById("img1");
-            myp.appendChild(img);
-        }
-
-        function show_dice2() {
-            var img = document.createElement('img');
-            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
-            img.width = "30";
-            var myp = document.getElementById("img2");
-            myp.appendChild(img);
-        }
-
-        function show_dice3() {
-            var img = document.createElement('img');
-            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
-            img.width = "30";
-            var myp = document.getElementById("img3");
-            myp.appendChild(img);
-        }
-
-        function show_dice4() {
-            var img = document.createElement('img');
-            img.src = "https://gilkalai.files.wordpress.com/2017/09/dice.png";
-            img.width = "30";
-            var myp = document.getElementById("img4");
-            myp.appendChild(img);
-        }
 
         $(document).ready(function(){
             $("#opt").change(function() {
@@ -1198,19 +1191,19 @@
 <br><br>
 <div id="inputWrap1"></div>
 <label for="lname" class="box_leading" id="text1"></label>
-<input type="text" class="box" id="input1" name="userInput1" onclick="show_dice1(); this.onclick=null;">
+<input type="text" class="box" id="input1" name="userInput1">
 <span>&nbsp&nbsp&nbsp</span><span id="img1"></span>
 <p class="err" id="err1">&nbsp</p>
 <div id="inputWrap2"></div>
 <br><br>
 <label for="lname" class="box_leading" id="text2"></label>
-<input type="text" class="box" id="input2" name="userInput2" onclick="show_dice2(); this.onclick=null;">
+<input type="text" class="box" id="input2" name="userInput2">
 <span>&nbsp&nbsp&nbsp</span><span id="img2"></span>
 <p class="err" id="err2">&nbsp</p>
 <div id="inputWrap3"></div>
 <br><br>
 <label for="lname" class="box_leading" id="text3"></label>
-<input type="text" class="box" id="input3" name="userInput3" onclick="show_dice3(); this.onclick=null;">
+<input type="text" class="box" id="input3" name="userInput3">
 <span>&nbsp&nbsp&nbsp</span><span id="img3"></span>
 <p class="err" id="err3">&nbsp</p>
 <div id="inputWrap4"></div>
