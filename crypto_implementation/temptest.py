@@ -16,13 +16,18 @@ import random
 import math
 
 
-def primePQ(num_prime):
-    """generate two prime numbers """
-    prime_list = randomNumGenerator(num_prime)
-    p = random.choice(prime_list)
-    prime_list.remove(p)
-    q = random.choice(prime_list)
-    prime_list.remove(q)
+def primePQ(num_prime: int, num_len: int) -> (int, int):
+    """generate two prime numbers
+    num_prime: number of prime numbers we want in prime list
+    num_len: length of prime numbers
+    len(p) != len(q), so set q list by using num_len+1
+    """
+    p_list = randomNumGenerator(num_prime, num_len)
+    q_list = randomNumGenerator(num_prime, num_len + 1)
+    p = random.choice(p_list)
+    p_list.remove(p)
+    q = random.choice(q_list)
+    q_list.remove(q)
     return p, q
 
 
@@ -37,7 +42,7 @@ def eGenerator(r):
 def rsaTester():
     print(f"{'-' * 42} RSA tester {'-' * 42}")
     num_prime = 20
-    p, q = primePQ(num_prime)
+    p, q = primePQ(num_prime, 5)
     # print(f"random prime p = {p}, q = {q}")
 
     r = (p - 1) * (q - 1)
@@ -61,7 +66,7 @@ def rsaTester():
 def dhTester():
     print(f"{'-' * 36} Diffie Hellman tester {'-' * 36}")
     print("[p, g, a, b, A, B, A', B']")
-    p, q = primePQ(20)
+    p, q = primePQ(20, 5)
     g = random.randint(10, p)
     a = random.randint(1, 1000)
     b = random.randint(1, 1000)
@@ -75,7 +80,7 @@ def dhTester():
 def elgamalTester():
     print(f"{'-' * 40} Elgamal tester {'-' * 40}")
     print("[p, g, a, publicKeyA, k, message, encryptedMsg, decryptedMsg]")
-    p, q = primePQ(20)
+    p, q = primePQ(20, 5)
     g = random.randint(10, 1000)
     a = random.randint(1, p-1)
     k = random.randint(10, 100)
@@ -103,7 +108,6 @@ def main():
         elgamalTester()
 
     # subTester()
-
 
 
 if __name__ == '__main__':
