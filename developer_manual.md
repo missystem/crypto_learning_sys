@@ -2,11 +2,39 @@
 
 ### A detailed developer log with progress: [meeting.md](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md)
 
+---
+
 ## Overall explanation of this project:
 * An interactive learning system for learning cryptosystems. 
 * Help students who is learning cryptography, especially in the midst of the pandemic. 
 * This web application is unique in that it uses interactive learning tools and communicates with the user at each step. 
 * The user must input the correct number in each step to be able to reach the next step.
+
+---
+
+## General mapping of each directory in this repo:
+* **user_manual.md**
+	- A user guide, give assistance to user who is using the cryptosystem interactive learning system
+	
+* **config**:
+	- [Page Design](https://github.com/missystem/crypto_learning_sys/tree/master/config/Page%20Design): Page designs for each cryptosystem
+	- [algorithm_info](https://github.com/missystem/crypto_learning_sys/tree/master/config/algorithm_info): Guide to the frontend developers
+		- examples and methods used for each cryptosystem
+	- config.sh: used by users to download the required libraries
+		- used in heroku to set up the environment
+
+* **images**:
+	- images inserted in each .md file
+
+* **meeting.md**
+	- Detailed developers' log
+		-includes progress for each week in addition to any obstacles we faced
+* **crypto_implementation**
+	- cryptosystem implementations
+* Xuehai’s section
+* John’s section
+
+---
 
 ### This project is separated into 3 modules:
 1. **Back-End**
@@ -15,7 +43,7 @@
 		- Each cryptosystem will return a list of string with corresponding numbers
 		- These lists are different for different cryptosystems. 
 		- Frontend takes output list to make interactive process
-		- More info can be found in the comments of each cryptosystem.
+		- Detailed explanation in the comments of each cryptosystem implementation
 			- [RSA Key Exchange]((https://github.com/missystem/crypto_learning_sys/blob/master/crypto_implementation/RSA.py)	
 			- [Diffie-Hellman Key Exchange](https://github.com/missystem/crypto_learning_sys/blob/master/crypto_implementation/DH.py)
 			- [Elgamal Public Key Cryptosystem](https://github.com/missystem/crypto_learning_sys/blob/master/crypto_implementation/Elgamal.py)
@@ -32,14 +60,23 @@
 
 ### TESTING  
 1. backend testing
-	- using test file [temptest.py](https://github.com/missystem/crypto_learning_sys/blob/master/crypto_implementation/temptest.py) to run each program with different data sets
-	- We tested the backend section by running the code on different large and small numbers and made sure all outputs were correct. We used edge cases and normal ones to make sure the backend is functioning correctly and without any errors.
+	- Use test file [temptest.py](https://github.com/missystem/crypto_learning_sys/blob/master/crypto_implementation/temptest.py) to run each program with random generated data sets
 2. frontend -- input and method
 	- How did Xuehai test
 3. frontend -- Interactive portion
 	- How did John test
-4. Outside testing
-	- We had friends who are not computer scientists and have no knowledge of cryptosystems test our product and give us some feedback about the accessibility, the instructions, and how to make out product better.
+4. Product testing
+	- Invited people to try our learning system and give us feedback about the accessibility, the instructions, and what to improve
+
+### Further Extensions:
+* Adding more cryptosystems
+	- You would have to 
+		- make the corresponding changes in ​Frontend code​ to add them to the main page
+		- make the corresponding changes in Middleend code​ ​to add the javascript and jquery calls, in addition to construct the new cryptosystem
+	- Creating app for iOS or Android
+	- Make it compatible with screen readers
+	- Adding video or voice explanation option that can walk through the methods and examples
+
 
 
 
