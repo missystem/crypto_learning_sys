@@ -61,6 +61,7 @@ def diffie_hellman(p: int, g: int, a: int, b: int) -> list:
     check_p = prime_check(p)
     if check_p == False:
         result.append("0")
+        return result
     else:
         result.append(str(p))
 
