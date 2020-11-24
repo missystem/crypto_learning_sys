@@ -1,5 +1,5 @@
 # Crypto Learning System User Guide
-<a href="#" class="image"><img src="images/mainpage.png" alt="" /></a><br/>
+<a href="#" class="image"><img src="images/mainpage.png" alt="https://crypto-learning-sys.herokuapp.com" /></a><br/>
 
 ### What is Crypto Learning System
 
@@ -11,5 +11,3 @@ Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgam
 
 
 ### Contributing
-<a href="https://github.com/crypto_learning_sys/missystem/graphs/contributors" alt="Contributors">
-<img src="https://img.shields.io/github/contributors/badges/shields" /></a>
