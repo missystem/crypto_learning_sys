@@ -255,10 +255,26 @@
 
 ### 11/23 M: ALL members
 * **Current Progress**: 
-	- 
+	- John: RSA is broken. ElGamal is Broken. Diffie-Hellman is running.... 
+	- Xuehai: Fixed dice option. All cryptosystems are done. Hide option is working very well. Very Pretty.
+	- Donna and Missy: Documentation is done. 
 * **TO DO**:
-	- 
+	- We will meet at 8:00 PM to see progress. John must fix his broken module by then. 
+	- After that, we need to fix user documentation. 
+		- Record how to video for user documentation.
+	- Host on Heroku.
 
 
 
+---
+
+### 11/23 M: ALL members 8:00 PM
+* **Current Progress**: 
+	- John: RSA is fixed. ElGamal is broken.
+* **TO DO**:
+	- Missy looked for a faster soltuion, but this is the fastest. 
+	- Xuehai will sent a limit on how large primes can be for ElGamal.
+		- 6 digits is maximum. 
+		- Also add a note that tells the user about this limitations and explains the slowness of ElGamal in the multiplicative inverse stage in decrypting the message. 
+		- If Missy can find a faster solution we can use. 
 
