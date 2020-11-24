@@ -11,7 +11,7 @@ Date: 11/03/2020
 # mul_inverse(e: int, r: int) -> int
 # rsa_encrypt(public: tuple, m: int) -> int
 # rsa_decrypt(private: int, c: int) -> int
-# rsa(p: int, q: int, e: int, message: int) -> list
+# rsa(p: str, q: str, e: str, message: str) -> list
 # ------------------------------------------------------------------------------------------------ #
 
 

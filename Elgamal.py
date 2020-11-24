@@ -11,7 +11,7 @@ Date: 11/11/2020
 # fast_powering(n: int, pow: int, modulus: int) -> int
 # elgamalEncrypt(m: int, q: int, g: int, bigA: int, k: int) -> list
 # elgamalDecrypt(c1: int, c2: int, key: int, q: int) -> int
-# elgamal(q: int, g: int, a: int, k: int, m: int) -> list
+# elgamal(q: str, g: str, a: str, k: str, m: str) -> list
 # ------------------------------------------------------------------------------------------------ #
 
 
@@ -77,7 +77,7 @@ def elgamalDecrypt(c1: int, c2: int, key: int, q: int) -> int:
     return dec_msg
 
 
-def elgamal(q, g, a, k, m) -> list:
+def elgamal(q: str, g: str, a: str, k: str, m: str) -> list:
     """
     return ["0"] if q is not prime
     return [q, g, "0"] if a is not valid
