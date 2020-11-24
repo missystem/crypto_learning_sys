@@ -9,6 +9,9 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
+        var p_list = [100357, 166429, 116269, 171169, 189529, 182981, 173059, 190529, 189583, 106123, 160483, 105509, 160081, 149161, 144737, 161033, 140159, 176779, 198929, 121487];
+        var q_list = [1979581, 1096541, 1187353, 1752889, 1484183, 1533127, 1380083, 1029157, 1633553, 1761187, 1008421, 1639367, 1326167, 1674847, 1624507, 1954369, 1163993, 1375637, 1190573, 1076077];
+        var e_list = [97, 107, 127, 137, 157, 277, 283, 367, 373, 31, 179];
 
         function gcd_two_numbers(e, r) {
             while (r != 0) {
@@ -63,6 +66,7 @@
                 var id4 = "img" + i;
                 var id5 = "#err" + i;
                 var img_id = "#img" + i;
+                var input_id = "#input" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
@@ -75,6 +79,7 @@
                     myp.appendChild(img);
                 }
                 $(id5).html("&nbsp");
+                $(input_id).val("");
             }
             document.getElementById("inputWrap6").style.display = 'none';
 
@@ -343,20 +348,20 @@
                 }
                 document.getElementById("inputWrap5").style.display = 'inline-block';
             });
-            var primes = primesInRange(10000000);
+            // var primes = primesInRange(10000000);
             $("#img1").click(function() {
-                var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
+                var randomNum1 = p_list[Math.floor(Math.random() * p_list.length)];
                 $("#input1").val(randomNum1);
             });
             $("#img2").click(function() {
-                var randomNum2 = primes[Math.floor(Math.random() * primes.length)];
+                var randomNum2 = q_list[Math.floor(Math.random() * q_list.length)];
                 $("#input2").val(randomNum2);
             });
-            var p = $("#input1").val();
-            var q = $("#input2").val();
-            var elist = valid_e(p, q);
+            // var p = $("#input1").val();
+            // var q = $("#input2").val();
+            // var elist = valid_e(p, q);
             $("#img3").click(function() {
-                var randomNum3 = elist[Math.floor(Math.random() * elist.length)];
+                var randomNum3 = e_list[Math.floor(Math.random() * e_list.length)];
                 $("#input3").val(randomNum3);
             });
             $("#img4").click(function() {
@@ -392,6 +397,7 @@
                 var id3 = "inputWrap" + i;
                 var id4 = "img" + i;
                 var id5 = "#err" + i;
+                var input_id = "#input" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
@@ -404,6 +410,7 @@
                     myp.appendChild(img);
                 }
                 $(id5).html("&nbsp");
+                $(input_id).val("");
             }
             document.getElementById("inputWrap6").style.display = 'none';
             $("#word2").html("Method &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
@@ -636,6 +643,7 @@
                 var id3 = "inputWrap" + i;
                 var id4 = "img" + i;
                 var id5 = "#err" + i;
+                var input_id = "#input" + i;
                 document.getElementById(id1).style.display = 'none';
                 document.getElementById(id2).style.display = 'none';
                 document.getElementById(id3).style.display = 'none';
@@ -648,6 +656,7 @@
                     myp.appendChild(img);
                 }
                 $(id5).html("&nbsp");
+                $(input_id).val("");
             }
             document.getElementById("inputWrap6").style.display = 'none';
             $("#word2").html("Method &nbsp&nbsp&#709;").css({"background-color": "rgb(140, 190, 140)", "font-size": "24px", "border-radius": "12px"});
@@ -900,7 +909,7 @@
                 document.getElementById("img5").style.display = 'inline-block';
                 document.getElementById("inputWrap6").style.display = 'inline-block';
             });
-            var primes = primesInRange(10000000);
+            var primes = primesInRange(100000);
             $("#img1").click(function() {
                 var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
                 $("#input1").val(randomNum1);
@@ -1075,9 +1084,9 @@
                            userInput4: $("#input4").val()}
                     })
                     .done(function(data) {
-<!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {-->
-<!--                            $("#err4").html("please fill in all blanks");-->
-<!--                        }-->
+// <!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {-->
+// <!--                            $("#err4").html("please fill in all blanks");-->
+// <!--                        }-->
                         if (data.length == 2) {
                             if (data[0] == "0" && data[1] == "0") {
                                 $("#err1").html("p has to be a prime");
@@ -1120,9 +1129,9 @@
                                userInput4: $("#input4").val()}
                     })
                     .done(function(data) {
-<!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {-->
-<!--                            $("#err4").html("please fill in all blanks");-->
-<!--                        }-->
+// <!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {-->
+// <!--                            $("#err4").html("please fill in all blanks");-->
+// <!--                        }-->
                         if (data.length == 1) {
                             $("#err1").html("p has to be a prime");
                         }else {
@@ -1156,9 +1165,9 @@
                                userInput5: $("#input5").val()}
                     })
                     .done(function(data){
-<!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined || data[4] === undefined) {-->
-<!--                            $("#err4").html("please fill in all blanks");-->
-<!--                        }-->
+// <!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined || data[4] === undefined) {-->
+// <!--                            $("#err4").html("please fill in all blanks");-->
+// <!--                        }-->
                         if (data.length == 1) {
                             $("#err1").html("p has to be a prime");
                         }else if (data.length == 3) {
@@ -1176,6 +1185,7 @@
                                 $("#div_8").remove();
                             }catch(err){
                             }
+                            console.log(data);
                             show_EIGStep(data);
                         }
                     });
@@ -1241,7 +1251,7 @@
                 });
 
             $("#check3").click(function(){
-                    if($("#user_input3").val() == data[6]){
+                    if($("#user_input3").val() == data[7]){
                         $("#hint3").text("Hint: Correct.");
                         $("#check3").hide();
                         $("#check3").val('1');
@@ -1256,7 +1266,7 @@
             if($("#check1").val() && $("#check2").val() && $("#check3").val() == "1"){
                         $("#div_3").after("<div id='div_4'><p id='Text1'>GREAT JOB! You have finished encryption!</p></div>");
                         $("#Text1").after("<p id='Text2'></p>");
-                        $("#Text2").text("Your encrypted message is: " + data[6] + ".");
+                        $("#Text2").text("Your encrypted message is: " + data[7] + ".");
 
                         $("#div_4").after("<div id='div_5'><p id='Text3'>Now, let's do decryption!</p></div>");
 
@@ -1277,7 +1287,7 @@
                         $("#check5").hide();
 
                         $("#check4").click(function(){
-                            if($("#user_input4").val() == data[7]){
+                            if($("#user_input4").val() == data[8]){
                                 $("#hint4").text("Hint: Correct.");
                                 $("#check4").hide();
                                 $("#check4").val('1');
@@ -1292,7 +1302,7 @@
                         });
 
                         $("#check5").click(function(){
-                            if($("#user_input5").val() == data[9]){
+                            if($("#user_input5").val() == data[10]){
                                 $("#hint5").text("Hint: Correct.");
                                 $("#check5").hide();
                                 $("#check5").val('1');
@@ -1411,7 +1421,6 @@
         }
 
         function show_EIGStep(data){
-            console.log(data);
             $(".btn").after("<div id='div_1'><label for='lname' class='box_leading' id='lab1'>A: </label></div>");
             $("#lab1").append("<input type='text' class='box' id='user_input1' placeholder='Hint: A = g^a (mod p)'>");
             $("#user_input1").after("<button class='button' id='check1'>Check</button>");

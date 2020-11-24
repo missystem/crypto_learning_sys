@@ -94,10 +94,11 @@ def Elgamal_decrypt(enc_msg: [str,str], p: int, a:int) -> int:
     dec_msg = plaintext m
     return plaintext dec_msg
     """
-    c1, c2 = enc_msg
-    x = mul_inverse(int(c1) ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
+    c1 = int(enc_msg[0])
+    c2 = int(enc_msg[1])
+    x = mul_inverse(c1 ** a, p)      # x = (c1 ^ a) ^ (-1) (mod p)
     # print(f"multiplicative inverse of c1^a mod p: {x}")
-    dec_msg = (x * int(c2)) % p
+    dec_msg = (x * c2) % p
     return dec_msg
 
 
@@ -164,15 +165,17 @@ def elgamal(p, g, a, k, m) -> list:
     result.append(enc_msg)
 
     # decrypt the encrypted message #
+    print(enc_msg)
     dec_msg = Elgamal_decrypt(enc_msg, p, a)
     result.append(str(dec_msg))
 
     return result
 
-#
-# def main():
-#     print(elgamal('23333', '233', '776', '456', '345'))
-#
-#
-# if __name__ == '__main__':
-#     main()
+
+def main():
+    # print(elgamal('2503261', '1796', '807521', '189', '2682'))
+    print(elgamal('5293439', '3202', '5039839', '76', '8540'))
+
+
+if __name__ == '__main__':
+    main()
