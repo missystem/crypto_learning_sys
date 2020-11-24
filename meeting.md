@@ -255,9 +255,13 @@
 
 ### 11/23 M: ALL members
 * **Current Progress**: 
-	- 
+	- John: RSA is broken. ElGamal is Broken. Diffie-Hellman is running.... 
+	- Xuehai: Fixed dice option. All cryptosystems are done. Hide option is working very well. Very Pretty.
+	- Donna and Missy: Documentation is done. 
 * **TO DO**:
-	- 
+	- We will meet at 8:00 PM to see progress. John must fix his broken module by then. 
+	- After that, we need to fix user documentation. 
+		- Record how to video for user documentation.
 
 
 
