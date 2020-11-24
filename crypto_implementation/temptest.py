@@ -14,6 +14,7 @@ from substitution import *
 from prime_list import *
 import random
 import math
+import time
 
 
 def primePQ(num_prime: int, num_len: int) -> (int, int):
@@ -40,8 +41,9 @@ def eGenerator(r):
 
 
 def rsaTester():
+    print()
     print(f"{'-' * 42} RSA tester {'-' * 42}")
-    num_prime = 20
+    num_prime = 10
     p, q = primePQ(num_prime, 5)
     # print(f"random prime p = {p}, q = {q}")
 
@@ -58,12 +60,12 @@ def rsaTester():
     rsa_result = rsa(p, q, e, message)
     print("[p, q, N, phi, e, publicKey, message, encryptedMsg, d, privateKey, decryptedMsg]")
     print(rsa_result)
-    print()
     # simple example result:
     # ['233', '2333', '543589', '541024', '97', '(97, 543589)', '345', '451737', '373697', '(373697, 543589)', '345']
 
 
 def dhTester():
+    print()
     print(f"{'-' * 36} Diffie Hellman tester {'-' * 36}")
     print("[p, g, a, b, A, B, A', B']")
     p, q = primePQ(20, 5)
@@ -72,12 +74,12 @@ def dhTester():
     b = random.randint(1, 1000)
     dh_result = diffie_hellman(p, g, a, b)
     print(dh_result)
-    print()
     # simple example result:
     # ['2333', '233', '97', '345', '1613', '357', '93', '93']
 
 
 def elgamalTester():
+    print()
     print(f"{'-' * 40} Elgamal tester {'-' * 40}")
     print("[p, g, a, publicKeyA, k, message, encryptedMsg, decryptedMsg]")
     p, q = primePQ(20, 5)
@@ -87,25 +89,32 @@ def elgamalTester():
     m = random.randint(10, 1000)
     elgamal_result = elgamal(p, g, a, k, m)
     print(elgamal_result)
-    print()
     # simple example result:
     # ['23333', '233', '776', '19729', '456', '345', '(16065, 19636)', '345']
 
 
 def subTester():
+    print()
     print(f"{'-' * 38} Substitution tester {'-' * 38}")
     print("[message, generatedKey, encryptedMsg, decryptedMsg]")
     message = "Hi! How are you? I am good, thank you."
     sub_result = substitution(message)
     print(sub_result)
-    print()
 
 
 def main():
-    for i in range(2):
+    for i in range(3):
+        start_rsa = time.time()
         rsaTester()
+        print(f"--- RSA runs {(time.time() - start_rsa)} seconds for 6 digits prime---")
+
+        start_dh = time.time()
         dhTester()
+        print(f"--- Diffie-Hellman runs {(time.time() - start_dh)} seconds for 6 digits prime---")
+
+        start_elgamal = time.time()
         elgamalTester()
+        print(f"--- Elgamal runs {(time.time() - start_elgamal)} seconds for 6 digits prime---")
 
     # subTester()
 
