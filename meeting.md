@@ -262,7 +262,7 @@
 	- We will meet at 8:00 PM to see progress. John must fix his broken module by then. 
 	- After that, we need to fix user documentation. 
 		- Record how to video for user documentation.
-
+	- Host on Heroku.
 
 
 
