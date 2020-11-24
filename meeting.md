@@ -276,4 +276,5 @@
 	- Xuehai will sent a limit on how large primes can be for ElGamal.
 		- 6 digits is maximum. 
 		- Also add a note that tells the user about this limitations and explains the slowness of ElGamal in the multiplicative inverse stage in decrypting the message. 
+		- If Missy can find a faster solution we can use. 
 
