@@ -1,5 +1,7 @@
 # Crypto Learning System User Guide
-<a href="#" class="image"><img src="images/mainpage.png" alt="https://crypto-learning-sys.herokuapp.com" /></a><br/>
+<p align='center'>
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/mainpage.png" alt="" /></a><br/>
+</p>
 
 ### What is Crypto Learning System
 
