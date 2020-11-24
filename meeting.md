@@ -266,3 +266,12 @@
 
 
 
+---
+
+### 11/23 M: ALL members 8:00 PM
+* **Current Progress**: 
+	- John: RSA is fixed. ElGamal is broken.
+* **TO DO**:
+	- Missy is looking for a faster mult_inverse function. 
+	- If not, we head to our worse case solution. 
+
