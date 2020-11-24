@@ -272,6 +272,8 @@
 * **Current Progress**: 
 	- John: RSA is fixed. ElGamal is broken.
 * **TO DO**:
-	- Missy is looking for a faster mult_inverse function. 
-	- If not, we head to our worse case solution. 
+	- Missy looked for a faster soltuion, but this is the fastest. 
+	- Xuehai will sent a limit on how large primes can be for ElGamal.
+		- 6 digits is maximum. 
+		- Also add a note that tells the user about this limitations and explains the slowness of ElGamal in the multiplicative inverse stage in decrypting the message. 
 
