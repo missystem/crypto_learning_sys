@@ -1,6 +1,6 @@
 # Crypto Learning System User Guide
 <p align="center">
-<a href="https://github.com/missystem/crypto_learning_sys/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/badge/contributor-4-green" /></a>
+<a href="https://github.com/missystem/crypto_learning_sys/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/badge/contributors-4-green" /></a>
 </p>
 <p align='center'>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/mainpage.png" alt="" /></a><br/>
