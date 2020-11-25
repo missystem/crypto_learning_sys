@@ -31,8 +31,10 @@
 		-includes progress for each week in addition to any obstacles we faced
 * **crypto_implementation**
 	- cryptosystem implementations
-* Xuehai’s section
-* John’s section
+* **templates**
+	- the mainpage is stored here. This is the file for all frontend functionality.
+* **static**
+	- design elements of the main page (css).
 
 ---
 
