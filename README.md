@@ -73,7 +73,7 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 [John Zhou](https://github.com/Xuehaiz)
 
 
-<span style="color:red; font-family:Georgia; font-size:4em;">Like This? ❤</span><br/>
+<span style="color:red; font-family:Georgia;"> ❤ Like This? </span><br/>
 [Tell us about it](mailto:yuhanspace@gmail.com?subject=[Github]%20Crypto%20Learning%20System)!
 
 
