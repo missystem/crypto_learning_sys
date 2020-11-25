@@ -17,7 +17,7 @@ Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgam
 
 ---
 
-You can watch the video or follow the steps in [Usage](https://github.com/missystem/crypto_learning_sys#usage)<br/>
+You can watch the [instruction video](https://youtu.be/8n4My4PsU0w) or follow the steps in [Usage](https://github.com/missystem/crypto_learning_sys#usage)<br/>
 <p align='center'>
 <a href="https://youtu.be/8n4My4PsU0w" class="image"><img src="images/webapppage.png" alt="" /></a><br/>
 click the picture to our instruction video<br/>
