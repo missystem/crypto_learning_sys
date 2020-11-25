@@ -2,8 +2,6 @@
 
 <p align="center">
 <a href="https://github.com/missystem/crypto_learning_sys/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/badge/contributors-4-green" /></a>
-<!-- <a href="https://github.com/missystem/crypto_learning_sys/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/badge/contributors-4-green" /></a> -->
-
 [![GitHub forks](https://img.shields.io/github/forks/missystem/crypto_learning_sys)](https://github.com/missystem/crypto_learning_sys/network)
 </p>
 
