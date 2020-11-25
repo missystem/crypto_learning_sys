@@ -6,9 +6,8 @@
 
 <p align='center'>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/logo.png" alt="" /></a><br/>
+click the picture to check our web app
 </p>
-
-**click the picture to check our web app**
 
 ### What is Crypto Learning System
 
