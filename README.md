@@ -22,9 +22,11 @@ They are instructions for RSA method with one example.
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction5.png" alt="" /></a><br/>
 You can click the dice, then we will provide valid numbers for you <br/>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction6.png" alt="" /></a><br/>
-7. After input the numbers, click [Go!], and we will check if your numbers are usable or not
+6. After input the numbers, click [Go!], and we will check if your numbers are usable or not
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction7.png" alt="" /></a><br/>
-	- 
+	- If your number is not valid, we will popup small hint
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error1.png" alt="" /></a><br/>
+7. 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction8.png" alt="" /></a><br/>
 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
