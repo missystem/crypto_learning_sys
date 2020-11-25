@@ -11,19 +11,20 @@ Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgam
 ### Usage
 1. Select a cryptosystem you want to learn
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction1.png" alt="" /></a><br/>
-2. Here we select RSA as example
+2. Here we use RSA as example, You will see foldinng section: Method and Example
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction2.png" alt="" /></a><br/>
-3. 
+3. When you click on them, it will show more information<br/>
+They are instructions for RSA method with one example.
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction3.png" alt="" /></a><br/>
-
+4. After you read through instructions, you can click [Yeah!] to go to the interactive section
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction4.png" alt="" /></a><br/>
-
+5. Input numbers selected by yourself in the text box or<br/>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction5.png" alt="" /></a><br/>
-
+You can click the dice, then we will provide valid numbers for you <br/>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction6.png" alt="" /></a><br/>
-
+7. After input the numbers, click [Go!], and we will check if your numbers are usable or not
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction7.png" alt="" /></a><br/>
-
+	- 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction8.png" alt="" /></a><br/>
 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
