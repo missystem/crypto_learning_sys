@@ -1155,7 +1155,7 @@
             $("#input3").attr("placeholder", "private key a, 1 ≤ a ≤ p-1");
             $("#input4").attr("placeholder", "input an integer 1 ≤ k ≤ 1000");
             $("#input5").attr("placeholder", "input the message you want to encrypt!");
-            $("#inputWrap6").html("<button class=\"btn\">Go!</button>");
+            $("#inputWrap6").html("<button class=\"btn\" id = 'Debug1'>Go!</button>");
             }
         }
 
@@ -1599,7 +1599,7 @@
         }
 
         function show_EIGStep(data){
-            $(".btn").after("<div id='div_1'><label for='lname' class='box_leading' id='lab1'>A: </label></div>");
+            $("#Debug1").after("<div id='div_1'><label for='lname' class='box_leading' id='lab1'>A: </label></div>");
             $("#lab1").append("<input type='text' class='box' id='user_input1' placeholder='Hint: A = g^a (mod p)'>");
             $("#user_input1").after("<button class='button' id='check1'>Check</button>");
             $("#check1").after("<p id='hint1' val='0'></p>");
@@ -1712,11 +1712,7 @@
 
 <span class="color-picker"></span>
 
-<br/><br/>
-<p style="text-align:center;">
-<a href="https://github.com/missystem/crypto_learning_sys/blob/master/README.md" target="_blank">User Guide</a>
-</p>
-<br/>
+<br/><br/><br/>
 
 <!-- <form action="_choose" onsubmit="return validateForm()" method="GET|POST"></form> -->
 <span class="dropdown_leading">
