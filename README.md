@@ -23,7 +23,7 @@ They are instructions for RSA method with one example.
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction5.png" alt="" /></a><br/>
 6. After input the numbers, click [Go!], and we will check if your numbers are usable or not
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction7.png" alt="" /></a><br/>
-	- If your number is not valid, we will popup small hint
+	- If your number is not valid, a hint will popup to show which number is having problem
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error1.png" alt="" /></a><br/>
 	- Else, next section (Encryption section) will show up
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction8.png" alt="" /></a><br/>
@@ -32,11 +32,11 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 	- If your calculated result is incorrect, the following Hint will jump out
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error2.png" alt="" /></a><br/>
 	- Otherwise, you will see **Correct**
-	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
 8. Once you finished the encryption section with correct answers, you are eligible to go to the next section: Decryption Section
-<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
-9. Start **Decryption**!
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction11.png" alt="" /></a><br/>
+9. Start **Decryption**!
+
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction12.png" alt="" /></a><br/>
 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction13.png" alt="" /></a><br/>
