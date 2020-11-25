@@ -962,6 +962,58 @@
                 document.getElementById("word3").innerHTML = "Cryptosystem is a asymmetric cryptosystem that is used today by modern computers to encrypt and decrypt messages! Asymmetric means that there are two different keys. It is also classified as a public key cryptosystem since one of the keys can be given to anyone. \n" +
                     "RSA is based on the principle that it is easy to multiply large numbers, but factoring large numbers is very difficult. ";
                 document.getElementById("word4").innerHTML = "RSA is used today in modern computers. It is used in a range of web browsers, email, VPNs, chat and other communication channels. So, it is a very valuable cryptosystem to learn for many computer scienctists!";
+                $("#word57").html("Ready to try it yourself?").css({"font-size": "24px"});
+                $("#word57").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
+                $("#word58").hide();
+                $("#word59").hide();
+                $("#readyBtn").click(function() {
+                    for (var i = 58; i <= 75; i++) {
+                        var id = "#word" + i;
+                        $(id).show();
+                    }
+                    for (var i = 1; i < 5; i++) {
+                        var id1 = "text" + i;
+                        var id2 = "input" + i;
+                        var id3 = "inputWrap" + i;
+                        var id4 = "img" + i;
+                        document.getElementById(id1).style.display = 'inline-block';
+                        document.getElementById(id2).style.display = 'inline-block';
+                        document.getElementById(id3).style.display = 'inline-block';
+                        document.getElementById(id4).style.display = 'inline-block';
+                    }
+                    document.getElementById("inputWrap5").style.display = 'inline-block';
+                });
+                // var primes = primesInRange(10000000);
+                $("#img1").click(function() {
+                    var randomNum1 = p_list[Math.floor(Math.random() * p_list.length)];
+                    $("#input1").val(randomNum1);
+                });
+                $("#img2").click(function() {
+                    var randomNum2 = q_list[Math.floor(Math.random() * q_list.length)];
+                    $("#input2").val(randomNum2);
+                });
+                // var p = $("#input1").val();
+                // var q = $("#input2").val();
+                // var elist = valid_e(p, q);
+                $("#img3").click(function() {
+                    var randomNum3 = e_list[Math.floor(Math.random() * e_list.length)];
+                    $("#input3").val(randomNum3);
+                });
+                $("#img4").click(function() {
+                    var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
+                    $("#input4").val(randomNum4);
+                });
+                $("#word58").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "click here".link("https://bigprimes.org"));
+                $("#word59").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "click here".link("https://www.wolframalpha.com/"));
+                document.getElementById("text1").innerHTML = "p: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text2").innerHTML = "q: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text3").innerHTML = "e: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                document.getElementById("text4").innerHTML = "m: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+                $("#input1").attr("placeholder", "input a prime number here");
+                $("#input2").attr("placeholder", "input a prime number here");
+                $("#input3").attr("placeholder", "input an exponent here");
+                $("#input4").attr("placeholder", "input the message you want to encrypt!");
+                $("#inputWrap5").html("<button class=\"btn\">Go!</button>");
             }
             else if (text == "why Diffie–Hellman key exchange") {
                 for (var i = 2; i < 75; i++) {
@@ -976,7 +1028,59 @@
                 document.getElementById("word2").innerHTML = "Diffe-Hellman algorithm is one of the earliest practical examples of public key exchange implemented within the field of cryptography. Traditionally, secure encrypted communication between two parties required that they first exchange keys by some secure physical means, such as paper key lists transported by a trusted courier. The diffie-Hellman key exchange method allows two parties that have no prior knowledge of each other to jointly establish a shared key over an insecure channel. Which was a huge progress in the field of cryptography! This shared key can be used to encrypt subsequent communications using a symmetric key cipher. This algorithm is used for a variety of internet services. The idea of this algorithm is that it’s easy to compute powers modulo a prime but hard to reverse the process.";
                 document.getElementById("word3").innerHTML = "Important note: You’re not sharing information during the key exchange, you’re creating a key together! This can be used in addition to any other cryptosystem that requires exchanged keys. An important distinction to make is that the Diffie-Hellman is for exchanging keys over an insecure channel. So, we don’t encrypt or decrypt data. But rather we send “encrypted” keys and compute the shared value.";
                 document.getElementById("word4").innerHTML = "In the encrypt section we will demonstrate creating two keys.";
-            }
+                $("#word38").html("Ready to try it yourself?").css({"font-size": "24px"});
+                $("#word38").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
+                $("#word39").hide();
+                $("#word40").hide();
+                $("#word41").hide();
+                $("#readyBtn").click(function() {
+                    for (var i = 39; i <= 75; i++) {
+                        var id = "#word" + i;
+                        $(id).show();
+                    }
+                    for (var i = 1; i < 5; i++) {
+                        var id1 = "text" + i;
+                        var id2 = "input" + i;
+                        var id3 = "inputWrap" + i;
+                        var id4 = "img" + i;
+                        document.getElementById(id1).style.display = 'inline-block';
+                        document.getElementById(id2).style.display = 'inline-block';
+                        document.getElementById(id3).style.display = 'inline-block';
+                        document.getElementById(id4).style.display = 'inline-block';
+                    }
+                    document.getElementById("inputWrap5").style.display = 'inline-block';
+                });
+                var primes = primesInRange(10000000);
+                $("#img1").click(function() {
+                    var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
+                    $("#input1").val(randomNum1);
+                });
+                $("#img2").click(function() {
+                    var randomNum2 = Math.floor(Math.random() * Math.floor(10000));
+                    $("#input2").val(randomNum2);
+                });
+                $("#img3").click(function() {
+                    var randomNum3 = Math.floor(Math.random() * Math.floor(10000));
+                    $("#input3").val(randomNum3);
+                });
+                $("#img4").click(function() {
+                    var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
+                    $("#input4").val(randomNum4);
+                });
+                $("#word39").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "click here".link("https://bigprimes.org"));
+                $("#word40").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "click here".link("https://www.wolframalpha.com/"));
+                $("#word41").html("In the following, we call the sender Alice, and the receiver Bob");
+
+                $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#text2").html("g:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#text3").html("a:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#text4").html("b:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                $("#input1").attr("placeholder", "a large prime integer here");
+                $("#input2").attr("placeholder", "an integer g of prime order in Fp*");
+                $("#input3").attr("placeholder", "input a secret integer a");
+                $("#input4").attr("placeholder", "input a secret integer b");
+                $("#inputWrap5").html("<button class=\"btn\">Go!</button>");
+                }
             else if (text == "why ElGamal encryption") {
                 for (var i = 2; i < 75; i++) {
                     var id = "word" + i;
@@ -990,6 +1094,68 @@
                 document.getElementById("word2").innerHTML = "The ElGamal encryption system is an asymmetric key encryption algorithm for public key cryptography which is based on the Diffie-Hellman key exchange. The advantage of the ElGamal algorithm is the generation of keys using discrete logarithms.";
                 document.getElementById("word3").innerHTML = "ElGamalhas the disadvantage that the ciphertext is twice as long as the plaintext and it has the advantage that the same plaintext gives a different ciphertext (with near certainty) each time it is encrypted.";
                 document.getElementById("word4").innerHTML = "ElGamal encryption is used in the free GNU privacy guard software, recent versions of PGP, and other cryptosystems.";
+                $("#word51").html("Ready to try it yourself?").css({"font-size": "24px"});
+            $("#word51").append("&nbsp&nbsp&nbsp&nbsp<button class = 'greyBtn' id='readyBtn'>Yeah!</button>");
+            $("#word52").html("Learn what number to choose:&nbsp&nbsp&nbsp" + "click here".link("https://bigprimes.org"));
+            $("#word53").html("WolframeAlpha will help with your calculation: &nbsp&nbsp&nbsp" + "click here".link("https://www.wolframalpha.com/"));
+            for (var i = 52; i <= 75; i++) {
+                var id = "#word" + i;
+                $(id).hide();
+            }
+            $("#readyBtn").click(function() {
+                for (var i = 52; i <= 75; i++) {
+                    var id = "#word" + i;
+                    $(id).show();
+                }
+                for (var i = 1; i < 5; i++) {
+                    var id1 = "text" + i;
+                    var id2 = "input" + i;
+                    var id3 = "inputWrap" + i;
+                    var id4 = "img" + i;
+                    document.getElementById(id1).style.display = 'inline-block';
+                    document.getElementById(id2).style.display = 'inline-block';
+                    document.getElementById(id3).style.display = 'inline-block';
+                    document.getElementById(id4).style.display = 'inline-block';
+                }
+                document.getElementById("text5").style.display = 'inline-block';
+                document.getElementById("input5").style.display = 'inline-block';
+                document.getElementById("img5").style.display = 'inline-block';
+                document.getElementById("inputWrap6").style.display = 'inline-block';
+            });
+            var primes = primesInRange(100000);
+            $("#img1").click(function() {
+                var randomNum1 = primes[Math.floor(Math.random() * primes.length)];
+                $("#input1").val(randomNum1);
+            });
+            $("#img2").click(function() {
+                var randomNum2 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input2").val(randomNum2);
+            });
+            $("#img3").click(function() {
+                var p = $("#input1").val();
+                var randomNum3 = Math.floor(Math.random() * Math.floor(p-1));
+                $("#input3").val(randomNum3);
+            });
+            $("#img4").click(function() {
+                var randomNum4 = Math.floor(Math.random() * Math.floor(1000));
+                $("#input4").val(randomNum4);
+            });
+            $("#img5").click(function() {
+                var randomNum4 = Math.floor(Math.random() * Math.floor(10000));
+                $("#input5").val(randomNum4);
+            });
+
+            $("#text1").html("p:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text2").html("g:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text3").html("a:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text4").html("k:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#text5").html("m:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+            $("#input1").attr("placeholder", "input a large prime number here");
+            $("#input2").attr("placeholder", "input an element f of prime order");
+            $("#input3").attr("placeholder", "private key a, 1 ≤ a ≤ p-1");
+            $("#input4").attr("placeholder", "input an integer 1 ≤ k ≤ 1000");
+            $("#input5").attr("placeholder", "input the message you want to encrypt!");
+            $("#inputWrap6").html("<button class=\"btn\">Go!</button>");
             }
         }
 
@@ -1050,7 +1216,6 @@
                     }
                 }
                 else if (droptext == "ElGamal encryption") {
-
                     elGamal_text();
                     try{
                         $("#div_1").remove();
@@ -1075,6 +1240,7 @@
                     $("#err2").html("&nbsp");
                     $("#err3").html("&nbsp");
                     $("#err4").html("&nbsp");
+                    $("#err5").html("&nbsp");
                     $.ajax({
                         url: '/process',
                         type: 'POST',
@@ -1084,19 +1250,24 @@
                            userInput4: $("#input4").val()}
                     })
                     .done(function(data) {
-// <!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {-->
-// <!--                            $("#err4").html("please fill in all blanks");-->
-// <!--                        }-->
+                        if ($("#input1").val() === undefined || $("#input2").val() === undefined || $("#input3").val() === undefined || $("#input4").val() === undefined
+                        || $("#input1").val() == "" || $("#input2").val() == "" || $("#input3").val() == "" || $("#input4").val() == "") {
+                            $("#err5").html("please fill in all blanks");
+                            return;
+                        }
                         if (data.length == 2) {
                             if (data[0] == "0" && data[1] == "0") {
                                 $("#err1").html("p has to be a prime");
                                 $("#err2").html("q has to be a prime");
+                                return;
                             }
                             else if (data[0] == "0") {
                                 $("#err1").html("p has to be a prime");
+                                return;
                             }
                             else if (data[1] == "0") {
                                 $("#err2").html("q has to be a prime");
+                                return;
                             }
                         }else if (data.length == 5){
                             $("#err3").html("e is not a valid number, please read the example one more time!");
@@ -1129,11 +1300,14 @@
                                userInput4: $("#input4").val()}
                     })
                     .done(function(data) {
-// <!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined) {-->
-// <!--                            $("#err4").html("please fill in all blanks");-->
-// <!--                        }-->
+                        if ($("#input1").val() === undefined || $("#input2").val() === undefined || $("#input3").val() === undefined || $("#input4").val() === undefined
+                        || $("#input1").val() == "" || $("#input2").val() == "" || $("#input3").val() == "" || $("#input4").val() == "") {
+                            $("#err5").html("please fill in all blanks");
+                            return;
+                        }
                         if (data.length == 1) {
                             $("#err1").html("p has to be a prime");
+                            return;
                         }else {
                             // show steps here
                             try{
@@ -1165,13 +1339,17 @@
                                userInput5: $("#input5").val()}
                     })
                     .done(function(data){
-// <!--                        if (data[0] === undefined || data[1] === undefined || data[2] === undefined || data[3] === undefined || data[4] === undefined) {-->
-// <!--                            $("#err4").html("please fill in all blanks");-->
-// <!--                        }-->
+                        if ($("#input1").val() === undefined || $("#input2").val() === undefined || $("#input3").val() === undefined || $("#input4").val() === undefined
+                        || $("#input1").val() == "" || $("#input2").val() === "" || $("#input3").val() === "" || $("#input4").val() === "") {
+                            $("#err5").html("please fill in all blanks");
+                            return;
+                        }
                         if (data.length == 1) {
                             $("#err1").html("p has to be a prime");
+                            return;
                         }else if (data.length == 3) {
                             $("#err3").html("a is not valid");
+                            return;
                         }else {
                             // show steps here
                             try{
