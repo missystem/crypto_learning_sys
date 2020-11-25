@@ -32,9 +32,9 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 	- If your calculated result is incorrect, the following Hint will jump out
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error2.png" alt="" /></a><br/>
 	- Otherwise, you will see **Correct**
-	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
 8. Once you finished the encryption section with correct answers, you are eligible to go to the next section: Decryption Section
-<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction11.png" alt="" /></a><br/>
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
 9. Start **Decryption**!
 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction12.png" alt="" /></a><br/>
