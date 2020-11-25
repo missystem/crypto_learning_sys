@@ -11,7 +11,13 @@
 Crypto Learning System is an interactive learning system for people who wants to learn cryptography. <br/>
 Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgamal. This web application is unique. Because it is not only providing generated results, it uses interactive learning tools and communicates with the user at each step. it is not only providing generated results. The user must input the correct number in each step to be able to reach the next step. We want users to understand and think with our step-by-step instructions, which can assist learning. <br/>
 
+
 ### Usage
+You can watch the video or read through the following steps<br/>
+[![instruction video](https://img.youtube.com/vi/https://youtu.be/wnMR1jbAlSw/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/wnMR1jbAlSw)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wnMR1jbAlSw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 1. Select a cryptosystem you want to learn
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction1.png" alt="" /></a><br/>
 2. Here we use RSA as example, You will see foldinng section: Method and Example
