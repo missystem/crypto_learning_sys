@@ -1,22 +1,60 @@
-# User Guide
+# Crypto Learning System User Guide
+<p align="center">
+<a href="https://github.com/missystem/crypto_learning_sys/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/badge/contributors-4-green" /></a>
+</p>
+<p align='center'>
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/mainpage.png" alt="" /></a><br/>
+</p>
 
-# Check our meeting schedules: [meeting.md](https://github.com/missystem/crypto_learning_sys/blob/master/meeting.md)
+### What is Crypto Learning System
 
-# Project info:
-* due in week 9 (11/24 Tues 11:59pm)
-* presentation in week 10 
+Crypto Learning System is an interactive learning system for people who wants to learn cryptography. <br/>
+Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgamal. This web application is unique. Because it is not only providing generated results, it uses interactive learning tools and communicates with the user at each step. it is not only providing generated results. The user must input the correct number in each step to be able to reach the next step. We want users to understand and think with our step-by-step instructions, which can assist learning. <br/>
 
-# Security-Cryptography Interactive Learning System
+### Usage
+1. Select a cryptosystem you want to learn
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction1.png" alt="" /></a><br/>
+2. Here we use RSA as example, You will see foldinng section: Method and Example
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction2.png" alt="" /></a><br/>
+3. When you click on them, it will show more information<br/>
+They are instructions for RSA method with one example.
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction3.png" alt="" /></a><br/>
+4. After you read through instructions, you can click [Yeah!] to go to the interactive section<br/>
+	Key Creation Section <br/>
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction4.png" alt="" /></a><br/>
+5. Input numbers selected by yourself in the text box or You can also click 🎲, we will generate valid numbers for you 
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction5.png" alt="" /></a><br/>
+6. After input the numbers, click [Go!], and we will check if your numbers are usable or not
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction7.png" alt="" /></a><br/>
+	- If your number is not valid, a hint will popup to show which number is having problem
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error1.png" alt="" /></a><br/>
+	- Else, next section (Encryption section) will show up
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction8.png" alt="" /></a><br/>
+7. Start **Encryption**! <br/>
+Calculate the numbers with provided hint, input in the text box, and click [Check] <br/>
+	- If your calculated result is incorrect, the following Hint will jump out
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error2.png" alt="" /></a><br/>
+	- Otherwise, you will see **Correct**
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
+8. Once you finished the encryption section with correct answers, you are eligible to go to the next section: Decryption Section
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
+9. Start **Decryption**! <br/>
+Calculate the numbers with provided hint, input in the text box, and click [Check] <br/>
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction12.png" alt="" /></a><br/>
+- If your calculated result is incorrect, the following Hint will jump out
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error3.png" alt="" /></a><br/>
+	- Otherwise, you will see **Correct**
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction13.png" alt="" /></a><br/>
+10. Once you finished these two, you will see a message: "You will find out m’ is the same as your inputted message m!"<br/>
+**Now you're done! 😊** 
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction14.png" alt="" /></a><br/>
 
-* The goal is to create an interactive learning experience for CS students studying security
-* INTENDED USER: The intended user for this program is someone who is taking math458 or CIS399 next quarter! This is mostly doing the calculations that need to be done by hand, rather than generating the code. Generating code for crypto systems are different projects that the student must do themselves, independently.
-  - It will have 2 main users (If anyone can think of any other ones please let me know)
-    1. A student new to crypto systems looking for an interactive way to understand various cryptosystems and how to break them. For this user we will provide step by step instructions. The user will have to read step 1, do the work, and submit their result for step one. If it is incorrect, a hint will pop up on the webapp and the user can try again. If the answer is correct step 2 will pop up. (It will not go to a new page, but rather a new step will appear -- I will show this in my illustration).
-    2. The more advanced user who just wants to check the end result of the cryptosystem. Thus, they dont want any hint or a step by step guide. 
+
+### Contributing
 
 
-## Overall explanation of this project:
-* An interactive learning system for learning cryptosystems. 
-* Help students who is learning cryptography, especially in the midst of the pandemic. 
-* This web application is unique in that it uses interactive learning tools and communicates with the user at each step. 
-* The user must input the correct number in each step to be able to reach the next step.
+
+
+
+
+
