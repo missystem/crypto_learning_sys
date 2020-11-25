@@ -1,10 +1,14 @@
 # Crypto Learning System User Guide
+
 <p align="center">
 <a href="https://github.com/missystem/crypto_learning_sys/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/badge/contributors-4-green" /></a>
 </p>
+
 <p align='center'>
-<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/mainpage.png" alt="" /></a><br/>
+<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/logo.png" alt="" /></a><br/>
 </p>
+
+**click the picture to check our web app**
 
 ### What is Crypto Learning System
 
@@ -14,9 +18,8 @@ Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgam
 
 ### Usage
 You can watch the video or read through the following steps<br/>
-[![instruction video](https://img.youtube.com/vi/https://youtu.be/wnMR1jbAlSw/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/wnMR1jbAlSw)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wnMR1jbAlSw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://youtu.be/wnMR1jbAlSw" class="image"><img src="images/webapppage.png" alt="" /></a><br/>
+**click the picture to our instruction video**<br/>
 
 1. Select a cryptosystem you want to learn
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction1.png" alt="" /></a><br/>
@@ -56,7 +59,8 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction14.png" alt="" /></a><br/>
 
 
-### Contributing
+### Contributors
+
 
 
 
