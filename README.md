@@ -18,9 +18,10 @@ Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgam
 
 ### Usage
 You can watch the video or read through the following steps<br/>
+<p align='center'>
 <a href="https://youtu.be/8n4My4PsU0w" class="image"><img src="images/webapppage.png" alt="" /></a><br/>
-**click the picture to our instruction video**<br/>
-
+click the picture to our instruction video<br/>
+</p>
 1. Select a cryptosystem you want to learn
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction1.png" alt="" /></a><br/>
 2. Here we use RSA as example, You will see foldinng section: Method and Example
