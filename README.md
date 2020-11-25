@@ -18,10 +18,10 @@ They are instructions for RSA method with one example.
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction3.png" alt="" /></a><br/>
 4. After you read through instructions, you can click [Yeah!] to go to the interactive section
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction4.png" alt="" /></a><br/>
-5. Input numbers selected by yourself in the text box or<br/>
+5. Input numbers selected by yourself in the text box or
+	- You can also click 🎲, we will generate valid numbers for you <br/>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction5.png" alt="" /></a><br/>
-You can click the dice, then we will provide valid numbers for you <br/>
-<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction6.png" alt="" /></a><br/>
+
 6. After input the numbers, click [Go!], and we will check if your numbers are usable or not
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction7.png" alt="" /></a><br/>
 	- If your number is not valid, we will popup small hint
