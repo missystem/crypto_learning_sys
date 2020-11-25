@@ -31,8 +31,10 @@
 		-includes progress for each week in addition to any obstacles we faced
 * **crypto_implementation**
 	- cryptosystem implementations
-* Xuehai’s section
-* John’s section
+* **templates**
+	- the mainpage is stored here. This is the file for all frontend functionality.
+* **static**
+	- design elements of the main page (css).
 
 ---
 
@@ -62,10 +64,12 @@
 1. backend testing
 	- Use test file [temptest.py](https://github.com/missystem/crypto_learning_sys/blob/master/crypto_implementation/temptest.py) to run each program with random generated data sets
 2. frontend -- input and method
-	- How did Xuehai test
+	- Various tests to make sure html, flask, and the backend portion are working well together.
 3. frontend -- Interactive portion
-	- How did John test
-4. Product testing
+	- Before merging both frontend sections, Ajax code and calls were tested to make sure everthing is correct.
+4. frontend -- "full frontend"
+	- Tried small numberes in addition to very large number (more than 10 digits), in addition to edge cases such as inputing non prime numbers, and incorrect numbers.
+5. Product testing
 	- Invited people to try our learning system and give us feedback about the accessibility, the instructions, and what to improve
 
 ### Further Extensions:
