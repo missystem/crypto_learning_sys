@@ -17,6 +17,7 @@ Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgam
 They are instructions for RSA method with one example.
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction3.png" alt="" /></a><br/>
 4. After you read through instructions, you can click [Yeah!] to go to the interactive section<br/>
+	Key Creation Section <br/>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction4.png" alt="" /></a><br/>
 5. Input numbers selected by yourself in the text box or You can also click 🎲, we will generate valid numbers for you 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction5.png" alt="" /></a><br/>
@@ -24,15 +25,18 @@ They are instructions for RSA method with one example.
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction7.png" alt="" /></a><br/>
 	- If your number is not valid, we will popup small hint
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error1.png" alt="" /></a><br/>
-7. 
-<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction8.png" alt="" /></a><br/>
-
-<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
-
+	- Else, next section (Encryption section) will show up
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction8.png" alt="" /></a><br/>
+7. Start **Encryption**! <br/>
+Calculate the numbers with provided hint, input in the text box, and click [Check] <br/>
+	- If your calculated result is incorrect, the following Hint will jump out
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error2.png" alt="" /></a><br/>
+	- Otherwise, you will see **Correct**
+	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
+8. Once you finished the encryption section with correct answers, you are eligible to go to the next section: Decryption Section
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
-
+9. Start **Decryption**!
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction11.png" alt="" /></a><br/>
-
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction12.png" alt="" /></a><br/>
 
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction13.png" alt="" /></a><br/>
