@@ -8,14 +8,15 @@
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/logo.png" alt="" /></a><br/>
 click the picture to check our web app
 </p>
+<br/>
 
-### What is Crypto Learning System
+## What is Crypto Learning System
 
 Crypto Learning System is an interactive learning system for people who wants to learn cryptography. <br/>
 Currently, three main cryptosystems are provided, RSA, Diffie-Hellman, and Elgamal. This web application is unique. Because it is not only providing generated results, it uses interactive learning tools and communicates with the user at each step. it is not only providing generated results. The user must input the correct number in each step to be able to reach the next step. We want users to understand and think with our step-by-step instructions, which can assist learning. <br/>
 
 
-### Usage
+## Usage
 You can watch the video or read through the following steps<br/>
 <p align='center'>
 <a href="https://youtu.be/8n4My4PsU0w" class="image"><img src="images/webapppage.png" alt="" /></a><br/>
@@ -59,9 +60,13 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction14.png" alt="" /></a><br/>
 
 
-### Contributors
-
-
+<p align='center'>
+<h4> Contributors </h4>
+[Missy Shi](https://github.com/missystem)
+[Donna Hooshmand](https://github.com/DonnaHooshmand)
+[Xuehai Zhou](https://github.com/jzhou4)
+[John Zhou](https://github.com/Xuehaiz)
+</p>
 
 
 
