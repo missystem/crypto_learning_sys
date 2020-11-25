@@ -49,7 +49,7 @@ They are instructions for RSA method with one example.
 Calculate the numbers with provided hint, input in the text box, and click [Check] <br/>
 	- If your calculated result is incorrect, the following Hint will jump out
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error2.png" alt="" /></a><br/>
-	- Otherwise, you will see **Correct**
+	- Otherwise, you will see **Correct**<br/>
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction9.png" alt="" /></a><br/>
 8. Once you finished the encryption section with correct answers, you are eligible to go to the next section: Decryption Section <br/>
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction10.png" alt="" /></a><br/>
@@ -58,7 +58,7 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 <a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction12.png" alt="" /></a><br/>
 - If your calculated result is incorrect, the following Hint will jump out
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/error3.png" alt="" /></a><br/>
-	- Otherwise, you will see **Correct**
+	- Otherwise, you will see **Correct**<br/>
 	<a href="https://crypto-learning-sys.herokuapp.com" class="image"><img src="images/instruction13.png" alt="" /></a><br/>
 10. Once you finished these two, you will see a message: "You will find out m’ is the same as your inputted message m!"<br/>
 **Now you're done! 😊** <br/>
