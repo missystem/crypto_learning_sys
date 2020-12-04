@@ -69,8 +69,8 @@ Calculate the numbers with provided hint, input in the text box, and click [Chec
 ### Contributors
 [Missy Shi](https://github.com/missystem) | 
 [Donna Hooshmand](https://github.com/DonnaHooshmand) | 
-[Xuehai Zhou](https://github.com/jzhou4) | 
-[John Zhou](https://github.com/Xuehaiz)
+[John Zhou](https://github.com/jzhou4) | 
+[Xuehai Zhou](https://github.com/Xuehaiz)
 
 
 <span style="color:red; font-family:Georgia;"> ❤ Like This? </span><br/>
